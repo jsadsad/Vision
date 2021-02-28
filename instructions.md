@@ -20,7 +20,6 @@
 
 * Supplements your FSP and MERN as another coding example
 
-
 ---
 
 # JS Project Requirements
@@ -37,8 +36,6 @@
 * Must show off front-end skills -- make it pretty
 
 * Must show off JS skills -- make it interactive
-
-
 
 ---
 
@@ -61,7 +58,6 @@
 ---
 
 # MORE
-
 
 * [DanceMusicDance](https://john-chau.com/DanceMusicDance/)
 
