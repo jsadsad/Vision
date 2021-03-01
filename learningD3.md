@@ -78,3 +78,4 @@ When we set `translate()` on an SVG element, we're moving around its coordinate 
 
 We use D3 scales to translate our raw data into visual channels that we use to render to the DOM.
 
+Most common data types include: quantitative(rating out of 10), temporal(release dates), spatial(city, country), nominal(genres), ordinal(parent guidance ratings, t-shirt sizes)
