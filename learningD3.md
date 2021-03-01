@@ -70,3 +70,11 @@ The data must be an array so D3 will know it can be mapped.
 
 With an empty selection from `.selectAll('something')`, D3 will go ahead and calculate out how to find and match our data. `.enter()` will pluck out the enter selection returns the placeholders with the data already binded to it. `.append('something')` will insert the element with appropriate data bound it it.
 
+## Translate
+
+When we set `translate()` on an SVG element, we're moving around its coordinate system.
+
+# D3 Scales
+
+We use D3 scales to translate our raw data into visual channels that we use to render to the DOM.
+
