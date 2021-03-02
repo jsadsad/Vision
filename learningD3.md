@@ -74,6 +74,10 @@ With an empty selection from `.selectAll('something')`, D3 will go ahead and cal
 
 When we set `translate()` on an SVG element, we're moving around its coordinate system.
 
+## Group
+
+The <g> stands for `group`. It helps us to group all the children elements together so that we can manipulate its attributes all together. <g> elements don't render anything.
+
 # D3 Scales
 
 We use D3 scales to translate our raw data into visual channels that we use to render to the DOM.
