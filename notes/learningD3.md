@@ -10,6 +10,7 @@ D3 stands for Data Driven Documents.
   - not performant at large scale.
   - Like an illustrator
   - `x` increases going right, `y` increases going down
+  - Just like with HTML elements, the order in which you create and insert into DOM dictates the order in which they get rendered.
 
 ## Canvas
 
@@ -30,6 +31,7 @@ D3 stands for Data Driven Documents.
 - D3 creates the __data__ property in the DOMElements.
 - `datum` adds that __data__ property
 - `data` appends the data individually in separate select elements.
+- `data` can take in an array or function that would return an array.
 
 
 # Simple Graph
@@ -78,8 +80,57 @@ When we set `translate()` on an SVG element, we're moving around its coordinate 
 
 The <g> stands for `group`. It helps us to group all the children elements together so that we can manipulate its attributes all together. <g> elements don't render anything.
 
+```
+// create group elements
+{
+  const svg = html`<svg width=${width} height=${svgHeight}></svg>`
+  
+// create group elements
+  const g = d3.select(svg)
+  .selectAll('g')
+  .data(flowers)
+  .enter()
+  .append('g')
+  .attr('transform', d => `translate(${d.translate})`)
+  
+  
+  g.selectAll('path')
+    .data(d => {
+    return _.times(d.numPetals, i => 
+                   Object.assign({}, d, {rotate: i * (360 / d.numPetals)}))
+  }).enter().append('path')
+  .attr('transform', d => `rotate(${d.rotate})scale(${d.scale})`)
+  .attr('d', d=> d.path)
+  .attr('fill', d => d.color)
+  .attr('stroke', d => d.color)
+  .attr('fill-opacity', 0.5)
+  .attr('stroke-width', 2)
+  
+  g.append('text')
+    .text(d => _.truncate(d.title, 18))
+    .style('font-style', 'italic')
+    .style('font-size', '.7em')
+    .attr('text-anchor', 'middle')
+    .attr('dy', '.35em')
+  
+  
+  return scrollSVG(svg)
+}
+```
+
 # D3 Scales
 
 We use D3 scales to translate our raw data into visual channels that we use to render to the DOM.
 
 Most common data types include: quantitative(rating out of 10), temporal(release dates), spatial(city, country), nominal(genres), ordinal(parent guidance ratings, t-shirt sizes)
+
+
+# Rotate vs Translate
+
+The ordering matters. 
+
+Good rule of thumb is to `translate` first, and then `rotate` after.
+
+```
+<rect x=0 y=0 transform='rotate(0)translate(0,0)' />
+```

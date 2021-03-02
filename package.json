@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jsadsad/aa_js_viz_project#readme",
   "dependencies": {
     "d3": "^6.5.0",
+    "lodash": "^4.17.21",
     "prettier": "^2.2.1"
   }
 }
