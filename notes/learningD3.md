@@ -78,7 +78,7 @@ When we set `translate()` on an SVG element, we're moving around its coordinate 
 
 ## Group
 
-The <g> stands for `group`. It helps us to group all the children elements together so that we can manipulate its attributes all together. <g> elements don't render anything.
+The `<g>` stands for `group`. It helps us to group all the children elements together so that we can manipulate its attributes all together. <g> elements don't render anything.
 
 What the selection is. Represents our update selection.
 
@@ -220,3 +220,65 @@ updateBarsNew = (svg, data) => {
 ```
 
 ## Transitions
+
+Transition are how we animate attributes and styles from one state to the next in D3.js. This is really inmportant for us to main object constancy.
+
+Use greensock for advance animations.
+
+`const t = d3.transition().duration(1000)`
+
+```
+{
+  const rectWidth = 50
+  const svgHeight = 100
+  
+  const svg = html`<svg height=${svgHeight} style='overflow: visible' />`
+  const code = html`<code />`
+  const button = html`<button>new data!</button>`
+  
+  function updateBars() {
+    // select svg so that transition can be localized within selection
+    const t = d3.transition().duration(1000)
+    
+    // randomly generate an array of data
+    const data = _.times(_.random(3, 8), i => _.random(0, 100))
+    
+    d3.select(svg).selectAll('rect')
+      .data(data, d => d)
+      .join(
+        enter => {
+          return enter.append('rect')
+          //attributes to transtion from
+          .attr('x', (d, i) => i * rectWidth)
+          .attr('height', 0)
+          .attr('y', svgHeight)
+        },
+        update => update,
+        exit => {
+          exit.transition(t).attr('height', 0)
+            .attr('y', svgHeight)
+          //everything after here is transiton TO
+          }
+        )
+      .attr('width', rectWidth).transition(t) //we don't want the width to be animation.
+      
+      //attributes to transition TO
+      .attr('x', (d, i) => i * rectWidth)
+      .attr('height', d => d)
+      .attr('y', d => svgHeight - d)
+    
+    // update div with new data array:
+    d3.select(code).text(JSON.stringify(data).replace(/\,/g, ', '))
+  }
+  
+  updateBars()
+  d3.select(button).on('click', updateBars)
+  
+  return html`
+    ${svg}
+    <p>
+    ${button} ${code}
+    </p>
+  `
+}
+```
