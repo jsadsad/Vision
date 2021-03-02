@@ -34,7 +34,7 @@ D3 stands for Data Driven Documents.
 - `data` can take in an array or function that would return an array.
 
 
-# Simple Graph
+## Simple Graph
 
 ```
 const rectWidth = 200
@@ -64,7 +64,7 @@ const rectWidth = 200
 }
 ```
 
-# Creating DOM elements from Data
+## Creating DOM elements from Data
 
 IMPORTANT: `.data` => `.enter` => `.append`
 
@@ -79,6 +79,8 @@ When we set `translate()` on an SVG element, we're moving around its coordinate 
 ## Group
 
 The <g> stands for `group`. It helps us to group all the children elements together so that we can manipulate its attributes all together. <g> elements don't render anything.
+
+What the selection is. Represents our update selection.
 
 ```
 // create group elements
@@ -118,14 +120,14 @@ The <g> stands for `group`. It helps us to group all the children elements toget
 }
 ```
 
-# D3 Scales
+## D3 Scales
 
 We use D3 scales to translate our raw data into visual channels that we use to render to the DOM.
 
 Most common data types include: quantitative(rating out of 10), temporal(release dates), spatial(city, country), nominal(genres), ordinal(parent guidance ratings, t-shirt sizes)
 
 
-# Rotate vs Translate
+## Rotate vs Translate
 
 The ordering matters. 
 
@@ -134,3 +136,87 @@ Good rule of thumb is to `translate` first, and then `rotate` after.
 ```
 <rect x=0 y=0 transform='rotate(0)translate(0,0)' />
 ```
+
+## Key Function
+
+We tell D3 what to access in the bound data to control which `datum` is assigned to which elements in a selection.
+
+## Updating the DOM
+
+The enter-exit pattern is extremely powerful when combined with transitions.
+
+The old way:
+```
+updateBarsOld = (svg, data) => {
+  const rectWidth = 50
+  
+  const rect = d3.select(svg).selectAll('rect')
+  .data(data, d => d) //data bound
+  
+  //exit
+  rect.exit().remove() //important to remove everythuing first.
+  
+  //enter with attributes that do not depend on data.
+  const enter = rect.enter().append('rect')
+  .attr('width', rectWidth)
+  .attr('fill', 'pink')
+  .attr('stroke','tomato')
+  
+  //enter + update
+  enter.merge(rect)
+  .attr('x', (d, i) => i * rectWidth) //merge with attributes that depend on data.
+  .attr('y', d => 100 - d)
+  .attr('height', d => d)
+  
+}
+```
+
+The new way: 
+```
+d3.select(svg).selectAll('rect')
+  .data(newData, d => d)
+  .join('rect') // takes care of enter & exit in one
+  // returns the enter+update selection,
+  // so we can set all our attributes on it:
+  .attr('x', (d, i) => i * rectWidth)
+  .attr('width', rectWidth)
+  ...
+
+If we want access to specific selections to operate on them:
+
+d3.select(svg).selectAll('rect')
+  .data(newData, d => d)
+  .join(
+    enter => {
+      // return so it can be joined with update selection
+      return enter.append('rect')
+        // set attributes etc. on only enter selection
+    },
+    update => update,
+    exit => {
+      // do something with exit selection
+    }
+  )
+  // .join() returns enter+update selection
+  // so can also chain attributes here
+```
+
+```
+updateBarsNew = (svg, data) => {
+  const rectWidth = 50
+
+  d3.select(svg).selectAll('rect')
+  .data(data, d => d)
+  .join('rect')
+  .attr('x', (d, i) => i * rectWidth)
+  .attr('y', d => 100 - d)
+  .attr('height', d => d)
+  .attr('width', rectWidth)
+  .attr('fill', 'skyblue')
+  .attr('stroke', 'plum')
+  .attr('stroke-width', 2)
+  
+}
+```
+
+## Transitions
