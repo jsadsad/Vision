@@ -1,0 +1,24 @@
+{
+  "name": "Vision",
+  "version": "1.0.0",
+  "description": "Vision is a data visualization project to display relevent data from the Marvel Cinematic Universe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsadsad/aa_js_viz_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsadsad/aa_js_viz_project/issues"
+  },
+  "homepage": "https://github.com/jsadsad/aa_js_viz_project#readme",
+  "dependencies": {
+    "d3": "^6.5.0",
+    "prettier": "^2.2.1"
+  }
+}
