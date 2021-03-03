@@ -12,6 +12,6 @@ Vision is a data visualization project to display relevent data from the Marvel 
 
 [Let's Make A Bar Chart](https://observablehq.com/@d3/lets-make-a-bar-chart)
 
-[Bar-Chart-With-D3]https://www.htmlgoodies.com/beyond/javascript/generate-a-bar-chart-with-d3.js.html
+[Bar-Chart-With-D3](https://www.htmlgoodies.com/beyond/javascript/generate-a-bar-chart-with-d3.js.html)
 
 [Bar-Chart-Tutorials](https://www.youtube.com/watch?v=BDpBAFvdjYo)
