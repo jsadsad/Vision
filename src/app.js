@@ -7,20 +7,16 @@ const svg = container
   .attr('height', svgHeight)
   .attr('width', rectWidth)
   .style('overflow', 'visible')
-  .text('please work')
 
-// create div for button + code
 const buttonCode = container.append('div')
-const button = buttonCode.append('button').text('new data!')
+const button = buttonCode.append('button').text('Marvel')
 const code = buttonCode.append('code')
 
 function updateBars() {
   const t = d3.transition().duration(1000)
 
-  // randomly generate an array of data
   const data = _.times(_.random(3, 8), (i) => _.random(0, 100))
 
-  // ✨ YOUR CODE HERE
   d3.select(svg.node())
     .selectAll('rect')
     .data(data, (d) => d)
@@ -29,12 +25,11 @@ function updateBars() {
         return (
           enter
             .append('rect')
-            // attributes to transition FROM
             .attr('x', (d, i) => i * rectWidth)
             .attr('height', 0)
             .attr('y', svgHeight)
-            .attr('fill', 'pink')
-            .attr('stroke', 'plum')
+            .attr('fill', '#ed1d24')
+            .attr('stroke', 'gainsboro')
             .attr('stroke-width', 2)
         )
       },
@@ -42,19 +37,16 @@ function updateBars() {
       (exit) => {
         exit
           .transition(t)
-          // everything after here is transition TO
           .attr('height', 0)
           .attr('y', svgHeight)
       }
     ) // enter + update selection
     .attr('width', rectWidth)
     .transition(t)
-    // attributes to transition TO
     .attr('x', (d, i) => i * rectWidth)
     .attr('height', (d) => d)
     .attr('y', (d) => svgHeight - d)
 
-  // update div with new data array:
   d3.select(code.node()).text(JSON.stringify(data).replace(/\,/g, ', '))
 }
 

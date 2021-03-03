@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/jsadsad/aa_js_viz_project#readme",
   "dependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "babel-loader": "^8.2.2",
     "d3": "^6.5.0",
     "lodash": "^4.17.21",
     "prettier": "^2.2.1"
