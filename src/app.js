@@ -9,7 +9,10 @@ const svg = container
   .style('overflow', 'visible')
 
 const buttonCode = container.append('div')
-const button = buttonCode.append('button').text('Marvel').attr('class', 'button-code')
+const button = buttonCode
+  .append('button')
+  .text('Marvel')
+  .attr('class', 'button-code')
 const code = buttonCode.append('code')
 
 function updateBars() {
@@ -22,23 +25,18 @@ function updateBars() {
     .data(data, (d) => d)
     .join(
       (enter) => {
-        return (
-          enter
-            .append('rect')
-            .attr('x', (d, i) => i * rectWidth)
-            .attr('height', 0)
-            .attr('y', svgHeight)
-            .attr('fill', '#ed1d24')
-            .attr('stroke', 'gainsboro')
-            .attr('stroke-width', 2)
-        )
+        return enter
+          .append('rect')
+          .attr('x', (d, i) => i * rectWidth)
+          .attr('height', 0)
+          .attr('y', svgHeight)
+          .attr('fill', '#ed1d24')
+          .attr('stroke', 'gainsboro')
+          .attr('stroke-width', 2)
       },
       (update) => update,
       (exit) => {
-        exit
-          .transition(t)
-          .attr('height', 0)
-          .attr('y', svgHeight)
+        exit.transition(t).attr('height', 0).attr('y', svgHeight)
       }
     ) // enter + update selection
     .attr('width', rectWidth)
@@ -50,5 +48,24 @@ function updateBars() {
   d3.select(code.node()).text(JSON.stringify(data).replace(/\,/g, ', '))
 }
 
+d3.json('movies.json').then((movie) => {
+  console.log(movie)
+})
+
 updateBars()
 d3.select(button.node()).on('click', updateBars)
+
+const testCode = container.append('div')
+const tes = testCode.append('div').text('get shit done')
+
+function calculateData(movies) {
+  return _.map(movies, (data, i) => {
+    debugger
+    return {
+      title: data.title,
+      releaseDate: data.released,
+      rating: data.rating,
+      gross: data.gross,
+    }
+  })
+}
