@@ -9,7 +9,7 @@ const svg = container
   .style('overflow', 'visible')
 
 const buttonCode = container.append('div')
-const button = buttonCode.append('button').text('Marvel')
+const button = buttonCode.append('button').text('Marvel').attr('class', 'button-code')
 const code = buttonCode.append('code')
 
 function updateBars() {
