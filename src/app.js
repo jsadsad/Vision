@@ -1,7 +1,41 @@
-const width = window.innerWidth
-const height = window.innerHeight
+// const width = window.innerWidth
+// const height = window.innerHeight
 const rectWidth = 50
 const svgHeight = 100
+
+d3.json('movies.json', (d) => {
+  // return {
+  //   title: d['title'],
+  //   released: d['released'],
+  //   rating: d['rating'],
+  //   gross: d['budget'],
+  // }
+}).then((data) => {
+  movieData = data
+  for (let i = 0; i < 3; i++) {
+    const svg = d3
+      .select(`#mov-${i}`)
+      .append('svg')
+      .attr('height', svgHeight)
+      .attr('width', rectWidth)
+      .style('overflow', 'visible')
+    d3.select(svg.node())
+      .selectAll('rect')
+      .data(Object.values(movieData[i]).slice(3))
+      .enter()
+      .append('rect')
+      .join((enter) => {
+        return enter
+          .append('rect')
+          .attr('x', (d, i) => i * rectWidth)
+          .attr('height', 0)
+          .attr('y', svgHeight)
+          .attr('fill', '#ed1d24')
+          .attr('stroke', 'gainsboro')
+          .attr('stroke-width', 2)
+      })
+  }
+})
 
 // const container = d3.selectAll('#app')
 // const svg = container
@@ -223,3 +257,16 @@ const svgHeight = 100
 // // d3.json('movies.json').then((movie) => {})
 // updateBars2()
 // d3.select(button2.node()).on('click', updateBars2)
+
+// let svg1 = d3
+//   .select('.svgs')
+//   .append('svg')
+//   .attr('height', '150')
+//   .attr('width', '400')
+//   .attr('fill', '#222222')
+// let svg2 = d3
+//   .select('.svgs')
+//   .append('svg')
+//   .attr('height', '150')
+//   .attr('width', '400')
+//   .attr('fill', '#222222')
