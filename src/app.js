@@ -1,7 +1,7 @@
 const rectWidth = 50
 const svgHeight = 100
 
-const container = d3.select('#app')
+const container = d3.selectAll('#app')
 const svg = container
   .append('svg')
   .attr('height', svgHeight)
@@ -56,8 +56,8 @@ updateBars()
 d3.select(button.node()).on('click', updateBars)
 
 const testCode = container.append('div')
-const tes = testCode.append('div').text('get shit done')
-const tes2 = testCode.append('div').text('test')
+// const tes = testCode.append('div').text('get shit done')
+// const tes2 = testCode.append('div').text('test')
 
 function calculateData(movies) {
   return _.map(movies, (data, i) => {
