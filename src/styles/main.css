@@ -17,6 +17,7 @@ body {
 .viz-head {
   margin-left: 20px;
   font-size: 1.7rem;
+  cursor: pointer;
 }
 
 .viz-head:hover {
@@ -122,7 +123,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1300px;
+  width: 100%;
   margin: auto;
 }
 

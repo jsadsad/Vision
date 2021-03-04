@@ -3,160 +3,161 @@
     "title": "Iron Man",
     "released": "May 2, 2008",
     "rating": 94,
-    "gross": "319,034,126",
+    "gross": 319034126,
     "budget": ""
   },
   {
     "title": "The Incredible Hulk",
     "released": "June 13, 2008",
     "rating": 62,
-    "gross": "134,806,913",
+    "gross": 134806913,
     "budget": ""
   },
   {
     "title": "Iron Man 2",
     "released": "May 7, 2010",
     "rating": 72,
-    "gross": "312,433,331",
+    "gross": 312433331,
     "budget": ""
   },
   {
     "title": "Thor",
     "released": "May 6, 2011",
     "rating": 77,
-    "gross": "181,030,624",
+    "gross": 181030624,
     "budget": ""
   },
   {
     "title": "Captain America: The First Avenger",
     "released": "July 22, 2011",
     "rating": 80,
-    "gross": "176,654,505",
+    "gross": 176654505,
     "budget": ""
   },
   {
     "title": "Marvel's The Avengers",
     "released": "May 4, 2012",
     "rating": 91,
-    "gross": "623,357,910",
+    "gross": 623357910,
     "budget": ""
   },
   {
     "title": "Iron Man 3",
     "released": "May 3, 2013",
     "rating": 79,
-    "gross": "409,013,994",
+    "gross": 409013994,
     "budget": ""
   },
   {
     "title": "Thor: The Dark World",
     "released": "November 8, 2013",
     "rating": 66,
-    "gross": "206,362,140",
+    "gross": 206362140,
     "budget": ""
   },
   {
     "title": "Captain America: The Winter Soldier",
     "released": "April 4, 2014",
     "rating": 90,
-    "gross": "259,766,572",
+    "gross": 259766572,
     "budget": ""
   },
   {
     "title": "Guardians of the Galaxy",
     "released": "August 1, 2014",
     "rating": 92,
-    "gross": "333,176,600",
+    "gross": 333176600,
     "budget": ""
   },
   {
     "title": "Avengers: Age of Ultron",
     "released": "May 1, 2015",
     "rating": 75,
-    "gross": "59,005,868",
+    "gross": 59005868,
     "budget": ""
   },
   {
     "title": "Ant-Man",
     "released": "July 17, 2015",
     "rating": 82,
-    "gross": "180,202,163",
+    "gross": 180202163,
     "budget": ""
   },
   {
     "title": "Captain America: Civil War",
     "released": "May 6, 2016",
     "rating": 90,
-    "gross": "408,084,349",
+    "gross": 408084349,
     "budget": ""
   },
   {
     "title": "Doctor Strange",
     "released": "November 4, 2016",
     "rating": 89,
-    "gross": "232,641,920",
+    "gross": 232641920,
     "budget": ""
   },
   {
     "title": "Guardians of the Galaxy Vol. 2",
     "released": "May 5, 2017",
     "rating": 85,
-    "gross": "389,813,101",
+    "gross": 389813101,
     "budget": ""
   },
   {
     "title": "Spider-Man: Homecoming",
     "released": "July 7, 2017",
     "rating": 92,
-    "gross": "334,201,140",
+    "gross": 334201140,
     "budget": ""
   },
   {
     "title": "Thor: Ragnarok",
     "released": "November 3, 2017",
     "rating": 93,
-    "gross": "315,058,289",
+    "gross": 315058289,
     "budget": ""
   },
   {
     "title": "Black Panther",
     "released": "February 16, 2018",
     "rating": 96,
-    "gross": "700,426,566"
+    "gross": 700426566,
+    "budget": ""
   },
   {
     "title": "Avengers: Infinity War",
     "released": "April 27, 2018",
     "rating": 85,
-    "gross": "678,815,482",
+    "gross": 678815482,
     "budget": ""
   },
   {
     "title": "Ant-Man and the Wasp",
     "released": "July 6, 2018",
     "rating": 87,
-    "gross": "216,648,740",
+    "gross": 216648740,
     "budget": ""
   },
   {
     "title": "Captain Marvel",
     "released": "March 8, 2019",
     "rating": 79,
-    "gross": "426,829,839",
+    "gross": 426829839,
     "budget": ""
   },
   {
     "title": "Avengers: Endgame",
     "released": "April 26, 2019",
     "rating": 94,
-    "gross": "858,373,000",
+    "gross": 858373000,
     "budget": ""
   },
   {
     "title": "Spider-Man: Far From Home",
     "released": "July 2, 2019",
     "rating": 90,
-    "gross": "390,532,085",
+    "gross": 390532085,
     "budget": ""
   }
 ]
