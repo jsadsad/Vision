@@ -1,39 +1,63 @@
 // const width = window.innerWidth
 // const height = window.innerHeight
-const rectWidth = 50
-const svgHeight = 100
+const rectWidth = 100
+const svgHeight = 250
+const t = d3.transition().duration(1000)
 
 d3.json('movies.json', (d) => {
-  // return {
-  //   title: d['title'],
-  //   released: d['released'],
-  //   rating: d['rating'],
-  //   gross: d['budget'],
-  // }
+  return {
+    title: d['title'],
+    released: d['released'],
+    rating: d['rating'],
+    budget: sizeScale(d.budget),
+    gross: sizeScale(d.gross),
+  }
 }).then((data) => {
   movieData = data
+
+  const sizeGross = d3
+    .scaleLinear()
+    .domain(d3.extent(movieData, (d) => d.gross))
+    .range([0, 250])
+
+  const sizeBudget = d3
+    .scaleLinear()
+    .domain(d3.extent(movieData, (d) => d.budget))
+    .range([0, 250])
+
   for (let i = 0; i < 3; i++) {
     const svg = d3
       .select(`#mov-${i}`)
+      .append('div')
       .append('svg')
       .attr('height', svgHeight)
       .attr('width', rectWidth)
       .style('overflow', 'visible')
+    d3.scaleLinear().domain([0, 42.195]).range([0, 600])
     d3.select(svg.node())
       .selectAll('rect')
-      .data(Object.values(movieData[i]).slice(3))
+      .data([sizeGross(movieData[i].gross), sizeBudget(movieData[i].budget)])
+      // .data(Object.values(movieData[i]).slice(3))
       .enter()
       .append('rect')
-      .join((enter) => {
-        return enter
-          .append('rect')
-          .attr('x', (d, i) => i * rectWidth)
-          .attr('height', 0)
-          .attr('y', svgHeight)
-          .attr('fill', '#ed1d24')
-          .attr('stroke', 'gainsboro')
-          .attr('stroke-width', 2)
-      })
+      .attr('width', rectWidth)
+      .transition(t)
+      .attr('x', (d, i) => i * rectWidth) // [0] = 100, [1] = 200
+      .attr('y', (d) => svgHeight - d)
+      .attr('height', (d) => d)
+      .attr('fill', '#ed1d24')
+      .attr('stroke', 'gainsboro')
+      .attr('stroke-width', 2)
+    // .join((enter) => {
+    //   return enter
+    //     .append('rect')
+    //     .attr('x', (d, i) => i * rectWidth)
+    //     .attr('height', 0)
+    //     .attr('y', svgHeight)
+    //     .attr('fill', '#ed1d24')
+    //     .attr('stroke', 'gainsboro')
+    //     .attr('stroke-width', 2)
+    // })
   }
 })
 
