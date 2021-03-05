@@ -129,6 +129,7 @@ thumb
 sketch
 
 config/keys_dev.js
+
 frontend/node_modules
 
 # End of https://www.toptal.com/developers/gitignore/api/react,node
