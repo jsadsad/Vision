@@ -33,9 +33,13 @@ const rectWidth = 225
 const svgHeight = 250
 const t = d3.transition().duration(2000)
 
-// let xscale = d3.scaleLinear().domain([0, 100]).range([0, 100])
+let xscale = d3.scalePoint().range([100, 300]).domain(['Worldwide Gross', 'Budget'])
 
 let yscale = d3.scaleLinear().domain([3, 0]).range([0, 250])
+
+let x_axis = d3
+  .axisBottom()
+  .scale(xscale)
 
 let y_axis = d3
   .axisLeft()
@@ -44,8 +48,6 @@ let y_axis = d3
   .tickFormat((d) => {
     if (d !== 0) return d + 'billion'
   })
-
-// let x_axis = d3.axisBottom().scale(xscale)
 
 let svg = d3.select('body').append('svg').attr('width', 500).attr('height', 300)
 
@@ -110,7 +112,11 @@ d3.json('movies.json', (d) => {
       .attr('stroke', 'rgb(221,0,29)')
       .attr('stroke-width', 2)
 
-    d3.select(svg.node()).attr('transform', 'translate(150, 50)').call(y_axis)
+    d3.select(svg.node()).append('g')
+    .attr('transform', 'translate(0, 0)')
+    .call(y_axis).append('g')
+    .attr('transform', 'translate(0, 250)')
+    .call(x_axis)
     appendAnchor(i)
     apppendNavLi(i)
   }
