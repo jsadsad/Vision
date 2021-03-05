@@ -33,9 +33,16 @@ body {
 }
 
 .viz-timeline {
-  color: tomato;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  padding: 20px 0px 10px 15px;
+  margin: 20px 20px;
+  border-radius: 20px;
+  background: coral;
+}
+.viz-timeline li {
+  width: 7%;
+  list-style: none;
 }
 
 /*  Outer Container */
