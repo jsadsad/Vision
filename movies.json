@@ -3,161 +3,161 @@
     "title": "Iron Man",
     "released": "May 2, 2008",
     "rating": 94,
-    "gross": 312433331,
-    "budget": 1000000
+    "gross": 585,
+    "budget": 140
   },
   {
     "title": "The Incredible Hulk",
     "released": "June 13, 2008",
     "rating": 62,
-    "gross": 312433331,
-    "budget": 1000000
+    "gross": 263,
+    "budget": 264
   },
   {
     "title": "Iron Man 2",
     "released": "May 7, 2010",
     "rating": 72,
-    "gross": 312433331,
-    "budget": 1000000
+    "gross": 623,
+    "budget": 200
   },
   {
     "title": "Thor",
     "released": "May 6, 2011",
     "rating": 77,
-    "gross": 181030624,
-    "budget": 1000000
+    "gross": 449,
+    "budget": 150
   },
   {
     "title": "Captain America: The First Avenger",
     "released": "July 22, 2011",
     "rating": 80,
-    "gross": 176654505,
-    "budget": 1000000
+    "gross": 370,
+    "budget": 216
   },
   {
     "title": "Marvel's The Avengers",
     "released": "May 4, 2012",
     "rating": 91,
-    "gross": 623357910,
-    "budget": 1000000
+    "gross": 370,
+    "budget": 216
   },
   {
     "title": "Iron Man 3",
     "released": "May 3, 2013",
     "rating": 79,
-    "gross": 409013994,
-    "budget": 1000000
+    "gross": 1215,
+    "budget": 200
   },
   {
     "title": "Thor: The Dark World",
     "released": "November 8, 2013",
     "rating": 66,
-    "gross": 206362140,
-    "budget": 1000000
+    "gross": 644,
+    "budget": 170
   },
   {
     "title": "Captain America: The Winter Soldier",
     "released": "April 4, 2014",
     "rating": 90,
-    "gross": 259766572,
-    "budget": 1000000
+    "gross": 714,
+    "budget": 177
   },
   {
     "title": "Guardians of the Galaxy",
     "released": "August 1, 2014",
     "rating": 92,
-    "gross": 333176600,
-    "budget": 1000000
+    "gross": 772,
+    "budget": 232
   },
   {
     "title": "Avengers: Age of Ultron",
     "released": "May 1, 2015",
     "rating": 75,
-    "gross": 59005868,
-    "budget": 1000000
+    "gross": 1403,
+    "budget": 495
   },
   {
     "title": "Ant-Man",
     "released": "July 17, 2015",
     "rating": 82,
-    "gross": 180202163,
-    "budget": 1000000
+    "gross": 519,
+    "budget": 169
   },
   {
     "title": "Captain America: Civil War",
     "released": "May 6, 2016",
     "rating": 90,
-    "gross": 408084349,
-    "budget": 1000000
+    "gross": 250,
+    "budget": 1153
   },
   {
     "title": "Doctor Strange",
     "released": "November 4, 2016",
     "rating": 89,
-    "gross": 232641920,
-    "budget": 1000000
+    "gross": 677,
+    "budget": 236
   },
   {
     "title": "Guardians of the Galaxy Vol. 2",
     "released": "May 5, 2017",
     "rating": 85,
-    "gross": 389813101,
-    "budget": 1000000
+    "gross": 863,
+    "budget": 200
   },
   {
     "title": "Spider-Man: Homecoming",
     "released": "July 7, 2017",
     "rating": 92,
-    "gross": 334201140,
-    "budget": 1000000
+    "gross": 880,
+    "budget": 175
   },
   {
     "title": "Thor: Ragnarok",
     "released": "November 3, 2017",
     "rating": 93,
-    "gross": 315058289,
-    "budget": 1000000
+    "gross": 854,
+    "budget": 180
   },
   {
     "title": "Black Panther",
     "released": "February 16, 2018",
     "rating": 96,
-    "gross": 700426566,
-    "budget": 1000000
+    "gross": 1347,
+    "budget": 200
   },
   {
     "title": "Avengers: Infinity War",
     "released": "April 27, 2018",
     "rating": 85,
-    "gross": 678815482,
-    "budget": 1000000
+    "gross": 2048,
+    "budget": 400
   },
   {
     "title": "Ant-Man and the Wasp",
     "released": "July 6, 2018",
     "rating": 87,
-    "gross": 216648740,
-    "budget": 1000000
+    "gross": 622,
+    "budget": 195
   },
   {
     "title": "Captain Marvel",
     "released": "March 8, 2019",
     "rating": 79,
-    "gross": 426829839,
-    "budget": 1000000
+    "gross": 1128,
+    "budget": 175
   },
   {
     "title": "Avengers: Endgame",
     "released": "April 26, 2019",
     "rating": 94,
-    "gross": 858373000,
-    "budget": 1000000
+    "gross": 2798,
+    "budget": 356
   },
   {
     "title": "Spider-Man: Far From Home",
     "released": "July 2, 2019",
     "rating": 90,
-    "gross": 390532085,
-    "budget": 1000000
+    "gross": 1132,
+    "budget": 160
   }
 ]

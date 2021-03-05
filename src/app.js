@@ -25,7 +25,9 @@ d3.json('movies.json', (d) => {
     .domain(d3.extent(movieData, (d) => d.budget))
     .range([0, 250])
 
-  for (let i = 0; i < 3; i++) {
+  const size = d3.scaleLinear().domain([0, 2800]).range([0, 250])
+
+  for (let i = 0; i < 23; i++) {
     const svg = d3
       .select(`#mov-${i}`)
       .append('div')
@@ -36,7 +38,8 @@ d3.json('movies.json', (d) => {
     d3.scaleLinear().domain([0, 42.195]).range([0, 600])
     d3.select(svg.node())
       .selectAll('rect')
-      .data([sizeGross(movieData[i].gross), sizeBudget(movieData[i].budget)])
+      .data([size(movieData[i].gross), size(movieData[i].budget)])
+      // .data([sizeGross(movieDasizeta[i].gross), sizeBudget(movieData[i].budget)])
       // .data(Object.values(movieData[i]).slice(3))
       .enter()
       .append('rect')
@@ -48,16 +51,6 @@ d3.json('movies.json', (d) => {
       .attr('fill', '#ed1d24')
       .attr('stroke', 'gainsboro')
       .attr('stroke-width', 2)
-    // .join((enter) => {
-    //   return enter
-    //     .append('rect')
-    //     .attr('x', (d, i) => i * rectWidth)
-    //     .attr('height', 0)
-    //     .attr('y', svgHeight)
-    //     .attr('fill', '#ed1d24')
-    //     .attr('stroke', 'gainsboro')
-    //     .attr('stroke-width', 2)
-    // })
   }
 })
 
