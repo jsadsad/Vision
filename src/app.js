@@ -1,8 +1,20 @@
-// const width = window.innerWidth
-// const height = window.innerHeight
 const rectWidth = 100
 const svgHeight = 250
 const t = d3.transition().duration(1000)
+
+let xscale = d3.scaleLinear().domain([0, 500]).range([0, 250])
+
+let yscale = d3.scaleLinear().domain([3, 0]).range([0, 250])
+
+let x_axis = d3.axisBottom().scale(xscale)
+
+let y_axis = d3
+  .axisLeft()
+  .scale(yscale)
+  .ticks(3)
+  .tickFormat((d) => {
+    if (d !== 0) return d + 'billion'
+  })
 
 d3.json('movies.json', (d) => {
   return {
@@ -27,7 +39,7 @@ d3.json('movies.json', (d) => {
 
   const size = d3.scaleLinear().domain([0, 2800]).range([0, 250])
 
-  for (let i = 0; i < 23; i++) {
+  for (let i = 0; i < movieData.length; i++) {
     const svg = d3
       .select(`#mov-${i}`)
       .append('div')
@@ -36,6 +48,7 @@ d3.json('movies.json', (d) => {
       .attr('width', rectWidth)
       .style('overflow', 'visible')
     d3.scaleLinear().domain([0, 42.195]).range([0, 600])
+
     d3.select(svg.node())
       .selectAll('rect')
       .data([size(movieData[i].gross), size(movieData[i].budget)])
@@ -43,14 +56,19 @@ d3.json('movies.json', (d) => {
       // .data(Object.values(movieData[i]).slice(3))
       .enter()
       .append('rect')
-      .attr('width', rectWidth)
       .transition(t)
+      .attr('width', rectWidth)
       .attr('x', (d, i) => i * rectWidth) // [0] = 100, [1] = 200
       .attr('y', (d) => svgHeight - d)
       .attr('height', (d) => d)
       .attr('fill', '#ed1d24')
       .attr('stroke', 'gainsboro')
       .attr('stroke-width', 2)
+
+    d3.select(svg.node())
+      // .selectAll('rect')
+      .attr('transform', 'translate(50, 10)')
+      .call(y_axis)
   }
 })
 
