@@ -22,7 +22,6 @@ const apppendNavLi = (idx) => {
 
 const appendAnchor = (idx) => {
   let movieContainer = document.getElementById(`mov-${idx}`)
-
   let aTag = document.createElement('a')
   aTag.setAttribute('id', `mcu-${idx}`)
   aTag.classList.add('mcu')
@@ -49,7 +48,7 @@ let y_axis = d3
     if (d !== 0) return d + 'billion'
   })
 
-let svg = d3.select('body').append('svg').attr('width', 500).attr('height', 300)
+let svg = d3.select('body').append('svg').attr('width', 100).attr('height', 100)
 
 let defs = svg.append('defs')
 
@@ -89,6 +88,7 @@ d3.json('movies.json', (d) => {
   const size = d3.scaleLinear().domain([0, 2800]).range([0, 250])
 
   for (let i = 0; i < movieData.length; i++) {
+
     const svg = d3
       .select(`#mov-${i}`)
       .append('div')
