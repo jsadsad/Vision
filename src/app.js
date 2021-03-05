@@ -6,7 +6,7 @@ window.onscroll = () => {
   scrollFunction()
 }
 
-mybutton = document.getElementById('topBtn')
+scrollTopButton = document.getElementById('topBtn')
 
 const apppendNavLi = (idx) => {
   let navColumn = document.querySelector('.nav-column')
@@ -118,9 +118,9 @@ d3.json('movies.json', (d) => {
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    mybutton.style.display = 'block'
+    scrollTopButton.style.display = 'block'
   } else {
-    mybutton.style.display = 'none'
+    scrollTopButton.style.display = 'none'
   }
 }
 

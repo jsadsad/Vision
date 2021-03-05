@@ -70,8 +70,7 @@ body {
   margin: 8px;
   padding: -4px;
   width: 45px;
-  border-radius: 25%;
-  border: 1.5px solid black;
+  border-radius: 80%;
 }
 
 .mcu-li:after {
@@ -92,7 +91,8 @@ body {
 
 /* Iron Man 1 */
 #mcu-li-0 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/iron_man.png);
+  background-size: 50px;
 }
 
 #mcu-li-0:after {
@@ -105,7 +105,8 @@ body {
 /* Incredible Hulk */
 
 #mcu-li-1 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/hulk.png);
+  background-size: 45px;
 }
 
 #mcu-li-1:after {
@@ -118,7 +119,8 @@ body {
 /* Iron Man 2 */
 
 #mcu-li-2 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/iron_man.png);
+  background-size: 50px;
 }
 
 #mcu-li-2:after {
@@ -131,7 +133,8 @@ body {
 /* Thor 1 */
 
 #mcu-li-3 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thor.jpeg);
+  background-size: 52px;
 }
 
 #mcu-li-3:after {
@@ -144,7 +147,8 @@ body {
 /* Captain America 1 */
 
 #mcu-li-4 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/captain_america.jpeg);
+  background-size: 45px;
 }
 
 #mcu-li-4:after {
@@ -157,7 +161,8 @@ body {
 /* Marvel's The Avengers */
 
 #mcu-li-5 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/loki.jpg);
+  background-size: 50px;
 }
 
 #mcu-li-5:after {
@@ -170,7 +175,8 @@ body {
 /* Iron Man 3 */
 
 #mcu-li-6 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/iron_man.png);
+  background-size: 45px;
 }
 
 #mcu-li-6:after {
@@ -183,7 +189,8 @@ body {
 /* Thor 2 */
 
 #mcu-li-7 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thor.jpeg);
+  background-size: 52px;
 }
 
 #mcu-li-7:after {
@@ -196,7 +203,8 @@ body {
 /* Captain America 2 */
 
 #mcu-li-8 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/captain_america.jpeg);
+  background-size: 45px;
 }
 
 #mcu-li-8:after {
@@ -209,7 +217,8 @@ body {
 /* Guardians of the Galaxy 1 */
 
 #mcu-li-9 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/baby_groot.png);
+  background-size: 48px;
 }
 
 #mcu-li-9:after {
@@ -222,20 +231,22 @@ body {
 /* Avenger's Age of Ultron */
 
 #mcu-li-10 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/wanda.png);
+  background-size: 48px;
 }
 
 #mcu-li-10:after {
   content: 'Avengers: Age of Ultron (2015)';
   bottom: 65px;
   left: 86px;
-  background-color: mintcream;
+  background-color: red;
 }
 
 /* Ant Man 1 */
 
 #mcu-li-11 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/ant-man.png);
+  background-size: 48px;
 }
 
 #mcu-li-11:after {
@@ -248,7 +259,8 @@ body {
 /* Civil War */
 
 #mcu-li-12 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/captain_america.jpeg);
+  background-size: 45px;
 }
 
 #mcu-li-12:after {
@@ -261,7 +273,8 @@ body {
 /* Doctor Strange */
 
 #mcu-li-13 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/doc_strange.jpeg);
+  background-size: 45px;
 }
 
 #mcu-li-13:after {
@@ -274,7 +287,8 @@ body {
 /* Guardian' of the Galaxy 2 */
 
 #mcu-li-14 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/rocket.png);
+  background-size: 48px;
 }
 
 #mcu-li-14:after {
@@ -287,7 +301,8 @@ body {
 /* Spider-Man 1 */
 
 #mcu-li-15 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/spider-man.png);
+  background-size: 48px;
 }
 
 #mcu-li-15:after {
@@ -300,7 +315,8 @@ body {
 /* Thor 3 */
 
 #mcu-li-16 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thor.jpeg);
+  background-size: 52px;
 }
 
 #mcu-li-16:after {
@@ -313,7 +329,8 @@ body {
 /* Black Panther */
 
 #mcu-li-17 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/black_panther.png);
+  background-size: 48px;
 }
 
 #mcu-li-17:after {
@@ -326,7 +343,8 @@ body {
 /* Avengers: Infinity War */
 
 #mcu-li-18 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thanos.png);
+  background-size: 48px;
 }
 
 #mcu-li-18:after {
@@ -339,7 +357,8 @@ body {
 /* Ant-Man and the Wasp */
 
 #mcu-li-19 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/wasp.png);
+  background-size: 48px;
 }
 
 #mcu-li-19:after {
@@ -352,7 +371,8 @@ body {
 /* Captain Marvel */
 
 #mcu-li-20 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/captain_marvel.jpg);
+  background-size: 50px;
 }
 
 #mcu-li-20:after {
@@ -365,7 +385,8 @@ body {
 /* Avengers Endgame */
 
 #mcu-li-21 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thanos.png);
+  background-size: 48px;
 }
 
 #mcu-li-21:after {
@@ -378,7 +399,8 @@ body {
 /* Spider-Man: Far from Home */
 
 #mcu-li-22 {
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/spider-man.png);
+  background-size: 48px;
 }
 
 #mcu-li-22:after {
@@ -525,5 +547,5 @@ body {
 }
 
 #topBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: #555;
 }
