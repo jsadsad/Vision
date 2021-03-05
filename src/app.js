@@ -1,3 +1,34 @@
+window.onbeforeunload = () => {
+  window.scrollTo(0, 0)
+}
+
+window.onscroll = () => {
+  scrollFunction()
+}
+
+mybutton = document.getElementById('topBtn')
+
+const apppendNavLi = (idx) => {
+  let navColumn = document.querySelector('.nav-column')
+  let ankLink = document.createElement('a')
+  ankLink.setAttribute('href', `#mcu-${idx}`)
+  navColumn.appendChild(ankLink)
+
+  let navLi = document.createElement('li')
+  navLi.setAttribute('id', `mcu-li-${idx}`)
+  navLi.classList.add('mcu-li')
+  ankLink.appendChild(navLi)
+}
+
+const appendAnchor = (idx) => {
+  let movieContainer = document.getElementById(`mov-${idx}`)
+
+  let aTag = document.createElement('a')
+  aTag.setAttribute('id', `mcu-${idx}`)
+  aTag.classList.add('mcu')
+  movieContainer.appendChild(aTag)
+}
+
 const rectWidth = 225
 const svgHeight = 250
 const t = d3.transition().duration(2000)
@@ -80,5 +111,20 @@ d3.json('movies.json', (d) => {
       .attr('stroke-width', 2)
 
     d3.select(svg.node()).attr('transform', 'translate(150, 50)').call(y_axis)
+    appendAnchor(i)
+    apppendNavLi(i)
   }
 })
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    mybutton.style.display = 'block'
+  } else {
+    mybutton.style.display = 'none'
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+}

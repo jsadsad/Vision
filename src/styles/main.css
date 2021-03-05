@@ -45,6 +45,350 @@ body {
   list-style: none;
 }
 
+.viz-timeline a {
+  text-decoration: none;
+  color: black;
+}
+
+.viz-timeline a:hover {
+  text-decoration: none;
+  color: green;
+}
+
+.nav-column {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  margin: 12px 10px;
+}
+
+/* Nav Li */
+
+.mcu-li {
+  height: 2.5rem;
+  margin: 8px;
+  padding: -4px;
+  width: 45px;
+  border-radius: 25%;
+  border: 1.5px solid black;
+}
+
+.mcu-li:after {
+  left: 30px;
+  position: absolute;
+  opacity: 0%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.mcu-li:hover:after {
+  opacity: 100%;
+}
+
+/* Li Icons */
+
+/* Iron Man 1 */
+#mcu-li-0 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-0:after {
+  content: 'Iron Man (2008)';
+  bottom: 65px;
+  left: 86px;
+  background-color: red;
+}
+
+/* Incredible Hulk */
+
+#mcu-li-1 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-1:after {
+  content: 'The Incredible Hulk (2008)';
+  bottom: 65px;
+  left: 86px;
+  background-color: green;
+}
+
+/* Iron Man 2 */
+
+#mcu-li-2 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-2:after {
+  content: 'Iron Man 2 (2010)';
+  bottom: 65px;
+  left: 86px;
+  background-color: red;
+}
+
+/* Thor 1 */
+
+#mcu-li-3 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-3:after {
+  content: 'Thor (2011)';
+  bottom: 65px;
+  left: 86px;
+  background-color: yellow;
+}
+
+/* Captain America 1 */
+
+#mcu-li-4 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-4:after {
+  content: 'Captain America: The First Avenger (2011)';
+  bottom: 65px;
+  left: 86px;
+  background-color: skyblue;
+}
+
+/* Marvel's The Avengers */
+
+#mcu-li-5 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-5:after {
+  content: "Marvel's The Avengers (2012)";
+  bottom: 65px;
+  left: 86px;
+  background-color: burlywood;
+}
+
+/* Iron Man 3 */
+
+#mcu-li-6 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-6:after {
+  content: 'Iron Man 3 (2013)';
+  bottom: 65px;
+  left: 86px;
+  background-color: red;
+}
+
+/* Thor 2 */
+
+#mcu-li-7 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-7:after {
+  content: 'Thor: The Dark World (2013)';
+  bottom: 65px;
+  left: 86px;
+  background-color: yellow;
+}
+
+/* Captain America 2 */
+
+#mcu-li-8 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-8:after {
+  content: 'Captain America: The Winter Soldier (2014)';
+  bottom: 65px;
+  left: 86px;
+  background-color: red;
+}
+
+/* Guardians of the Galaxy 1 */
+
+#mcu-li-9 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-9:after {
+  content: 'Guardians of the Galaxy (2014)';
+  bottom: 65px;
+  left: 86px;
+  background-color: palevioletred;
+}
+
+/* Avenger's Age of Ultron */
+
+#mcu-li-10 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-10:after {
+  content: 'Avengers: Age of Ultron (2015)';
+  bottom: 65px;
+  left: 86px;
+  background-color: mintcream;
+}
+
+/* Ant Man 1 */
+
+#mcu-li-11 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-11:after {
+  content: 'Ant-Man (2015)';
+  bottom: 65px;
+  left: 86px;
+  background-color: tomato;
+}
+
+/* Civil War */
+
+#mcu-li-12 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-12:after {
+  content: 'Captain America: Civil War (2016)';
+  bottom: 65px;
+  left: 86px;
+  background-color: peru;
+}
+
+/* Doctor Strange */
+
+#mcu-li-13 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-13:after {
+  content: 'Doctor Strange (2016)';
+  bottom: 65px;
+  left: 86px;
+  background-color: gold;
+}
+
+/* Guardian' of the Galaxy 2 */
+
+#mcu-li-14 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-14:after {
+  content: 'Guardians of the Galaxy Vol. 2 (2017)';
+  bottom: 65px;
+  left: 86px;
+  background-color: magenta;
+}
+
+/* Spider-Man 1 */
+
+#mcu-li-15 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-15:after {
+  content: 'Spider-Man: Homecoming (2017)';
+  bottom: 65px;
+  left: 86px;
+  background-color: rgb(149, 41, 41);
+}
+
+/* Thor 3 */
+
+#mcu-li-16 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-16:after {
+  content: 'Thor: Ragnarok (2017)';
+  bottom: 65px;
+  left: 86px;
+  background-color: rgb(177, 162, 48);
+}
+
+/* Black Panther */
+
+#mcu-li-17 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-17:after {
+  content: 'Black Panther (2018)';
+  bottom: 65px;
+  left: 86px;
+  background-color: purple;
+}
+
+/* Avengers: Infinity War */
+
+#mcu-li-18 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-18:after {
+  content: 'Avengers: Infinity War (2018)';
+  bottom: 65px;
+  left: 86px;
+  background-color: rgb(111, 53, 100);
+}
+
+/* Ant-Man and the Wasp */
+
+#mcu-li-19 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-19:after {
+  content: 'Ant-Man and the Wasp (2018)';
+  bottom: 65px;
+  left: 86px;
+  background-color: rgb(111, 53, 100);
+}
+
+/* Captain Marvel */
+
+#mcu-li-20 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-20:after {
+  content: 'Captain Marvel (2019)';
+  bottom: 65px;
+  left: 86px;
+  background-color: rgb(111, 53, 100);
+}
+
+/* Avengers Endgame */
+
+#mcu-li-21 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-21:after {
+  content: 'Avengers: Endgame (2019)';
+  bottom: 65px;
+  left: 86px;
+  background-color: rgb(111, 53, 100);
+}
+
+/* Spider-Man: Far from Home */
+
+#mcu-li-22 {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/691/73/218/comics-hulk-wallpaper-preview.jpg');
+}
+
+#mcu-li-22:after {
+  content: 'Spider-Man: Far from Home (2019)';
+  bottom: 65px;
+  width: auto;
+  left: 86px;
+  background-color: rgb(111, 53, 100);
+}
+
 /*  Outer Container */
 
 .viz-container {
@@ -160,4 +504,26 @@ body {
 
 .viz-footer-right {
   margin: 1px;
+}
+
+/* Back To Top */
+
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 10.5rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+}
+
+#topBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }

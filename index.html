@@ -22,22 +22,24 @@
     <nav id="viz-nav">
       <h1 class="viz-head">Vision</h1>
     </nav>
-    <div class="viz-timeline">
-      <li>2008</li>
-      <li>2009</li>
-      <li>2010</li>
-      <li>2011</li>
-      <li>2012</li>
-      <li>2013</li>
-      <li>2014</li>
-      <li>2015</li>
-      <li>2016</li>
-      <li>2017</li>
-      <li>2018</li>
-      <li>2019</li>
-      <li>2020</li>
-      <li>2021</li>
-    </div>
+    <!-- <div class="viz-timeline">
+      <li><a href="">2008</a></li>
+      <li><a href="">2009</a></li>
+      <li><a href="">2010</a></li>
+      <li><a href="">2011</a></li>
+      <li><a href="">2011</a></li>
+      <li><a href="">2012</a></li>
+      <li><a href="">2013</a></li>
+      <li><a href="">2014</a></li>
+      <li><a href="">2015</a></li>
+      <li><a href="">2016</a></li>
+      <li><a href="">2017</a></li>
+      <li><a href="">2018</a></li>
+      <li><a href="">2019</a></li>
+      <li><a href="">2020</a></li>
+      <li><a href="">2021</a></li>
+    </div> -->
+    <ul class="nav-column"></ul>
     <body>
       <div class="viz-container">
         <div class="viz-outer">
@@ -63,7 +65,6 @@
                   to fight evil.
                 </div>
               </div>
-              <div id="app"></div>
             </div>
             <div class="movie-info-container" id="mov-1">
               <div class="movie-info-desc">
@@ -204,7 +205,8 @@
                 <div class="movie-title">
                   <a
                     href="https://www.imdb.com/title/tt1981115/"
-                    target="_blank "
+                    target="_blank"
+                    class="movie-title-text"
                     >Thor: The Dark World (2013)</a
                   >
                 </div>
@@ -599,6 +601,9 @@
           </div>
         </div>
       </div>
+      <button onclick="topFunction()" id="topBtn" title="Go to top">
+        Back To Top
+      </button>
       <script src="./src/app.js"></script>
     </body>
 
