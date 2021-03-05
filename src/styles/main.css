@@ -32,6 +32,12 @@ body {
   color: green;
 }
 
+.viz-timeline {
+  color: tomato;
+  display: flex;
+  align-items: center;
+}
+
 /*  Outer Container */
 
 .viz-container {
