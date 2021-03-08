@@ -28,17 +28,18 @@ const appendAnchor = (idx) => {
   movieContainer.appendChild(aTag)
 }
 
-const rectWidth = 225
+const rectWidth = 90
 const svgHeight = 250
 const t = d3.transition().duration(2000)
 
-let xscale = d3.scalePoint().range([100, 300]).domain(['Worldwide Gross', 'Budget'])
+let xscale = d3
+  .scalePoint()
+  .range([50, 200])
+  .domain(['Worldwide Gross', 'Budget', 'Opening Weekend'])
 
 let yscale = d3.scaleLinear().domain([3, 0]).range([0, 250])
 
-let x_axis = d3
-  .axisBottom()
-  .scale(xscale)
+let x_axis = d3.axisBottom().scale(xscale)
 
 let y_axis = d3
   .axisLeft()
@@ -88,7 +89,6 @@ d3.json('movies.json', (d) => {
   const size = d3.scaleLinear().domain([0, 2800]).range([0, 250])
 
   for (let i = 0; i < movieData.length; i++) {
-
     const svg = d3
       .select(`#mov-${i}`)
       .append('div')
@@ -96,6 +96,7 @@ d3.json('movies.json', (d) => {
       .attr('height', svgHeight)
       .attr('width', rectWidth)
       .style('overflow', 'visible')
+
     d3.scaleLinear().domain([0, 42.195]).range([0, 600])
 
     d3.select(svg.node())
@@ -112,11 +113,13 @@ d3.json('movies.json', (d) => {
       .attr('stroke', 'rgb(221,0,29)')
       .attr('stroke-width', 2)
 
-    d3.select(svg.node()).append('g')
-    .attr('transform', 'translate(0, 0)')
-    .call(y_axis).append('g')
-    .attr('transform', 'translate(0, 250)')
-    .call(x_axis)
+    d3.select(svg.node())
+      .append('g')
+      .attr('transform', 'translate(0, 0)')
+      .call(y_axis)
+      .append('g')
+      .attr('transform', 'translate(0, 250)')
+      .call(x_axis)
     appendAnchor(i)
     apppendNavLi(i)
   }

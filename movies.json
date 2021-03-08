@@ -4,160 +4,183 @@
     "released": "May 2, 2008",
     "rating": 94,
     "gross": 585,
-    "budget": 140
+    "budget": 140,
+    "us-opening": 99
   },
   {
     "title": "The Incredible Hulk",
     "released": "June 13, 2008",
     "rating": 62,
     "gross": 263,
-    "budget": 264
+    "budget": 264,
+    "us-opening": 55
   },
   {
     "title": "Iron Man 2",
     "released": "May 7, 2010",
     "rating": 72,
     "gross": 623,
-    "budget": 200
+    "budget": 200,
+    "us-opening": 128
   },
   {
     "title": "Thor",
     "released": "May 6, 2011",
     "rating": 77,
     "gross": 449,
-    "budget": 150
+    "budget": 150,
+    "us-opening": 66
   },
   {
     "title": "Captain America: The First Avenger",
     "released": "July 22, 2011",
     "rating": 80,
     "gross": 370,
-    "budget": 216
+    "budget": 216,
+    "us-opening": 65
   },
   {
     "title": "Marvel's The Avengers",
     "released": "May 4, 2012",
     "rating": 91,
     "gross": 370,
-    "budget": 216
+    "budget": 216,
+    "us-opening": 207
   },
   {
     "title": "Iron Man 3",
     "released": "May 3, 2013",
     "rating": 79,
     "gross": 1215,
-    "budget": 200
+    "budget": 200,
+    "us-opening": 174
   },
   {
     "title": "Thor: The Dark World",
     "released": "November 8, 2013",
     "rating": 66,
     "gross": 644,
-    "budget": 170
+    "budget": 170,
+    "us-opening": 86
   },
   {
     "title": "Captain America: The Winter Soldier",
     "released": "April 4, 2014",
     "rating": 90,
     "gross": 714,
-    "budget": 177
+    "budget": 177,
+    "us-opening": 95
   },
   {
     "title": "Guardians of the Galaxy",
     "released": "August 1, 2014",
     "rating": 92,
     "gross": 772,
-    "budget": 232
+    "budget": 232,
+    "us-opening": 94
   },
   {
     "title": "Avengers: Age of Ultron",
     "released": "May 1, 2015",
     "rating": 75,
     "gross": 1403,
-    "budget": 495
+    "budget": 495,
+    "us-opening": 191
   },
   {
     "title": "Ant-Man",
     "released": "July 17, 2015",
     "rating": 82,
     "gross": 519,
-    "budget": 169
+    "budget": 169,
+    "us-opening": 57
   },
   {
     "title": "Captain America: Civil War",
     "released": "May 6, 2016",
     "rating": 90,
     "gross": 1153,
-    "budget": 250
+    "budget": 250,
+    "us-opening": 179
   },
   {
     "title": "Doctor Strange",
     "released": "November 4, 2016",
     "rating": 89,
     "gross": 677,
-    "budget": 236
+    "budget": 236,
+    "us-opening": 85
   },
   {
     "title": "Guardians of the Galaxy Vol. 2",
     "released": "May 5, 2017",
     "rating": 85,
     "gross": 863,
-    "budget": 200
+    "budget": 200,
+    "us-opening": 147
   },
   {
     "title": "Spider-Man: Homecoming",
     "released": "July 7, 2017",
     "rating": 92,
     "gross": 880,
-    "budget": 175
+    "budget": 175,
+    "us-opening": 117
   },
   {
     "title": "Thor: Ragnarok",
     "released": "November 3, 2017",
     "rating": 93,
     "gross": 854,
-    "budget": 180
+    "budget": 180,
+    "us-opening": 123
   },
   {
     "title": "Black Panther",
     "released": "February 16, 2018",
     "rating": 96,
     "gross": 1347,
-    "budget": 200
+    "budget": 200,
+    "us-opening": 202
   },
   {
     "title": "Avengers: Infinity War",
     "released": "April 27, 2018",
     "rating": 85,
     "gross": 2048,
-    "budget": 400
+    "budget": 400,
+    "us-opening": 258
   },
   {
     "title": "Ant-Man and the Wasp",
     "released": "July 6, 2018",
     "rating": 87,
     "gross": 622,
-    "budget": 195
+    "budget": 195,
+    "us-opening": 76
   },
   {
     "title": "Captain Marvel",
     "released": "March 8, 2019",
     "rating": 79,
     "gross": 1128,
-    "budget": 175
+    "budget": 175,
+    "us-opening": 153
   },
   {
     "title": "Avengers: Endgame",
     "released": "April 26, 2019",
     "rating": 94,
     "gross": 2798,
-    "budget": 356
+    "budget": 356,
+    "us-opening": 357
   },
   {
     "title": "Spider-Man: Far From Home",
     "released": "July 2, 2019",
     "rating": 90,
     "gross": 1132,
-    "budget": 160
+    "budget": 160,
+    "us-opening": 93
   }
 ]
