@@ -153,3 +153,16 @@ d3.json('movies.json', (d) => {
     apppendNavLi(i)
   }
 })
+
+function theSnap() {
+  let snapGif = document.getElementById('snap')
+  for (let index = 0; index < movieData.length / 2; index++) {
+    let movieContainer = document.getElementById(`mov-${index}`)
+    let movieLi = document.getElementById(`mcu-li-${index}`)
+
+    movieContainer.remove()
+    movieLi.remove()
+  }
+  topFunction()
+  snapGif.remove()
+}
