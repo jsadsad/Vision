@@ -8,6 +8,19 @@ window.onscroll = () => {
 
 scrollTopButton = document.getElementById('topBtn')
 
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    scrollTopButton.style.display = 'block'
+  } else {
+    scrollTopButton.style.display = 'none'
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+}
+
 const apppendNavLi = (idx) => {
   let navColumn = document.querySelector('.nav-column')
   let ankLink = document.createElement('a')
@@ -107,16 +120,27 @@ d3.json('movies.json', (d) => {
         size(movieData[i].opening),
         size(movieData[i].gross),
       ])
-      .enter()
-      .append('rect')
+      .join(
+        (enter) => {
+          const rect = enter
+            .append('rect')
+            .attr('width', 80)
+            .attr('stroke-width', 2)
+            .attr('stroke', 'rgb(221,0,29)')
+            .attr('fill', 'url(#svgGradient)')
+            .attr('x', (d, i) => 50)
+            .attr('y', (d) => 175)
+            .attr('height', (d) => d)
+          return rect
+        },
+        (update) => update,
+        (exit) => {
+          exit.transition(t).attr('y', svgHeight).attr('height', 0).remove()
+        }
+      )
       .transition(t)
-      .attr('width', 85)
       .attr('x', (d, i) => i * rectWidth)
-      .attr('y', (d) => svgHeight - d)
-      .attr('height', (d) => d)
-      .attr('fill', 'url(#svgGradient)')
-      .attr('stroke', 'rgb(221,0,29)')
-      .attr('stroke-width', 2)
+      .attr('y', (d) => 250 - d)
 
     d3.select(svg.node())
       .append('g')
@@ -129,16 +153,3 @@ d3.json('movies.json', (d) => {
     apppendNavLi(i)
   }
 })
-
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    scrollTopButton.style.display = 'block'
-  } else {
-    scrollTopButton.style.display = 'none'
-  }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0
-  document.documentElement.scrollTop = 0
-}
