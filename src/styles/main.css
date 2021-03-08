@@ -36,29 +36,6 @@ body {
   color: rgb(2, 154, 2);
 }
 
-/* .viz-timeline {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0px 10px 15px;
-  margin: 20px 20px;
-  border-radius: 20px;
-  background: coral;
-} */
-/* .viz-timeline li {
-  width: 7%;
-  list-style: none;
-} */
-
-/* .viz-timeline a {
-  text-decoration: none;
-  color: black;
-}
-
-.viz-timeline a:hover {
-  text-decoration: none;
-  color: green;
-} */
-
 .nav-column {
   padding: 10px;
   display: flex;
