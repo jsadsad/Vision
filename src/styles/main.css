@@ -446,8 +446,9 @@ body {
   max-height: 200px;
   padding: 2px 4px;
   margin: 6px 12px;
-  width: 50%;
+  width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .movie-info-desc {
@@ -510,6 +511,491 @@ body {
 }
 
 .snap-tooltip:hover .snap-text {
+  visibility: visible;
+}
+
+/* Poster Tooltips */
+
+.iron1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.iron1-tooltip .iron1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.iron1-tooltip:hover .iron1-text {
+  visibility: visible;
+}
+
+.hulk1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.hulk1-tooltip .hulk1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(90, 198, 128);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.hulk1-tooltip:hover .hulk1-text {
+  visibility: visible;
+}
+
+.iron2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.iron2-tooltip .iron2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.iron2-tooltip:hover .iron2-text {
+  visibility: visible;
+}
+
+.thor1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.thor1-tooltip .thor1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.thor1-tooltip:hover .thor1-text {
+  visibility: visible;
+}
+
+.cap1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cap1-tooltip .cap1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.cap1-tooltip:hover .cap1-text {
+  visibility: visible;
+}
+
+.avg1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.avg1-tooltip .avg1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.avg1-tooltip:hover .avg1-text {
+  visibility: visible;
+}
+
+.iron3-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.iron3-tooltip .iron3-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.iron3-tooltip:hover .iron3-text {
+  visibility: visible;
+}
+
+.thor2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.thor2-tooltip .thor2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.thor2-tooltip:hover .thor2-text {
+  visibility: visible;
+}
+
+.cap2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cap2-tooltip .cap2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.cap2-tooltip:hover .cap2-text {
+  visibility: visible;
+}
+
+.gotg1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.gotg1-tooltip .gotg1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.gotg1-tooltip:hover .gotg1-text {
+  visibility: visible;
+}
+
+.avg2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.avg2-tooltip .avg2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.avg2-tooltip:hover .avg2-text {
+  visibility: visible;
+}
+
+.ant1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.ant1-tooltip .ant1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.ant1-tooltip:hover .ant1-text {
+  visibility: visible;
+}
+
+.cw-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cw-tooltip .cw-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.cw-tooltip:hover .cw-text {
+  visibility: visible;
+}
+
+.strange1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.strange1-tooltip .strange1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.strange1-tooltip:hover .strange1-text {
+  visibility: visible;
+}
+
+.gotg2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.gotg2-tooltip .gotg2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.gotg2-tooltip:hover .gotg2-text {
+  visibility: visible;
+}
+
+.spider1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.spider1-tooltip .spider1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.spider1-tooltip:hover .spider1-text {
+  visibility: visible;
+}
+
+.thor3-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.thor3-tooltip .thor3-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.thor3-tooltip:hover .thor3-text {
+  visibility: visible;
+}
+
+.bp1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.bp1-tooltip .bp1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.bp1-tooltip:hover .bp1-text {
+  visibility: visible;
+}
+
+.iw-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.iw-tooltip .iw-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.iw-tooltip:hover .iw-text {
+  visibility: visible;
+}
+
+.ant2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.ant2-tooltip .ant2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.ant2-tooltip:hover .ant2-text {
+  visibility: visible;
+}
+
+.cm-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cm-tooltip .cm-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.cm-tooltip:hover .cm-text {
+  visibility: visible;
+}
+
+.endgame-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.endgame-tooltip .endgame-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.endgame-tooltip:hover .endgame-text {
+  visibility: visible;
+}
+
+.spider2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.spider2-tooltip .spider2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.spider2-tooltip:hover .spider2-text {
   visibility: visible;
 }
 
