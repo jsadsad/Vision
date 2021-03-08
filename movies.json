@@ -5,7 +5,7 @@
     "rating": 94,
     "gross": 585,
     "budget": 140,
-    "us-opening": 99
+    "opening": 99
   },
   {
     "title": "The Incredible Hulk",
@@ -13,7 +13,7 @@
     "rating": 62,
     "gross": 263,
     "budget": 264,
-    "us-opening": 55
+    "opening": 55
   },
   {
     "title": "Iron Man 2",
@@ -21,7 +21,7 @@
     "rating": 72,
     "gross": 623,
     "budget": 200,
-    "us-opening": 128
+    "opening": 128
   },
   {
     "title": "Thor",
@@ -29,7 +29,7 @@
     "rating": 77,
     "gross": 449,
     "budget": 150,
-    "us-opening": 66
+    "opening": 66
   },
   {
     "title": "Captain America: The First Avenger",
@@ -37,7 +37,7 @@
     "rating": 80,
     "gross": 370,
     "budget": 216,
-    "us-opening": 65
+    "opening": 65
   },
   {
     "title": "Marvel's The Avengers",
@@ -45,7 +45,7 @@
     "rating": 91,
     "gross": 370,
     "budget": 216,
-    "us-opening": 207
+    "opening": 207
   },
   {
     "title": "Iron Man 3",
@@ -53,7 +53,7 @@
     "rating": 79,
     "gross": 1215,
     "budget": 200,
-    "us-opening": 174
+    "opening": 174
   },
   {
     "title": "Thor: The Dark World",
@@ -61,7 +61,7 @@
     "rating": 66,
     "gross": 644,
     "budget": 170,
-    "us-opening": 86
+    "opening": 86
   },
   {
     "title": "Captain America: The Winter Soldier",
@@ -69,7 +69,7 @@
     "rating": 90,
     "gross": 714,
     "budget": 177,
-    "us-opening": 95
+    "opening": 95
   },
   {
     "title": "Guardians of the Galaxy",
@@ -77,7 +77,7 @@
     "rating": 92,
     "gross": 772,
     "budget": 232,
-    "us-opening": 94
+    "opening": 94
   },
   {
     "title": "Avengers: Age of Ultron",
@@ -85,7 +85,7 @@
     "rating": 75,
     "gross": 1403,
     "budget": 495,
-    "us-opening": 191
+    "opening": 191
   },
   {
     "title": "Ant-Man",
@@ -93,7 +93,7 @@
     "rating": 82,
     "gross": 519,
     "budget": 169,
-    "us-opening": 57
+    "opening": 57
   },
   {
     "title": "Captain America: Civil War",
@@ -101,7 +101,7 @@
     "rating": 90,
     "gross": 1153,
     "budget": 250,
-    "us-opening": 179
+    "opening": 179
   },
   {
     "title": "Doctor Strange",
@@ -109,7 +109,7 @@
     "rating": 89,
     "gross": 677,
     "budget": 236,
-    "us-opening": 85
+    "opening": 85
   },
   {
     "title": "Guardians of the Galaxy Vol. 2",
@@ -117,7 +117,7 @@
     "rating": 85,
     "gross": 863,
     "budget": 200,
-    "us-opening": 147
+    "opening": 147
   },
   {
     "title": "Spider-Man: Homecoming",
@@ -125,7 +125,7 @@
     "rating": 92,
     "gross": 880,
     "budget": 175,
-    "us-opening": 117
+    "opening": 117
   },
   {
     "title": "Thor: Ragnarok",
@@ -133,7 +133,7 @@
     "rating": 93,
     "gross": 854,
     "budget": 180,
-    "us-opening": 123
+    "opening": 123
   },
   {
     "title": "Black Panther",
@@ -141,7 +141,7 @@
     "rating": 96,
     "gross": 1347,
     "budget": 200,
-    "us-opening": 202
+    "opening": 202
   },
   {
     "title": "Avengers: Infinity War",
@@ -149,7 +149,7 @@
     "rating": 85,
     "gross": 2048,
     "budget": 400,
-    "us-opening": 258
+    "opening": 258
   },
   {
     "title": "Ant-Man and the Wasp",
@@ -157,7 +157,7 @@
     "rating": 87,
     "gross": 622,
     "budget": 195,
-    "us-opening": 76
+    "opening": 76
   },
   {
     "title": "Captain Marvel",
@@ -165,7 +165,7 @@
     "rating": 79,
     "gross": 1128,
     "budget": 175,
-    "us-opening": 153
+    "opening": 153
   },
   {
     "title": "Avengers: Endgame",
@@ -173,7 +173,7 @@
     "rating": 94,
     "gross": 2798,
     "budget": 356,
-    "us-opening": 357
+    "opening": 357
   },
   {
     "title": "Spider-Man: Far From Home",
@@ -181,6 +181,6 @@
     "rating": 90,
     "gross": 1132,
     "budget": 160,
-    "us-opening": 93
+    "opening": 93
   }
 ]

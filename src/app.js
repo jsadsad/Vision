@@ -34,8 +34,8 @@ const t = d3.transition().duration(2000)
 
 let xscale = d3
   .scalePoint()
-  .range([50, 200])
-  .domain(['Worldwide Gross', 'Budget', 'Opening Weekend'])
+  .range([50, 215])
+  .domain([' Budget ', ' Weekend 1', ' Worldwide Gross '])
 
 let yscale = d3.scaleLinear().domain([3, 0]).range([0, 250])
 
@@ -82,6 +82,7 @@ d3.json('movies.json', (d) => {
     rating: d['rating'],
     budget: sizeScale(d.budget),
     gross: sizeScale(d.gross),
+    opening: sizeScale(d.opening),
   }
 }).then((data) => {
   movieData = data
@@ -101,11 +102,15 @@ d3.json('movies.json', (d) => {
 
     d3.select(svg.node())
       .selectAll('rect')
-      .data([size(movieData[i].gross), size(movieData[i].budget)])
+      .data([
+        size(movieData[i].budget),
+        size(movieData[i].opening),
+        size(movieData[i].gross),
+      ])
       .enter()
       .append('rect')
       .transition(t)
-      .attr('width', rectWidth)
+      .attr('width', 85)
       .attr('x', (d, i) => i * rectWidth)
       .attr('y', (d) => svgHeight - d)
       .attr('height', (d) => d)
