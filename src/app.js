@@ -106,6 +106,7 @@ d3.json('movies.json', (d) => {
     const svg = d3
       .select(`#mov-${i}`)
       .append('div')
+      .attr('class', 'graph-container1')
       .append('svg')
       .attr('height', svgHeight)
       .attr('width', rectWidth)
@@ -128,19 +129,41 @@ d3.json('movies.json', (d) => {
             .attr('stroke-width', 2)
             .attr('stroke', 'rgb(221,0,29)')
             .attr('fill', 'url(#svgGradient)')
-            .attr('x', (d, i) => 50)
-            .attr('y', (d) => 175)
+            .attr('x', 50)
+            .attr('y', 175)
             .attr('height', (d) => d)
           return rect
         },
         (update) => update,
         (exit) => {
-          exit.transition(t).attr('y', svgHeight).attr('height', 0).remove()
+          exit
+            .transition(t)
+            .attr('y', svgHeight)
+            .attr('height', 0)
+            .remove()
+            .attr('width', 80)
+            .attr('stroke-width', 2)
+            .attr('stroke', 'rgb(221,0,29)')
+            .attr('fill', 'url(#svgGradient)')
+            .attr('x', 50)
+            .attr('y', 175)
+            .attr('height', (d) => d)
         }
       )
       .transition(t)
       .attr('x', (d, i) => i * rectWidth)
       .attr('y', (d) => 250 - d)
+
+    d3.select(svg.node())
+      .append('rating-rect')
+      .data([movieData[i].rating])
+      .attr('transform', 'translate(0, 0)')
+      .attr('width', 80)
+      .attr('stroke-width', 2)
+      .attr('stroke', 'rgb(221,0,29)')
+      .attr('fill', 'url(#svgGradient)')
+      .attr('x', 50)
+      .attr('y', 175)
 
     d3.select(svg.node())
       .append('g')

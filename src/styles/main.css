@@ -72,7 +72,13 @@ body {
   opacity: 100%;
 }
 
-/* Li Icons */
+/* SVG Container */
+
+.graph-container1 {
+  margin: 40px;
+  padding: 30px;
+  width: 100%;
+}
 
 /* Iron Man 1 */
 
