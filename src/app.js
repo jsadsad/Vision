@@ -8,6 +8,19 @@ window.onscroll = () => {
 
 scrollTopButton = document.getElementById('topBtn')
 
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    scrollTopButton.style.display = 'block'
+  } else {
+    scrollTopButton.style.display = 'none'
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
+}
+
 const apppendNavLi = (idx) => {
   let navColumn = document.querySelector('.nav-column')
   let ankLink = document.createElement('a')
@@ -28,17 +41,18 @@ const appendAnchor = (idx) => {
   movieContainer.appendChild(aTag)
 }
 
-const rectWidth = 225
+const rectWidth = 90
 const svgHeight = 250
 const t = d3.transition().duration(2000)
 
-let xscale = d3.scalePoint().range([100, 300]).domain(['Worldwide Gross', 'Budget'])
+let xscale = d3
+  .scalePoint()
+  .range([50, 215])
+  .domain([' Budget ', ' Weekend 1', ' Worldwide Gross '])
 
 let yscale = d3.scaleLinear().domain([3, 0]).range([0, 250])
 
-let x_axis = d3
-  .axisBottom()
-  .scale(xscale)
+let x_axis = d3.axisBottom().scale(xscale)
 
 let y_axis = d3
   .axisLeft()
@@ -81,6 +95,7 @@ d3.json('movies.json', (d) => {
     rating: d['rating'],
     budget: sizeScale(d.budget),
     gross: sizeScale(d.gross),
+    opening: sizeScale(d.opening),
   }
 }).then((data) => {
   movieData = data
@@ -88,49 +103,88 @@ d3.json('movies.json', (d) => {
   const size = d3.scaleLinear().domain([0, 2800]).range([0, 250])
 
   for (let i = 0; i < movieData.length; i++) {
-
     const svg = d3
       .select(`#mov-${i}`)
       .append('div')
+      .attr('class', 'graph-container1')
       .append('svg')
       .attr('height', svgHeight)
       .attr('width', rectWidth)
       .style('overflow', 'visible')
+
     d3.scaleLinear().domain([0, 42.195]).range([0, 600])
 
     d3.select(svg.node())
       .selectAll('rect')
-      .data([size(movieData[i].gross), size(movieData[i].budget)])
-      .enter()
-      .append('rect')
+      .data([
+        size(movieData[i].budget),
+        size(movieData[i].opening),
+        size(movieData[i].gross),
+      ])
+      .join(
+        (enter) => {
+          const rect = enter
+            .append('rect')
+            .attr('width', 80)
+            .attr('stroke-width', 2)
+            .attr('stroke', 'rgb(221,0,29)')
+            .attr('fill', 'url(#svgGradient)')
+            .attr('x', 50)
+            .attr('y', 175)
+            .attr('height', (d) => d)
+          return rect
+        },
+        (update) => update,
+        (exit) => {
+          exit
+            .transition(t)
+            .attr('y', svgHeight)
+            .attr('height', 0)
+            .remove()
+            .attr('width', 80)
+            .attr('stroke-width', 2)
+            .attr('stroke', 'rgb(221,0,29)')
+            .attr('fill', 'url(#svgGradient)')
+            .attr('x', 50)
+            .attr('y', 175)
+            .attr('height', (d) => d)
+        }
+      )
       .transition(t)
-      .attr('width', rectWidth)
       .attr('x', (d, i) => i * rectWidth)
-      .attr('y', (d) => svgHeight - d)
-      .attr('height', (d) => d)
-      .attr('fill', 'url(#svgGradient)')
-      .attr('stroke', 'rgb(221,0,29)')
-      .attr('stroke-width', 2)
+      .attr('y', (d) => 250 - d)
 
-    d3.select(svg.node()).append('g')
-    .attr('transform', 'translate(0, 0)')
-    .call(y_axis).append('g')
-    .attr('transform', 'translate(0, 250)')
-    .call(x_axis)
+    // d3.select(svg.node())
+    //   .append('rating-rect')
+    //   .data([movieData[i].rating])
+    //   .attr('transform', 'translate(0, 0)')
+    //   .attr('width', 80)
+    //   .attr('stroke-width', 2)
+    //   .attr('stroke', 'rgb(221,0,29)')
+    //   .attr('fill', 'url(#svgGradient)')
+    //   .attr('x', 50)
+    //   .attr('y', 175)
+
+    d3.select(svg.node())
+      .append('g')
+      .attr('transform', 'translate(0, 0)')
+      .call(y_axis)
+      .append('g')
+      .attr('transform', 'translate(0, 250)')
+      .call(x_axis)
     appendAnchor(i)
     apppendNavLi(i)
   }
 })
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    scrollTopButton.style.display = 'block'
-  } else {
-    scrollTopButton.style.display = 'none'
+function theSnap() {
+  let snapGif = document.getElementById('snap')
+  for (let index = 0; index < movieData.length / 2; index++) {
+    let movie = document.getElementById(`mov-${index}`)
+    let movieLi = document.getElementById(`mcu-li-${index}`)
+    movie.remove()
+    movieLi.remove()
   }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0
-  document.documentElement.scrollTop = 0
+  topFunction()
+  snapGif.remove()
 }

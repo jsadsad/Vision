@@ -36,29 +36,6 @@ body {
   color: rgb(2, 154, 2);
 }
 
-/* .viz-timeline {
-  display: flex;
-  justify-content: center;
-  padding: 20px 0px 10px 15px;
-  margin: 20px 20px;
-  border-radius: 20px;
-  background: coral;
-} */
-/* .viz-timeline li {
-  width: 7%;
-  list-style: none;
-} */
-
-/* .viz-timeline a {
-  text-decoration: none;
-  color: black;
-}
-
-.viz-timeline a:hover {
-  text-decoration: none;
-  color: green;
-} */
-
 .nav-column {
   padding: 10px;
   display: flex;
@@ -69,7 +46,7 @@ body {
 
 /* Nav Li */
 
-.nav-column li:hover  {
+.nav-column li:hover {
   border: solid 5px #000;
 }
 
@@ -95,7 +72,13 @@ body {
   opacity: 100%;
 }
 
-/* Li Icons */
+/* SVG Container */
+
+.graph-container1 {
+  margin: 40px;
+  padding: 30px;
+  width: 50%;
+}
 
 /* Iron Man 1 */
 
@@ -107,7 +90,7 @@ body {
 #mcu-li-0:after {
   content: 'Iron Man (2008)';
   bottom: 65px;
-  left: 86px;
+  left: 80px;
   background-color: rgb(205, 19, 19);
 }
 
@@ -121,7 +104,7 @@ body {
 #mcu-li-1:after {
   content: 'The Incredible Hulk (2008)';
   bottom: 65px;
-  left: 86px;
+  left: 150px;
   background-color: rgb(46, 142, 46);
 }
 
@@ -135,7 +118,7 @@ body {
 #mcu-li-2:after {
   content: 'Iron Man 2 (2010)';
   bottom: 65px;
-  left: 86px;
+  left: 220px;
   background-color: rgb(205, 19, 19);
 }
 
@@ -151,7 +134,7 @@ body {
   display: flex;
   align-items: center;
   bottom: 65px;
-  left: 86px;
+  left: 300px;
   background-color: rgb(222, 225, 161);
 }
 
@@ -165,7 +148,7 @@ body {
 #mcu-li-4:after {
   content: 'Captain America: The First Avenger (2011)';
   bottom: 65px;
-  left: 86px;
+  left: 320px;
   background-color: rgb(34, 86, 198);
 }
 
@@ -179,7 +162,7 @@ body {
 #mcu-li-5:after {
   content: "Marvel's The Avengers (2012)";
   bottom: 65px;
-  left: 86px;
+  left: 390px;
   background-color: rgb(96, 91, 198);
 }
 
@@ -193,7 +176,7 @@ body {
 #mcu-li-6:after {
   content: 'Iron Man 3 (2013)';
   bottom: 65px;
-  left: 86px;
+  left: 450px;
   background-color: rgb(205, 19, 19);
 }
 
@@ -207,7 +190,7 @@ body {
 #mcu-li-7:after {
   content: 'Thor: The Dark World (2013)';
   bottom: 65px;
-  left: 86px;
+  left: 500px;
   background-color: rgb(222, 225, 161);
 }
 
@@ -221,7 +204,7 @@ body {
 #mcu-li-8:after {
   content: 'Captain America: The Winter Soldier (2014)';
   bottom: 65px;
-  left: 86px;
+  left: 520px;
   background-color: rgb(34, 86, 198);
 }
 
@@ -235,7 +218,7 @@ body {
 #mcu-li-9:after {
   content: 'Guardians of the Galaxy (2014)';
   bottom: 65px;
-  left: 86px;
+  left: 590px;
   background-color: rgb(176, 41, 86);
 }
 
@@ -249,7 +232,7 @@ body {
 #mcu-li-10:after {
   content: 'Avengers: Age of Ultron (2015)';
   bottom: 65px;
-  left: 86px;
+  left: 650px;
   background-color: rgb(96, 91, 198);
 }
 
@@ -263,7 +246,7 @@ body {
 #mcu-li-11:after {
   content: 'Ant-Man (2015)';
   bottom: 65px;
-  left: 86px;
+  left: 780px;
   background-color: rgb(203, 141, 65);
 }
 
@@ -277,7 +260,7 @@ body {
 #mcu-li-12:after {
   content: 'Captain America: Civil War (2016)';
   bottom: 65px;
-  left: 86px;
+  left: 800px;
   background-color: rgb(40, 201, 230);
 }
 
@@ -291,7 +274,7 @@ body {
 #mcu-li-13:after {
   content: 'Doctor Strange (2016)';
   bottom: 65px;
-  left: 86px;
+  left: 850px;
   background-color: rgb(196, 173, 40);
 }
 
@@ -305,7 +288,7 @@ body {
 #mcu-li-14:after {
   content: 'Guardians of the Galaxy Vol. 2 (2017)';
   bottom: 65px;
-  left: 86px;
+  left: 900px;
   background-color: rgb(176, 41, 86);
 }
 
@@ -319,7 +302,7 @@ body {
 #mcu-li-15:after {
   content: 'Spider-Man: Homecoming (2017)';
   bottom: 65px;
-  left: 86px;
+  left: 930px;
   background-color: rgb(149, 41, 41);
 }
 
@@ -333,7 +316,7 @@ body {
 #mcu-li-16:after {
   content: 'Thor: Ragnarok (2017)';
   bottom: 65px;
-  left: 86px;
+  left: 1000px;
   background-color: rgb(177, 162, 48);
 }
 
@@ -347,7 +330,7 @@ body {
 #mcu-li-17:after {
   content: 'Black Panther (2018)';
   bottom: 65px;
-  left: 86px;
+  left: 1050px;
   background-color: purple;
 }
 
@@ -361,7 +344,7 @@ body {
 #mcu-li-18:after {
   content: 'Avengers: Infinity War (2018)';
   bottom: 65px;
-  left: 86px;
+  left: 1100px;
   background-color: rgb(111, 53, 100);
 }
 
@@ -375,7 +358,7 @@ body {
 #mcu-li-19:after {
   content: 'Ant-Man and the Wasp (2018)';
   bottom: 65px;
-  left: 86px;
+  left: 1150px;
   background-color: rgb(203, 141, 65);
 }
 
@@ -389,7 +372,7 @@ body {
 #mcu-li-20:after {
   content: 'Captain Marvel (2019)';
   bottom: 65px;
-  left: 86px;
+  left: 1250px;
   background-color: rgb(179, 41, 41);
 }
 
@@ -403,7 +386,7 @@ body {
 #mcu-li-21:after {
   content: 'Avengers: Endgame (2019)';
   bottom: 65px;
-  left: 86px;
+  left: 1250px;
   background-color: rgb(111, 53, 100);
 }
 
@@ -418,7 +401,7 @@ body {
   content: 'Spider-Man: Far from Home (2019)';
   bottom: 65px;
   width: auto;
-  left: 86px;
+  left: 1250px;
   background-color: rgb(149, 41, 41);
 }
 
@@ -463,8 +446,9 @@ body {
   max-height: 200px;
   padding: 2px 4px;
   margin: 6px 12px;
-  width: 50%;
+  width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .movie-info-desc {
@@ -499,6 +483,520 @@ body {
   margin: 6px 8px;
   min-width: 90%;
   font-style: oblique;
+}
+
+/* Snap */
+
+.snap-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.snap {
+  cursor: pointer;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.snap-tooltip .snap-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(108, 90, 198);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.snap-tooltip:hover .snap-text {
+  visibility: visible;
+}
+
+/* Poster Tooltips */
+
+.iron1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.iron1-tooltip .iron1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.iron1-tooltip:hover .iron1-text {
+  visibility: visible;
+}
+
+.hulk1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.hulk1-tooltip .hulk1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(90, 198, 128);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.hulk1-tooltip:hover .hulk1-text {
+  visibility: visible;
+}
+
+.iron2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.iron2-tooltip .iron2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.iron2-tooltip:hover .iron2-text {
+  visibility: visible;
+}
+
+.thor1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.thor1-tooltip .thor1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.thor1-tooltip:hover .thor1-text {
+  visibility: visible;
+}
+
+.cap1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cap1-tooltip .cap1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.cap1-tooltip:hover .cap1-text {
+  visibility: visible;
+}
+
+.avg1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.avg1-tooltip .avg1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.avg1-tooltip:hover .avg1-text {
+  visibility: visible;
+}
+
+.iron3-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.iron3-tooltip .iron3-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.iron3-tooltip:hover .iron3-text {
+  visibility: visible;
+}
+
+.thor2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.thor2-tooltip .thor2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.thor2-tooltip:hover .thor2-text {
+  visibility: visible;
+}
+
+.cap2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cap2-tooltip .cap2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.cap2-tooltip:hover .cap2-text {
+  visibility: visible;
+}
+
+.gotg1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.gotg1-tooltip .gotg1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.gotg1-tooltip:hover .gotg1-text {
+  visibility: visible;
+}
+
+.avg2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.avg2-tooltip .avg2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.avg2-tooltip:hover .avg2-text {
+  visibility: visible;
+}
+
+.ant1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.ant1-tooltip .ant1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.ant1-tooltip:hover .ant1-text {
+  visibility: visible;
+}
+
+.cw-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cw-tooltip .cw-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.cw-tooltip:hover .cw-text {
+  visibility: visible;
+}
+
+.strange1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.strange1-tooltip .strange1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.strange1-tooltip:hover .strange1-text {
+  visibility: visible;
+}
+
+.gotg2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.gotg2-tooltip .gotg2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.gotg2-tooltip:hover .gotg2-text {
+  visibility: visible;
+}
+
+.spider1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.spider1-tooltip .spider1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.spider1-tooltip:hover .spider1-text {
+  visibility: visible;
+}
+
+.thor3-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.thor3-tooltip .thor3-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.thor3-tooltip:hover .thor3-text {
+  visibility: visible;
+}
+
+.bp1-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.bp1-tooltip .bp1-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.bp1-tooltip:hover .bp1-text {
+  visibility: visible;
+}
+
+.iw-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.iw-tooltip .iw-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.iw-tooltip:hover .iw-text {
+  visibility: visible;
+}
+
+.ant2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.ant2-tooltip .ant2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.ant2-tooltip:hover .ant2-text {
+  visibility: visible;
+}
+
+.cm-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.cm-tooltip .cm-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.cm-tooltip:hover .cm-text {
+  visibility: visible;
+}
+
+.endgame-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.endgame-tooltip .endgame-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.endgame-tooltip:hover .endgame-text {
+  visibility: visible;
+}
+
+.spider2-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.spider2-tooltip .spider2-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(198, 43, 43);
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.spider2-tooltip:hover .spider2-text {
+  visibility: visible;
 }
 
 /* Footer */
