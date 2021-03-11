@@ -1,6 +1,8 @@
 # Vision
 
-Vision is a single-page data visualization project to display relevent data from the Marvel Cinematic Universe dating back to the first Iron Man film in 2008.
+Vision is a single-page data visualization project.
+
+The application displays relevant data from the Marvel Cinematic Universe dating back to the first Iron Man film in 2008.
 
 ## Background
 
