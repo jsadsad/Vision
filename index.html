@@ -3,11 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <title>Vision</title>
     <meta property="og:image" content="./src/images/marvel_logo.gif" />
     <meta name="title" property="og:title" content="Vision" />
-
     <meta
       property="og:description"
       content="Vision is a single-page data visualization project to display relevent data from the Marvel Cinematic Universe dating back to the first Iron Man film in 2008."
@@ -15,6 +12,11 @@
     <meta property="og:url" content="https://jsadsad.github.io/Vision/" />
     <meta name="author" content="Joshua Clarence Sadsad" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"></script>
+
+    <title>Vision</title>
     <link rel="icon" href="./src/images/vision-favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -26,16 +28,15 @@
     <link rel="stylesheet" href="./src/styles/main.css" />
     <link rel="stylesheet" href="./src/styles/modal.css" />
 
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"></script>
     <nav id="viz-nav">
       <h1 class="viz-head">
         Vision: A Marvel Cinematic Universe Visual Project
       </h1>
     </nav>
     <ul class="nav-column"></ul>
-    <body>
-      <!-- <div class="viz-container">
+  </head>
+  <body>
+    <!-- <div class="viz-container">
         <div class="viz-outer">
           <div class="viz-content">
             <div class="movie-info-container" id="mov-0">
@@ -706,7 +707,7 @@
           </div>
         </div>
       </div> -->
-      <!-- <button onclick="topFunction()" id="topBtn" title="Go to top">
+    <!-- <button onclick="topFunction()" id="topBtn" title="Go to top">
         Back To Top
       </button>
       <div class="snap-tooltip" id="snap">
@@ -719,22 +720,20 @@
         <span class="snap-text">I am inevitable</span>
       </div>
       <script src="./src/app.js"></script> -->
-      <div class="modal is-open">
-        <div class="modal-text">
-          <h1 class="modal-title">Vision</h1>
-          <h2>Created by Joshua Clarence Sadsad</h2>
-          <p>
-            Welcome! This is a Data Visualization Project that displays Marvel
-            Cinematic Movie information!
-          </p>
-          <button class="modal-close">Assemble!</button>
-        </div>
-
-        <div class="modal-screen"></div>
-        <script src="./src/modal.js"></script>
+    <div class="modal is-open">
+      <div class="modal-text">
+        <h1 class="modal-title">Vision</h1>
+        <h2>Created by Joshua Clarence Sadsad</h2>
+        <p>
+          Welcome! This is a Data Visualization Project that displays Marvel
+          Cinematic Movie information!
+        </p>
+        <button class="modal-close">Assemble!</button>
       </div>
-    </body>
 
+      <div class="modal-screen"></div>
+      <script src="./src/modal.js"></script>
+    </div>
     <!-- <footer>
       <div class="viz-footer-container">
         <div class="viz-footer-left">
@@ -765,5 +764,5 @@
         </div>
       </div>
     </footer> -->
-  </head>
+  </body>
 </html>
