@@ -3,299 +3,299 @@
     "Title": "Iron Man",
     "Release Date": "May 2, 2008",
     "Rating": 94,
+    "Budget": 140,
+    "Opening Weekend": 99,
     "World Gross": 585,
     "US & Canada Gross": 319,
     "United Kingdom Gross": 34,
     "China Gross": 15,
     "Japan Gross": 9,
-    "Germany Gross": 9,
-    "Production Budget": 140,
-    "Opening Weekend": 99
+    "Germany Gross": 9
   },
   {
     "Title": "The Incredible Hulk",
     "Release Date": "June 13, 2008",
     "Rating": 62,
-    "World Gross": 263,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 264,
-    "Opening Weekend": 55
+    "Budget": 150,
+    "Opening Weekend": 55,
+    "World Gross": 264,
+    "US & Canada Gross": 135,
+    "United Kingdom Gross": 15,
+    "China Gross": 9,
+    "Japan Gross": 2,
+    "Germany Gross": 2
   },
   {
     "Title": "Iron Man 2",
     "Release Date": "May 7, 2010",
     "Rating": 72,
+    "Budget": 200,
+    "Opening Weekend": 128,
     "World Gross": 623,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 200,
-    "Opening Weekend": 128
+    "US & Canada Gross": 312,
+    "United Kingdom Gross": 30,
+    "China Gross": 8,
+    "Japan Gross": 13,
+    "Germany Gross": 9
   },
   {
     "Title": "Thor",
     "Release Date": "May 6, 2011",
     "Rating": 77,
+    "Budget": 150,
+    "Opening Weekend": 66,
     "World Gross": 449,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 150,
-    "Opening Weekend": 66
+    "US & Canada Gross": 181,
+    "United Kingdom Gross": 23,
+    "China Gross": 0,
+    "Japan Gross": 6,
+    "Germany Gross": 16
   },
   {
     "Title": "Captain America: The First Avenger",
     "Release Date": "July 22, 2011",
     "Rating": 80,
+    "Budget": 140,
+    "Opening Weekend": 65,
     "World Gross": 370,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 216,
-    "Opening Weekend": 65
+    "US & Canada Gross": 177,
+    "United Kingdom Gross": 15,
+    "China Gross": 3,
+    "Japan Gross": 3,
+    "Germany Gross": 5
   },
   {
     "Title": "Marvel's The Avengers",
     "Release Date": "May 4, 2012",
     "Rating": 91,
-    "World Gross": 370,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 216,
-    "Opening Weekend": 207
+    "Budget": 220,
+    "Opening Weekend": 207,
+    "World Gross": 1519,
+    "US & Canada Gross": 623,
+    "United Kingdom Gross": 81,
+    "China Gross": 86,
+    "Japan Gross": 33,
+    "Germany Gross": 31
   },
   {
     "Title": "Iron Man 3",
     "Release Date": "May 3, 2013",
     "Rating": 79,
+    "Budget": 200,
+    "Opening Weekend": 174,
     "World Gross": 1215,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 200,
-    "Opening Weekend": 174
+    "US & Canada Gross": 409,
+    "United Kingdom Gross": 57,
+    "China Gross": 121,
+    "Japan Gross": 25,
+    "Germany Gross": 24
   },
   {
     "Title": "Thor: The Dark World",
     "Release Date": "November 8, 2013",
     "Rating": 66,
+    "Budget": 170,
+    "Opening Weekend": 86,
     "World Gross": 644,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 170,
-    "Opening Weekend": 86
+    "US & Canada Gross": 206,
+    "United Kingdom Gross": 26,
+    "China Gross": 55,
+    "Japan Gross": 6,
+    "Germany Gross": 20
   },
   {
     "Title": "Captain America: The Winter Soldier",
     "Release Date": "April 4, 2014",
     "Rating": 90,
+    "Budget": 170,
+    "Opening Weekend": 95,
     "World Gross": 714,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 177,
-    "Opening Weekend": 95
+    "US & Canada Gross": 260,
+    "United Kingdom Gross": 32,
+    "China Gross": 116,
+    "Japan Gross": 7,
+    "Germany Gross": 12
   },
   {
     "Title": "Guardians of the Galaxy",
     "Release Date": "August 1, 2014",
     "Rating": 92,
-    "World Gross": 772,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 232,
-    "Opening Weekend": 94
+    "Budget": 170,
+    "Opening Weekend": 94,
+    "World Gross": 773,
+    "US & Canada Gross": 334,
+    "United Kingdom Gross": 37,
+    "China Gross": 86,
+    "Japan Gross": 10,
+    "Germany Gross": 25
   },
   {
     "Title": "Avengers: Age of Ultron",
     "Release Date": "May 1, 2015",
     "Rating": 75,
+    "Budget": 250,
+    "Opening Weekend": 191,
     "World Gross": 1403,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 495,
-    "Opening Weekend": 191
+    "US & Canada Gross": 459,
+    "United Kingdom Gross": 63,
+    "China Gross": 240,
+    "Japan Gross": 26,
+    "Germany Gross": 32
   },
   {
     "Title": "Ant-Man",
     "Release Date": "July 17, 2015",
     "Rating": 82,
+    "Budget": 130,
+    "Opening Weekend": 57,
     "World Gross": 519,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 169,
-    "Opening Weekend": 57
+    "US & Canada Gross": 180,
+    "United Kingdom Gross": 25,
+    "China Gross": 105,
+    "Japan Gross": 10,
+    "Germany Gross": 6
   },
   {
     "Title": "Captain America: Civil War",
     "Release Date": "May 6, 2016",
     "Rating": 90,
+    "Budget": 250,
+    "Opening Weekend": 179,
     "World Gross": 1153,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 250,
-    "Opening Weekend": 179
+    "US & Canada Gross": 408,
+    "United Kingdom Gross": 54,
+    "China Gross": 181,
+    "Japan Gross": 24,
+    "Germany Gross": 21
   },
   {
     "Title": "Doctor Strange",
     "Release Date": "November 4, 2016",
     "Rating": 89,
+    "Budget": 165,
+    "Opening Weekend": 85,
     "World Gross": 677,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 236,
-    "Opening Weekend": 85
+    "US & Canada Gross": 233,
+    "United Kingdom Gross": 29,
+    "China Gross": 109,
+    "Japan Gross": 16,
+    "Germany Gross": 17
   },
   {
     "Title": "Guardians of the Galaxy Vol. 2",
     "Release Date": "May 5, 2017",
     "Rating": 85,
+    "Budget": 200,
+    "Opening Weekend": 147,
     "World Gross": 863,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 200,
-    "Opening Weekend": 147
+    "US & Canada Gross": 390,
+    "United Kingdom Gross": 53,
+    "China Gross": 101,
+    "Japan Gross": 10,
+    "Germany Gross": 30
   },
   {
     "Title": "Spider-Man: Homecoming",
     "Release Date": "July 7, 2017",
     "Rating": 92,
+    "Budget": 175,
+    "Opening Weekend": 117,
     "World Gross": 880,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 175,
-    "Opening Weekend": 117
+    "US & Canada Gross": 334,
+    "United Kingdom Gross": 40,
+    "China Gross": 116,
+    "Japan Gross": 25,
+    "Germany Gross": 12
   },
   {
     "Title": "Thor: Ragnarok",
     "Release Date": "November 3, 2017",
     "Rating": 93,
+    "Budget": 180,
+    "Opening Weekend": 123,
     "World Gross": 854,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 180,
-    "Opening Weekend": 123
+    "US & Canada Gross": 315,
+    "United Kingdom Gross": 41,
+    "China Gross": 112,
+    "Japan Gross": 10,
+    "Germany Gross": 19
   },
   {
     "Title": "Black Panther",
     "Release Date": "February 16, 2018",
     "Rating": 96,
+    "Budget": 200,
+    "Opening Weekend": 202,
     "World Gross": 1347,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 200,
-    "Opening Weekend": 202
+    "US & Canada Gross": 700,
+    "United Kingdom Gross": 71,
+    "China Gross": 105,
+    "Japan Gross": 15,
+    "Germany Gross": 23
   },
   {
     "Title": "Avengers: Infinity War",
     "Release Date": "April 27, 2018",
     "Rating": 85,
+    "Budget": 321,
+    "Opening Weekend": 258,
     "World Gross": 2048,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 400,
-    "Opening Weekend": 258
+    "US & Canada Gross": 679,
+    "United Kingdom Gross": 97,
+    "China Gross": 360,
+    "Japan Gross": 34,
+    "Germany Gross": 45
   },
   {
     "Title": "Ant-Man and the Wasp",
     "Release Date": "July 6, 2018",
     "Rating": 87,
+    "Budget": 162,
+    "Opening Weekend": 76,
     "World Gross": 622,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 195,
-    "Opening Weekend": 76
+    "US & Canada Gross": 217,
+    "United Kingdom Gross": 23,
+    "China Gross": 121,
+    "Japan Gross": 12,
+    "Germany Gross": 9
   },
   {
     "Title": "Captain Marvel",
     "Release Date": "March 8, 2019",
     "Rating": 79,
+    "Budget": 160,
+    "Opening Weekend": 153,
     "World Gross": 1128,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 175,
-    "Opening Weekend": 153
+    "US & Canada Gross": 427,
+    "United Kingdom Gross": 52,
+    "China Gross": 154,
+    "Japan Gross": 18,
+    "Germany Gross": 24
   },
   {
     "Title": "Avengers: Endgame",
     "Release Date": "April 26, 2019",
     "Rating": 94,
+    "Budget": 356,
+    "Opening Weekend": 357,
     "World Gross": 2798,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 356,
-    "Opening Weekend": 357
+    "US & Canada Gross": 858,
+    "United Kingdom Gross": 115,
+    "China Gross": 629,
+    "Japan Gross": 55,
+    "Germany Gross": 63
   },
   {
     "Title": "Spider-Man: Far From Home",
     "Release Date": "July 2, 2019",
     "Rating": 90,
+    "Budget": 160,
+    "Opening Weekend": 93,
     "World Gross": 1132,
-    "US & Canada Gross": ,
-    "United Kingdom Gross": ,
-    "China Gross":
-    "Japan Gross":
-    "Germany Gross" 0
-    "Production Budget": 160,
-    "Opening Weekend": 93
+    "US & Canada Gross": 391,
+    "United Kingdom Gross": 47,
+    "China Gross": 199,
+    "Japan Gross": 28,
+    "Germany Gross": 19
   }
 ]
