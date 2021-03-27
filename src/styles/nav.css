@@ -1,7 +1,8 @@
 .viz-nav {
   position: sticky;
-  top: 15px;
+  top: 10px;
   align-self: flex-start;
+  scroll-behavior: smooth;
 }
 
 .viz-nav-li {
@@ -15,7 +16,7 @@
 }
 
 .viz-nav-li:after {
-  left: 29px;
+  left: 21px;
   position: absolute;
   opacity: 0%;
   width: auto;
@@ -47,9 +48,8 @@
 
 .viz-nav-li-3,
 #viz-nav-li-3:hover {
-  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thor.jpeg);
-  background-size: 3.2rem;
-  background-repeat: no-repeat;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/og_thor.png);
+  background-repeat: round;
 }
 
 .viz-nav-li-4,
@@ -188,17 +188,16 @@
 #viz-nav-li-0:after {
   content: 'Iron Man';
   top: -2px;
-  background-size: 3rem;
-  background-repeat: no-repeat;
+  left: 35px;
+  background-color: rgb(208, 30, 30);
 }
 
 .viz-nav-li-0:after {
-  content: 'Iron Man (2008)';
-  top: -2px;
+  content: 'Iron Man';
+  top: 5px;
   background-color: rgb(205, 19, 19);
-  left: 45px;
   position: absolute;
-  opacity: 100%;
+  opacity: 70%;
   width: auto;
   border-radius: 4px;
   padding: 3px;
@@ -207,16 +206,16 @@
 
 #viz-nav-li-1:after {
   content: 'The Incredible Hulk';
-  top: 26px;
+  top: 40px;
+  left: 35px;
   background-color: rgb(46, 142, 46);
 }
 
 .viz-nav-li-1:after {
-  content: 'The Incredible Hulk';
   top: 26px;
   background-color: rgb(46, 142, 46);
   position: absolute;
-  opacity: 100%;
+  opacity: 70%;
   width: auto;
   border-radius: 4px;
   padding: 3px;
@@ -226,14 +225,15 @@
 .viz-nav-li-2:after,
 #viz-nav-li-2:after {
   content: 'Iron Man 2';
-  top: 56px;
+  top: 70px;
+  left: 35px;
   background-color: rgb(205, 19, 19);
   color: black;
 }
 
 .viz-nav-li-2:after {
   position: absolute;
-  opacity: 100%;
+  opacity: 70%;
   width: auto;
   border-radius: 4px;
   padding: 3px;
@@ -242,24 +242,28 @@
 .viz-nav-li-3:after,
 #viz-nav-li-3:after {
   content: 'Thor';
-  top: 86px;
-  background-color: rgb(222, 225, 161);
+  top: 130px;
+  left: 35px;
+  background-color: rgb(241, 254, 0);
+  color: black;
 }
 
 .viz-nav-li-3:after {
   position: absolute;
-  opacity: 100%;
+  opacity: 70%;
   width: auto;
   border-radius: 4px;
   padding: 3px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .viz-nav-li-4:after,
 #viz-nav-li-4:after {
   content: 'Captain America: The First Avenger';
-  top: 116px;
-  background-color: #b71511;
+  top: 170px;
+  left: 35px;
+  font-size: 12px;
+  background-color: #0d25de;
   width: 63px;
 }
 

@@ -1,0 +1,144 @@
+@keyframes rectGrow {
+  from {
+    y: 375;
+  }
+  to {
+    y: attr(y);
+  }
+  from {
+    height: 40px;
+  }
+  to {
+    height: attr(height);
+  }
+}
+
+/* Iron Man  */
+.slide-svg-0-rect {
+  fill: rgb(205, 19, 19);
+}
+
+/* The Incredible Hulk */
+.slide-svg-1-rect {
+  fill: rgb(46, 142, 46);
+}
+
+/* Iron Man 2 */
+.slide-svg-2-rect {
+  fill: rgb(187, 27, 27);
+}
+
+/* Thor */
+.slide-svg-3-rect {
+  fill: rgb(218, 223, 112);
+}
+
+/* Captain America: First Avenger */
+.slide-svg-4-rect {
+  fill: #143bd7;
+}
+
+/* Avengers 1 */
+.slide-svg-5-rect {
+  fill: #8890e6;
+}
+
+/* Iron Man 3 */
+.slide-svg-6-rect {
+  fill: rgb(187, 27, 27);
+}
+
+/* Thor Dark World */
+.slide-svg-7-rect {
+  fill: rgb(218, 223, 112);
+}
+
+/* Captain America: Winter Soldier   */
+.slide-svg-8-rect {
+  fill: #143bd7;
+}
+
+/* Guardians of the Galaxy (2014) */
+.slide-svg-9-rect {
+  fill: #e11998;
+}
+
+/* Age of Ultron */
+.slide-svg-10-rect {
+  fill: #d3cfa0;
+}
+
+/* Ant-Man 1*/
+.slide-svg-11-rect {
+  fill: #d53636;
+}
+
+/* Civil War */
+.slide-svg-12-rect {
+  fill: #570af0;
+}
+
+/* Doctor Strange */
+.slide-svg-13-rect {
+  fill: #e4b809;
+}
+
+/* Guardians of the Galaxy 2 */
+.slide-svg-14-rect {
+  fill: #e11998;
+}
+
+/* Spider-Man 1 */
+.slide-svg-15-rect {
+  fill: #a52828;
+}
+
+/* Thor Raganarok */
+.slide-svg-16-rect {
+  fill: rgb(218, 223, 112);
+}
+
+/* Black Panther */
+.slide-svg-17-rect {
+  fill: #5220b7;
+}
+
+/* Infinity War */
+.slide-svg-18-rect {
+  fill: #91b720;
+}
+
+/* Ant-Man 2 */
+.slide-svg-19-rect {
+  fill: #d53636;
+}
+
+/* Captain Marvel */
+.slide-svg-20-rect {
+  fill: #de2aab;
+}
+
+/* Endgame */
+.slide-svg-21-rect {
+  fill: #261eb8;
+}
+
+/* Spider-Man 2 */
+.slide-svg-22-rect {
+  fill: #a52828;
+}
+
+.chart-rect:hover {
+  opacity: 75%;
+  transition: all 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+.chart-rect {
+  transition: all 0.5s;
+  animation-duration: 0.5s;
+  animation-name: rectGrow;
+}
