@@ -1,18 +1,17 @@
 .viz-nav {
   position: sticky;
-  top: 65px;
-  margin-left: 4px;
+  top: 15px;
   align-self: flex-start;
 }
 
 .viz-nav-li {
   list-style: none;
-  height: 3rem;
-  width: 3rem;
-  border-radius: 100%;
-  margin-bottom: 10px;
+  height: 2.1rem;
+  width: 2.1rem;
+  border-radius: 75%;
+  margin-bottom: 7px;
   border: 1px solid black;
-  background-color: white;
+  background-color: #e8f9e6;
 }
 
 .viz-nav-li:after {
@@ -29,98 +28,168 @@
 #viz-nav-li-0:hover {
   background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/iron_man.png);
   background-size: 3rem;
-  background-repeat: no-repeat;
+  background-repeat: round;
 }
 
 .viz-nav-li-1,
 #viz-nav-li-1:hover {
-  background-color: rgb(46, 142, 46);
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/hulk.png);
+  background-size: 3rem;
+  background-repeat: round;
 }
 
 .viz-nav-li-2,
 #viz-nav-li-2:hover {
-  background-color: rgb(205, 19, 19);
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/iron_man.png);
+  background-size: 3rem;
+  background-repeat: round;
 }
 
 .viz-nav-li-3,
 #viz-nav-li-3:hover {
-  background-color: rgb(222, 225, 161);
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thor.jpeg);
+  background-size: 3.2rem;
+  background-repeat: no-repeat;
 }
 
 .viz-nav-li-4,
 #viz-nav-li-4:hover {
-  background-color: #b71511;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/captain_america.jpeg);
+  background-size: 3rem;
+  background-position-x: -7px;
+  background-position-y: 42px;
 }
 
 .viz-nav-li-5,
 #viz-nav-li-5:hover {
-  background-color: #e6a888;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/loki.jpg);
+  background-size: 2.6rem;
 }
 
 .viz-nav-li-6,
 #viz-nav-li-6:hover {
-  background-color: #fff5c2;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/iron_man.png);
+  background-size: 3rem;
+  background-repeat: round;
 }
 
 .viz-nav-li-7,
 #viz-nav-li-7:hover {
-  background-color: #e2c1b2;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thor.jpeg);
+  background-size: 3.2rem;
+  background-repeat: no-repeat;
 }
 
 .viz-nav-li-8,
 #viz-nav-li-8:hover {
-  background-color: #ef6285;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/Falcon.png);
+  background-size: 2.7rem;
+  background-position-y: 40px;
 }
 
 .viz-nav-li-9,
 #viz-nav-li-9:hover {
-  background-color: #84bb4c;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/baby_groot.png);
+  background-size: 3rem;
+  background-position: 41px 45px;
 }
 
 .viz-nav-li-10,
 #viz-nav-li-10:hover {
-  background-color: #3bad46;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/Vision.png);
+  background-size: 3rem;
+  background-repeat: round;
 }
 
 .viz-nav-li-11,
 #viz-nav-li-11:hover {
-  background-color: #e01200;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/ant-man.png);
+  background-size: 3rem;
+  background-repeat: round;
 }
 
 .viz-nav-li-12,
 #viz-nav-li-12:hover {
-  background-color: #d3cfa0;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/the_winter_soldier.png);
+  background-size: 2.8rem;
+  background-position-x: -5px;
+  background-position-y: 45px;
 }
 
 .viz-nav-li-13,
 #viz-nav-li-13:hover {
-  background-color: #4d8b00;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/doc_strange.jpeg);
+  background-size: 3rem;
+  background-repeat: round;
 }
 
 .viz-nav-li-14,
 #viz-nav-li-14:hover {
-  background-color: #f1d78b;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/rocket.png);
+  background-size: 2.5rem;
+  background-position: 37px 40px;
 }
 
 .viz-nav-li-15,
 #viz-nav-li-15:hover {
-  background-color: #663a00;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/spider-man.png);
+  background-repeat: round;
 }
 
 .viz-nav-li-16,
 #viz-nav-li-16:hover {
-  background-color: #dd1334;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thor.jpeg);
+  background-size: 3.2rem;
+  background-repeat: no-repeat;
 }
 
 .viz-nav-li-17,
 #viz-nav-li-17:hover {
-  background-color: #b76120;
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/black_panther.png);
+  background-size: 3rem;
+  background-position-x: 44px;
+  background-position-y: 47px;
+}
+
+.viz-nav-li-18,
+#viz-nav-li-18:hover {
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thanos.png);
+  background-size: 3rem;
+  background-repeat: round;
+}
+
+.viz-nav-li-19,
+#viz-nav-li-19:hover {
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/wasp.png);
+  background-size: 3rem;
+  background-repeat: round;
+}
+
+.viz-nav-li-20,
+#viz-nav-li-20:hover {
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/captain_marvel.jpg);
+  background-size: 3rem;
+  background-repeat: round;
+}
+
+.viz-nav-li-21,
+#viz-nav-li-21:hover {
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/thanos.png);
+  background-size: 3rem;
+  background-repeat: round;
+}
+.viz-nav-li-22,
+#viz-nav-li-22:hover {
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/spider-man.png);
+  background-size: 3rem;
+  background-repeat: round;
 }
 
 #viz-nav-li-0:after {
   content: 'Iron Man';
   top: -2px;
-  background-color: rgb(205, 19, 19);
+  background-size: 3rem;
+  background-repeat: no-repeat;
 }
 
 .viz-nav-li-0:after {

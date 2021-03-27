@@ -2,6 +2,10 @@ window.onload = function () {
   window.scrollTo(0, 0)
 }
 
+window.onbeforeunload = function () {
+  return 'Dude, are you sure you want to leave? Think of the kittens!'
+}
+
 const appendNavLi = (idx) => {
   let navCol = document.querySelector('.viz-nav')
   let ankLi = document.createElement('a')
