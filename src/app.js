@@ -3,7 +3,7 @@ window.onload = function () {
 }
 
 window.onbeforeunload = function () {
-  return 'Dude, are you sure you want to leave? Think of the kittens!'
+  return 'Is this Working?'
 }
 
 const appendNavLi = (idx) => {

@@ -95,6 +95,16 @@ body {
   display: flex;
 }
 
+.movie-title-text {
+  color: #000;
+  text-decoration: none;
+}
+
+.movie-title-text:hover {
+  color: #ed1d24;
+  text-decoration: underline;
+}
+
 .show {
   opacity: 100%;
 }
