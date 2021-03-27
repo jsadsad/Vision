@@ -1,0 +1,502 @@
+.viz-nav {
+  position: sticky;
+  top: 65px;
+  margin-left: 4px;
+  align-self: flex-start;
+}
+
+.viz-nav-li {
+  list-style: none;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.viz-nav-li:after {
+  left: 29px;
+  position: absolute;
+  opacity: 0%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-0,
+#viz-nav-li-0:hover {
+  background-image: url(https://vision-js.s3-us-west-1.amazonaws.com/avatars/iron_man.png);
+  background-size: 3rem;
+  background-repeat: no-repeat;
+}
+
+.viz-nav-li-1,
+#viz-nav-li-1:hover {
+  background-color: rgb(46, 142, 46);
+}
+
+.viz-nav-li-2,
+#viz-nav-li-2:hover {
+  background-color: rgb(205, 19, 19);
+}
+
+.viz-nav-li-3,
+#viz-nav-li-3:hover {
+  background-color: rgb(222, 225, 161);
+}
+
+.viz-nav-li-4,
+#viz-nav-li-4:hover {
+  background-color: #b71511;
+}
+
+.viz-nav-li-5,
+#viz-nav-li-5:hover {
+  background-color: #e6a888;
+}
+
+.viz-nav-li-6,
+#viz-nav-li-6:hover {
+  background-color: #fff5c2;
+}
+
+.viz-nav-li-7,
+#viz-nav-li-7:hover {
+  background-color: #e2c1b2;
+}
+
+.viz-nav-li-8,
+#viz-nav-li-8:hover {
+  background-color: #ef6285;
+}
+
+.viz-nav-li-9,
+#viz-nav-li-9:hover {
+  background-color: #84bb4c;
+}
+
+.viz-nav-li-10,
+#viz-nav-li-10:hover {
+  background-color: #3bad46;
+}
+
+.viz-nav-li-11,
+#viz-nav-li-11:hover {
+  background-color: #e01200;
+}
+
+.viz-nav-li-12,
+#viz-nav-li-12:hover {
+  background-color: #d3cfa0;
+}
+
+.viz-nav-li-13,
+#viz-nav-li-13:hover {
+  background-color: #4d8b00;
+}
+
+.viz-nav-li-14,
+#viz-nav-li-14:hover {
+  background-color: #f1d78b;
+}
+
+.viz-nav-li-15,
+#viz-nav-li-15:hover {
+  background-color: #663a00;
+}
+
+.viz-nav-li-16,
+#viz-nav-li-16:hover {
+  background-color: #dd1334;
+}
+
+.viz-nav-li-17,
+#viz-nav-li-17:hover {
+  background-color: #b76120;
+}
+
+#viz-nav-li-0:after {
+  content: 'Iron Man';
+  top: -2px;
+  background-color: rgb(205, 19, 19);
+}
+
+.viz-nav-li-0:after {
+  content: 'Iron Man (2008)';
+  top: -2px;
+  background-color: rgb(205, 19, 19);
+  left: 45px;
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+#viz-nav-li-1:after {
+  content: 'The Incredible Hulk';
+  top: 26px;
+  background-color: rgb(46, 142, 46);
+}
+
+.viz-nav-li-1:after {
+  content: 'The Incredible Hulk';
+  top: 26px;
+  background-color: rgb(46, 142, 46);
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-2:after,
+#viz-nav-li-2:after {
+  content: 'Iron Man 2';
+  top: 56px;
+  background-color: rgb(205, 19, 19);
+  color: black;
+}
+
+.viz-nav-li-2:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.viz-nav-li-3:after,
+#viz-nav-li-3:after {
+  content: 'Thor';
+  top: 86px;
+  background-color: rgb(222, 225, 161);
+}
+
+.viz-nav-li-3:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-4:after,
+#viz-nav-li-4:after {
+  content: 'Captain America: The First Avenger';
+  top: 116px;
+  background-color: #b71511;
+  width: 63px;
+}
+
+.viz-nav-li-4:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-5:after,
+#viz-nav-li-5:after {
+  content: "Marvel's The Avengers";
+  top: 146px;
+  background-color: #e6a888;
+  width: 59px;
+}
+
+.viz-nav-li-5:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-6:after,
+#viz-nav-li-6:after {
+  content: 'Iron Man 3';
+  top: 175px;
+  background-color: #fff5c2;
+  color: black;
+}
+
+.viz-nav-li-6:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.viz-nav-li-7:after,
+#viz-nav-li-7:after {
+  content: 'Thor: The Dark World';
+  top: 206px;
+  background-color: #e2c1b2;
+}
+
+.viz-nav-li-7:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-8:after,
+#viz-nav-li-8:after {
+  content: 'Captain America: The Winter Soldier';
+  top: 236px;
+  background-color: #ef6285;
+}
+
+.viz-nav-li-8:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-9:after,
+#viz-nav-li-9:after {
+  content: 'Guardians of the Galaxy';
+  top: 266px;
+  background-color: #84bb4c;
+}
+
+.viz-nav-li-9:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-10:after,
+#viz-nav-li-10:after {
+  content: 'Avengers: Age of Ultron';
+  top: 296px;
+  background-color: #3bad46;
+  width: 75px;
+}
+
+.viz-nav-li-10:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-11:after,
+#viz-nav-li-11:after {
+  content: 'Ant-Man';
+  top: 326px;
+  background-color: #e01200;
+  width: 77px;
+}
+
+.viz-nav-li-11:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-12:after,
+#viz-nav-li-12:after {
+  content: 'Captain America: Civil War';
+  top: 356px;
+  background-color: #d3cfa0;
+}
+
+.viz-nav-li-12:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-13:after,
+#viz-nav-li-13:after {
+  content: 'Doctor Strange';
+  top: 386px;
+  background-color: #4d8b00;
+}
+
+.viz-nav-li-13:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-14:after,
+#viz-nav-li-14:after {
+  content: 'Guardians of the Galaxy Vol. 2';
+  top: 416px;
+  background-color: #f1d78b;
+}
+
+.viz-nav-li-14:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-15:after,
+#viz-nav-li-15:after {
+  content: 'Spider-Man: Homecoming';
+  top: 446px;
+  background-color: #663a00;
+}
+
+.viz-nav-li-15:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-16:after,
+#viz-nav-li-16:after {
+  content: 'Thor: Ragnarok';
+  top: 476px;
+  background-color: #dd1334;
+}
+
+.viz-nav-li-16:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-17:after,
+#viz-nav-li-17:after {
+  content: 'Black Panther';
+  top: 506px;
+  background-color: #b76120;
+}
+
+.viz-nav-li-17:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-18:after,
+#viz-nav-li-18:after {
+  content: 'Avengers: Infinity War';
+  top: 536px;
+  background-color: #b76120;
+}
+
+.viz-nav-li-18:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-19:after,
+#viz-nav-li-19:after {
+  content: 'Ant-Man and the Wasp';
+  top: 566px;
+  background-color: #b76120;
+}
+
+.viz-nav-li-19:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+.viz-nav-li-20:after,
+#viz-nav-li-20:after {
+  content: 'Captain Marvel';
+  top: 596px;
+  background-color: #b76120;
+}
+
+.viz-nav-li-20:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-21:after,
+#viz-nav-li-21:after {
+  content: 'Avengers: Endgame';
+  top: 626px;
+  background-color: #b76120;
+}
+
+.viz-nav-li-21:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li-22:after,
+#viz-nav-li-22:after {
+  content: 'Spider-Man: Far from Home';
+  top: 656px;
+  background-color: #b76120;
+}
+
+.viz-nav-li-22:after {
+  position: absolute;
+  opacity: 100%;
+  width: auto;
+  border-radius: 4px;
+  padding: 3px;
+  color: white;
+}
+
+.viz-nav-li:hover:after {
+  opacity: 100%;
+}
+
+.viz-nav-li-selected {
+  opacity: 100%;
+}
