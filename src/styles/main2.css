@@ -113,10 +113,11 @@ body {
   max-width: 150px;
   max-height: 200px;
   padding: 2px 4px;
-  margin: 6px 12px;
+  margin: 18px 80px;
   width: 100%;
   height: 100%;
   position: relative;
+  object-fit: contain;
 }
 
 #movie-svg-container-0 {
@@ -230,8 +231,9 @@ body {
 
 .new-svg-container-class svg {
   width: 80%;
-  padding-left: 13.4%;
-  height: 117vh;
+  padding: 2rem 0px 0px 5rem;
+  /* padding-left: 14.4%; */
+  height: 121vh;
 }
 
 .y-axis path {
@@ -260,8 +262,10 @@ body {
 }
 
 .movie-blurb {
-  font-size: 14px;
-  margin-top: 15px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 18px;
+  margin-top: 20px;
 }
 
 .y-axis-label {
