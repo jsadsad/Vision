@@ -2,23 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <title>Vision</title>
     <meta property="og:image" content="./src/images/marvel_logo.gif" />
     <meta name="title" property="og:title" content="Vision" />
-    
     <meta
       property="og:description"
       content="Vision is a single-page data visualization project to display relevent data from the Marvel Cinematic Universe dating back to the first Iron Man film in 2008."
     />
-    <meta
-      property="og:url"
-      content="https://jsadsad.github.io/Vision/"
-    />
-    <meta name="author" content="Joshua Clarence Sadsad">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:url" content="https://jsadsad.github.io/Vision/" />
+    <meta name="author" content="Joshua Clarence Sadsad" />
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"></script>
+
+    <title>Vision</title>
     <link rel="icon" href="./src/images/vision-favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -27,730 +25,1512 @@
     />
     <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./src/styles/all.min.css" />
-    <link rel="stylesheet" href="./src/styles/main.css" />
-
-    <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.19/lodash.min.js"></script>
-    <nav id="viz-nav">
-      <h1 class="viz-head">Vision</h1>
-    </nav>
-    <ul class="nav-column"></ul>
-    <body>
-      <div class="viz-container">
-        <div class="viz-outer">
-          <div class="viz-content">
-            <div class="movie-info-container" id="mov-0">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt0371746/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Iron Man (2008)</a
-                  >
-                </div>
-                <div class="iron1-tooltip">
-                  <span class="iron1-text">I am Iron Man</span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/IronMan1.jpg"
-                    alt="iron-man-2008-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  After being held captive in an Afghan cave, billionaire
-                  engineer Tony Stark creates a unique weaponized suit of armor
-                  to fight evil.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-1">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt0800080/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >The Incredible Hulk (2008)</a
-                  >
-                </div>
-                <div class="hulk1-tooltip">
-                  <span class="hulk1-text">Hulk SMASH</span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/Hulk1.jpeg"
-                    alt="incredible-hulk-2008-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  Bruce Banner, a scientist on the run from the U.S. Government,
-                  must find a cure for the monster he turns into whenever he
-                  loses his temper.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-2">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt1228705/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Iron Man 2 (2010)</a
-                  >
-                </div>
-                <div class="iron2-tooltip">
-                  <span class="iron2-text"
-                    >You have a big gun, you're not the big gun</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/IronMan2.jpeg"
-                    alt="iron-man-2010-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  With the world now aware of his identity as Iron Man, Tony
-                  Stark must contend with both his declining health and a
-                  vengeful mad man with ties to his father's legacy.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-3">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt0800369/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Thor (2011)</a
-                  >
-                </div>
-                <div class="thor1-tooltip">
-                  <span class="thor1-text"
-                    >Whosoever holds this hammer, if he be worthy, shall possess
-                    the power of Thor</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/Thor1.jpeg"
-                    alt="thor-2011-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  The powerful but arrogant god Thor is cast out of Asgard to
-                  live amongst humans in Midgard (Earth), where he soon becomes
-                  one of their finest defenders.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-4">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt0458339/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Captain America: The First Avenger (2011)</a
-                  >
-                </div>
-                <div class="cap1-tooltip">
-                  <span class="cap1-text">I can do this all day</span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/CaptainAmerica1.jpg"
-                    alt="cap-america-2011-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  Steve Rogers, a rejected military soldier, transforms into
-                  Captain America after taking a dose of a "Super-Soldier
-                  serum". But being Captain America comes at a price as he
-                  attempts to take down a war monger and a terrorist
-                  organization.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-5">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt0848228/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Marvel's The Avengers (2012)</a
-                  >
-                </div>
-                <div class="avg1-tooltip">
-                  <span class="avg1-text"
-                    >The idea was to bring together a group of remarkable
-                    people, see if they could become something more.</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/Avengers1.jpg"
-                    alt="avengers-2012-poster"
-                  />
-                </div>
-
-                <div class="movie-blurb">
-                  Earth's mightiest heroes must come together and learn to fight
-                  as a team if they are going to stop the mischievous Loki and
-                  his alien army from enslaving humanity.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-6">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt1300854/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Iron Man 3 (2013)</a
-                  >
-                </div>
-                <div class="iron3-tooltip">
-                  <span class="iron3-text"
-                    >You can take away my house, all my tricks and toys, but one
-                    thing you can't take away - I am Iron Man</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/IronMan3.jpg"
-                    alt="iron-man-3-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  When Tony Stark's world is torn apart by a formidable
-                  terrorist called the Mandarin, he starts an odyssey of
-                  rebuilding and retribution.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-7">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt1981115/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Thor: The Dark World (2013)</a
-                  >
-                </div>
-                <div class="thor2-tooltip">
-                  <span class="thor2-text">
-                    One son who wanted the throne too much, and other who will
-                    not take it. Is this my legacy?
-                  </span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/Thor2.jpg"
-                    alt="thor-2013-poster"
-                  />
-                </div>
-
-                <div class="movie-blurb">
-                  When the Dark Elves attempt to plunge the universe into
-                  darkness, Thor must embark on a perilous and personal journey
-                  that will reunite him with doctor Jane Foster.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-8">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt1843866/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Captain America: The Winter Soldier (2014)</a
-                  >
-                </div>
-                <div class="cap2-tooltip">
-                  <span class="cap2-text"
-                    >I'm with you 'till the end of the line</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/CaptainAmerica2.jpg"
-                    alt="cap-america-2014-poster"
-                  />
-                </div>
-
-                <div class="movie-blurb">
-                  As Steve Rogers struggles to embrace his role in the modern
-                  world, he teams up with a fellow Avenger and S.H.I.E.L.D
-                  agent, Black Widow, to battle a new threat from history: an
-                  assassin known as the Winter Soldier.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-9">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt2015381/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Guardians of the Galaxy (2014)</a
-                  >
-                </div>
-                <div class="gotg1-tooltip">
-                  <span class="gotg1-text">We are Groot</span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/GotG1.jpg"
-                    alt="gotg-2014-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  A group of intergalactic criminals must pull together to stop
-                  a fanatical warrior with plans to purge the universe.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-10">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt2395427/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Avengers: Age of Ultron (2015)</a
-                  >
-                </div>
-                <div class="avg2-tooltip">
-                  <span class="avg2-text">You Didn't See That Coming?</span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/Avengers2.jpg"
-                    alt="avengers-ultron-2015-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  When Tony Stark and Bruce Banner try to jump-start a dormant
-                  peacekeeping program called Ultron, things go horribly wrong
-                  and it's up to Earth's mightiest heroes to stop the villainous
-                  Ultron from enacting his terrible plan.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-11">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt0478970/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Ant-Man (2015)</a
-                  >
-                </div>
-                <div class="ant1-tooltip">
-                  <span class="ant1-text"
-                    >I Want You To Break Into A Place And Steal Some Sh*T</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/AntMan1.jpg"
-                    alt="ant-man-2015-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  Armed with a super-suit with the astonishing ability to shrink
-                  in scale but increase in strength, cat burglar Scott Lang must
-                  embrace his inner hero and help his mentor, Dr. Hank Pym, plan
-                  and pull off a heist that will save the world.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-12">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt3498820/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Captain America: Civil War (2016)</a
-                  >
-                </div>
-                <div class="cw-tooltip">
-                  <span class="cw-text"
-                    >Our very strength incites challenge. Challenge incites
-                    conflict. And conflict breeds catastrophe</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/CivilWar.jpeg"
-                    alt="marvel-civil-war-2016-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  Political involvement in the Avengers' affairs causes a rift
-                  between Captain America and Iron Man.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-13">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt1211837/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Doctor Strange (2016)</a
-                  >
-                </div>
-                <div class="strange1-tooltip">
-                  <span class="strange1-text"
-                    >Arrogance and fear still keep you from learning the
-                    simplest and most significant lesson of all - it's not about
-                    you.
-                  </span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/DoctorStrange.jpg"
-                    alt="doctor-strange-2016-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  While on a journey of physical and spiritual healing, a
-                  brilliant neurosurgeon is drawn into the world of the mystic
-                  arts.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-14">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt3896198/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Guardians of the Galaxy Vol. 2 (2017)</a
-                  >
-                </div>
-                <div class="gotg2-tooltip">
-                  <span class="gotg2-text">I'm Mary Poppins, Y'all!</span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/GotG2.jpg"
-                    alt="gotg-2-2017-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  The Guardians struggle to keep together as a team while
-                  dealing with their personal family issues, notably Star-Lord's
-                  encounter with his father the ambitious celestial being Ego.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-15">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt2250912/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Spider-Man: Homecoming (2017)</a
-                  >
-                </div>
-                <div class="spider1-tooltip">
-                  <span class="spider1-text"
-                    >If you're nothing without this suit, then you shouldn't
-                    have it</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/Spider1.jpeg"
-                    alt="spiderman-homecoming-2017-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  Peter Parker balances his life as an ordinary high school
-                  student in Queens with his superhero alter-ego Spider-Man, and
-                  finds himself on the trail of a new menace prowling the skies
-                  of New York City.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-16">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt3501632/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Thor: Ragnarok (2017)</a
-                  >
-                </div>
-                <div class="thor3-tooltip">
-                  <span class="thor3-text"
-                    >Asgard is not a place, it's a people</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/Thor3.jpg"
-                    alt="thor-3-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  Imprisoned on the planet Sakaar, Thor must race against time
-                  to return to Asgard and stop Ragnarök, the destruction of his
-                  world, at the hands of the powerful and ruthless villain Hela.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-17">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt1825683/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Black Panther (2018)</a
-                  >
-                </div>
-                <div class="bp1-tooltip">
-                  <span class="bp1-text">Wakanda FOREVER</span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/BlackPanther1.jpg"
-                    alt="black-panther-poster-2018"
-                  />
-                </div>
-
-                <div class="movie-blurb">
-                  T'Challa, heir to the hidden but advanced kingdom of Wakanda,
-                  must step forward to lead his people into a new future and
-                  must confront a challenger from his country's past.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-18">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt4154756/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Avengers: Infinity War (2018)</a
-                  >
-                </div>
-                <div class="iw-tooltip">
-                  <span class="iw-text">Mr Stark, I don't feel so good...</span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/Avengers_IW.jpg"
-                    alt="infinity-war-poster-2018"
-                  />
-                </div>
-
-                <div class="movie-blurb">
-                  The Avengers and their allies must be willing to sacrifice all
-                  in an attempt to defeat the powerful Thanos before his blitz
-                  of devastation and ruin puts an end to the universe.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-19">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt5095030/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Ant-Man and the Wasp (2018)</a
-                  >
-                </div>
-                <div class="ant2-tooltip">
-                  <span class="ant2-text">Hold on, you gave her wings?!</span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/AntMan2.jpeg"
-                    alt="ant-man-2018-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  As Scott Lang balances being both a superhero and a father,
-                  Hope van Dyne and Dr. Hank Pym present an urgent new mission
-                  that finds the Ant-Man fighting alongside The Wasp to uncover
-                  secrets from their past.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-20">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt4154664/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Captain Marvel (2019)</a
-                  >
-                </div>
-                <div class="cm-tooltip">
-                  <span class="cm-text"
-                    >We have no idea what threats are out there. We can't do
-                    this alone. We need you.</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/CaptainMarvel.jpg"
-                    alt="captain-marvel-2019-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  Carol Danvers becomes one of the universe's most powerful
-                  heroes when Earth is caught in the middle of a galactic war
-                  between two alien races.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-21">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt4154796/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Avengers: Endgame (2019)</a
-                  >
-                </div>
-                <div class="endgame-tooltip">
-                  <span class="endgame-text">I love you 3000.</span>
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/AvengersEndgame.jpg"
-                    alt="avengers-endgame-2019-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  After the devastating events of Avengers: Infinity War, the
-                  universe is in ruins. With the help of remaining allies, the
-                  Avengers assemble once more in order to reverse Thanos'
-                  actions and restore balance to the universe.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-22">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt6320628/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Spider-Man: Far from Home (2019)</a
-                  >
-                </div>
-                <div class="spider2-tooltip">
-                  <span class="spider2-text"
-                    >I don’t think Tony would have done what he did, if he
-                    didn’t know you were going to be here after he was
-                    gone.</span
-                  >
-                  <img
-                    class="movie-poster"
-                    src="https://vision-js.s3-us-west-1.amazonaws.com/Spider2.jpg"
-                    alt="spiderman-2-2019-poster"
-                  />
-                </div>
-                <div class="movie-blurb">
-                  Following the events of Avengers: Endgame, Spider-Man must
-                  step up to take on new threats in a world that has changed
-                  forever.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-23">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt3480822/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Black Widow (2021)</a
-                  >
-                </div>
-                <img
-                  class="movie-poster"
-                  src="https://vision-js.s3-us-west-1.amazonaws.com/BlackWidow.jpeg"
-                  alt="black-widow-2021-poster"
-                />
-                <div class="movie-blurb">
-                  A film about Natasha Romanoff in her quests between the films
-                  Civil War and Infinity War.
-                </div>
-              </div>
-            </div>
-            <div class="movie-info-container" id="mov-24">
-              <div class="movie-info-desc">
-                <div class="movie-title">
-                  <a
-                    href="https://www.imdb.com/title/tt9376612/"
-                    target="_blank"
-                    class="movie-title-text"
-                    >Shang-Chi and the Legend of the Ten Rings (2021)</a
-                  >
-                </div>
-                <img
-                  class="movie-poster"
-                  src="https://vision-js.s3-us-west-1.amazonaws.com/ShangChi.jpeg"
-                  alt="shang-chi-2021-poster"
-                />
-                <div class="movie-blurb">
-                  The movie, based on Marvel Comics, will focus on Shang-Chi;
-                  'The Master of Kung-Fu'.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button onclick="topFunction()" id="topBtn" title="Go to top">
-        Back To Top
-      </button>
-      <div class="snap-tooltip" id="snap">
-        <img
-          class="snap"
-          src="https://vision-js.s3-us-west-1.amazonaws.com/thanos_snap.gif"
-          alt="thanos-snap"
-          onclick="theSnap()"
-        />
-        <span class="snap-text">I am inevitable</span>
-      </div>
-      <script src="./src/app.js"></script>
-    </body>
-
-    <footer>
-      <div class="viz-footer-container">
-        <div class="viz-footer-left">
-          <div class="viz-footer-socials">
-            <a
-              target="_blank"
-              class="movie-title-text"
-              href="https://github.com/jsadsad"
-              ><i class="fab fa-github-square"></i
-            ></a>
-            <a
-              target="_blank"
-              class="movie-title-text"
-              href="https://www.linkedin.com/in/joshsad2/"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </div>
-        </div>
-        <div class="viz-footer-center">
-          <p class="viz-footer-center-text">Made with ♥ by JS</p>
-        </div>
-        <div class="viz-footer-right">
-          <img
-            src="./src/images/marvel_logo.gif"
-            alt="viz-footer"
-            class="viz-footer-logo"
-          />
-        </div>
-      </div>
-    </footer>
+    <link rel="stylesheet" href="./src/styles/main2.css" />
+    <link rel="stylesheet" href="./src/styles/nav.css" />
+    <link rel="stylesheet" href="./src/styles/tables.css" />
+    <link rel="stylesheet" href="./src/styles/rect.css" />
+    <link rel="stylesheet" href="./src/styles/modal.css" />
   </head>
+  <body>
+    <script src="./dist/main.js"></script>
+    <div class="viz-background-container">
+      <div id="viz-content">
+        <div id="main-header-container">
+          <h1 id="main-header">Vision: A Data Visualization Project</h1>
+          <div id="viz-socials">
+            By
+            <a target="_blank" href="https://github.com/jsadsad"
+              >Joshua Clarence Sadsad</a
+            >
+          </div>
+          <ul class="logos-bar">
+            <li class="logo-li">
+              <a
+                target="_blank"
+                class="viz-socials"
+                href="https://github.com/jsadsad"
+                ><i class="fab fa-github-square"></i
+              ></a>
+            </li>
+            <li class="logo-li">
+              <a
+                target="_blank"
+                class="viz-socials"
+                href="https://www.linkedin.com/in/joshsad2/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <a
+              target="_blank"
+              class="viz-socials"
+              href="https://www.linkedin.com/in/joshsad2/"
+              ><i class="fab fa-angellist"></i
+            ></a>
+          </ul>
+        </div>
+        <div id="viz-area">
+          <div class="slide-container" id="movie-container-0">
+            <div class="slide-text-area">
+              <div class="mov-info-container">
+                <div
+                  id="movie-svg-container-0"
+                  class="svg-immediate-container"
+                ></div>
+              </div>
+              <div class="slide-header">
+                <a
+                  href="https://www.imdb.com/title/tt0371746/"
+                  target="_blank"
+                  class="movie-title-text"
+                  >Iron Man (2008)</a
+                >
+              </div>
+              <div class="movie-blurb">
+                After being held captive in an Afghan cave, billionaire engineer
+                Tony Stark creates a unique weaponized suit of armor to fight
+                evil.
+              </div>
+              <img
+                class="movie-poster"
+                src="https://vision-js.s3-us-west-1.amazonaws.com/IronMan1.jpg"
+                alt="iron-man-2008-poster"
+              />
+              <table class="viz-style-table">
+                <tr>
+                  <td>Budget</td>
+                  <td>$140,000,000</td>
+                </tr>
+                <tr>
+                  <td>Opening Weekend</td>
+                  <td>$98,618,668</td>
+                </tr>
+                <tr>
+                  <td>Worldwide Gross</td>
+                  <td>$585,796,247</td>
+                </tr>
+                <tr>
+                  <td>US & Canada Gross</td>
+                  <td>$319,034,126</td>
+                </tr>
+                <tr>
+                  <td>United Kingdom Gross</td>
+                  <td>$34,282,266</td>
+                </tr>
+                <tr>
+                  <td>China Gross</td>
+                  <td>$15,274,332</td>
+                </tr>
+                <tr>
+                  <td>Japan Gross</td>
+                  <td>$8,658,784</td>
+                </tr>
+                <tr>
+                  <td>Germany Gross</td>
+                  <td>$8,560,475</td>
+                </tr>
+              </table>
+            </div>
+            <div class="new-svg-container-class" id="vision"></div>
+          </div>
+          <div class="slide-container" id="movie-container-1">
+            <div class="slide-text-area">
+              <div class="mov-info-container">
+                <div
+                  id="movie-svg-container-1"
+                  class="svg-immediate-container"
+                ></div>
+              </div>
+              <div class="slide-header">
+                <a
+                  href="https://www.imdb.com/title/tt0800080/"
+                  target="_blank"
+                  class="movie-title-text"
+                  >The Incredible Hulk (2008)</a
+                >
+              </div>
+              <div class="movie-blurb">
+                Bruce Banner, a scientist on the run from the U.S. Government,
+                must find a cure for the monster he turns into whenever he loses
+                his temper.
+              </div>
+              <img
+                class="movie-poster"
+                src="https://vision-js.s3-us-west-1.amazonaws.com/Hulk1.jpeg"
+                alt="incredible-hulk-2008-poster"
+              />
+              <table class="viz-style-table">
+                <tr>
+                  <td>Budget</td>
+                  <td>$150,000,000</td>
+                </tr>
+                <tr>
+                  <td>Opening Weekend</td>
+                  <td>$55,414,050</td>
+                </tr>
+                <tr>
+                  <td>Worldwide Gross</td>
+                  <td>$264,770,996</td>
+                </tr>
+                <tr>
+                  <td>US & Canada Gross</td>
+                  <td>$134,806,913</td>
+                </tr>
+                <tr>
+                  <td>United Kingdom Gross</td>
+                  <td>$15,163,328</td>
+                </tr>
+                <tr>
+                  <td>China Gross</td>
+                  <td>$9,336,251</td>
+                </tr>
+                <tr>
+                  <td>Japan Gross</td>
+                  <td>$1,692,037</td>
+                </tr>
+                <tr>
+                  <td>Germany Gross</td>
+                  <td>$2,461,403</td>
+                </tr>
+              </table>
+            </div>
+            <div class="new-svg-container-class" id="svg-container-1"></div>
+          </div>
+          <div class="slide-container" id="movie-container-2">
+            <div class="slide-text-area">
+              <div class="mov-info-container">
+                <div
+                  class="svg-immediate-container"
+                  id="movie-svg-container-2"
+                ></div>
+              </div>
+              <div class="slide-header">
+                <a
+                  href="https://www.imdb.com/title/tt1228705/"
+                  target="_blank"
+                  class="movie-title-text"
+                  >Iron Man 2 (2010)</a
+                >
+              </div>
+              <div class="movie-blurb">
+                With the world now aware of his identity as Iron Man, Tony Stark
+                must contend with both his declining health and a vengeful mad
+                man with ties to his father's legacy.
+              </div>
+              <img
+                class="movie-poster"
+                src="https://vision-js.s3-us-west-1.amazonaws.com/IronMan2.jpeg"
+                alt="iron-man-2010-poster"
+              />
+              <table class="viz-style-table">
+                <tr>
+                  <td>Budget</td>
+                  <td>$140,000,000</td>
+                </tr>
+                <tr>
+                  <td>Opening Weekend</td>
+                  <td>$128,122,480</td>
+                </tr>
+                <tr>
+                  <td>Worldwide Gross</td>
+                  <td>$312,433,331</td>
+                </tr>
+                <tr>
+                  <td>US & Canada Gross</td>
+                  <td>$312,433,331</td>
+                </tr>
+                <tr>
+                  <td>United Kingdom Gross</td>
+                  <td>$30,456,328</td>
+                </tr>
+                <tr>
+                  <td>China Gross</td>
+                  <td>$7,919,827</td>
+                </tr>
+                <tr>
+                  <td>Japan Gross</td>
+                  <td>$12,831,962</td>
+                </tr>
+                <tr>
+                  <td>Germany Gross</td>
+                  <td>$9,254,348</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="new-svg-container-class" id="svg-container-2"></div>
+          </div>
+          <div class="slide-container" id="movie-container-3">
+            <div class="slide-text-area">
+              <div class="mov-info-container">
+                <div
+                  class="svg-immediate-container"
+                  id="movie-svg-container-3"
+                ></div>
+              </div>
+              <div class="slide-header">
+                <a
+                  href="https://www.imdb.com/title/tt0800369/"
+                  target="_blank"
+                  class="movie-title-text"
+                  >Thor (2011)</a
+                >
+              </div>
+              <div class="movie-blurb">
+                The powerful but arrogant god Thor is cast out of Asgard to live
+                amongst humans in Midgard (Earth), where he soon becomes one of
+                their finest defenders.
+              </div>
+              <img
+                class="movie-poster"
+                src="https://vision-js.s3-us-west-1.amazonaws.com/Thor1.jpeg"
+                alt="thor-2011-poster"
+              />
+              <table class="viz-style-table">
+                <tr>
+                  <td>Budget</td>
+                  <td>$150,000,000</td>
+                </tr>
+                <tr>
+                  <td>Opening Weekend</td>
+                  <td>$65,723,338</td>
+                </tr>
+                <tr>
+                  <td>Worldwide Gross</td>
+                  <td>$449,326,618</td>
+                </tr>
+                <tr>
+                  <td>US & Canada Gross</td>
+                  <td>$181,030,624</td>
+                </tr>
+                <tr>
+                  <td>United Kingdom Gross</td>
+                  <td>$22,521,717</td>
+                </tr>
+                <tr>
+                  <td>China Gross</td>
+                  <td>$2,490,495</td>
+                </tr>
+                <tr>
+                  <td>Japan Gross</td>
+                  <td>$5,737,436</td>
+                </tr>
+                <tr>
+                  <td>Germany Gross</td>
+                  <td>$16,007,303</td>
+                </tr>
+              </table>
+            </div>
+            <div class="new-svg-container-class" id="svg-container-3"></div>
+          </div>
+          <div class="slide-container" id="movie-container-4">
+            <div class="slide-text-area">
+              <div class="mov-info-container">
+                <div
+                  class="svg-immediate-container"
+                  id="movie-svg-container-4"
+                ></div>
+              </div>
+              <div class="slide-header">
+                <a
+                  href="https://www.imdb.com/title/tt0458339/"
+                  target="_blank"
+                  class="movie-title-text"
+                  >Captain America: The First Avenger (2011)</a
+                >
+              </div>
+              <div class="movie-blurb">
+                Steve Rogers, a rejected military soldier, transforms into
+                Captain America after taking a dose of a "Super-Soldier serum".
+                But being Captain America comes at a price as he attempts to
+                take down a war monger and a terrorist organization.
+              </div>
+              <img
+                class="movie-poster"
+                src="https://vision-js.s3-us-west-1.amazonaws.com/CaptainAmerica1.jpg"
+                alt="cap-america-2011-poster"
+              />
+              <table class="viz-style-table">
+                <tr>
+                  <td>Budget</td>
+                  <td>$140,000,000</td>
+                </tr>
+                <tr>
+                  <td>Opening Weekend</td>
+                  <td>$65,058,524</td>
+                </tr>
+                <tr>
+                  <td>Worldwide Gross</td>
+                  <td>$370,569,774</td>
+                </tr>
+                <tr>
+                  <td>US & Canada Gross</td>
+                  <td>$176,654,505</td>
+                </tr>
+                <tr>
+                  <td>United Kingdom Gross</td>
+                  <td>$14,752,839</td>
+                </tr>
+                <tr>
+                  <td>China Gross</td>
+                  <td>$2,496,989</td>
+                </tr>
+                <tr>
+                  <td>Japan Gross</td>
+                  <td>$3,431,374</td>
+                </tr>
+                <tr>
+                  <td>Germany Gross</td>
+                  <td>$4,872,496</td>
+                </tr>
+              </table>
+            </div>
+            <div class="new-svg-container-class" id="svg-container-4"></div>
+          </div>
+          <div class="slide-container" id="movie-container-5">
+            <div class="slide-text-area">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-5"
+              ></div>
+              <div class="slide-header">
+                <a
+                  href="https://www.imdb.com/title/tt0848228/"
+                  target="_blank"
+                  class="movie-title-text"
+                  >Marvel's The Avengers (2012)</a
+                >
+              </div>
+              <div class="movie-blurb">
+                Earth's mightiest heroes must come together and learn to fight
+                as a team if they are going to stop the mischievous Loki and his
+                alien army from enslaving humanity.
+              </div>
+              <img
+                class="movie-poster"
+                src="https://vision-js.s3-us-west-1.amazonaws.com/Avengers1.jpg"
+                alt="avengers-2012-poster"
+              />
+              <table class="viz-style-table">
+                <tr>
+                  <td>Budget</td>
+                  <td>$220,000,000</td>
+                </tr>
+                <tr>
+                  <td>Opening Weekend</td>
+                  <td>$207,438,708</td>
+                </tr>
+                <tr>
+                  <td>Worldwide Gross</td>
+                  <td>$1,518,815,515</td>
+                </tr>
+                <tr>
+                  <td>US & Canada Gross</td>
+                  <td>$623,357,910</td>
+                </tr>
+                <tr>
+                  <td>United Kingdom Gross</td>
+                  <td>$80,563,081</td>
+                </tr>
+                <tr>
+                  <td>China Gross</td>
+                  <td>$86,300,000</td>
+                </tr>
+                <tr>
+                  <td>Japan Gross</td>
+                  <td>$33,019,883</td>
+                </tr>
+                <tr>
+                  <td>Germany Gross</td>
+                  <td>$30,828,359</td>
+                </tr>
+              </table>
+            </div>
+            <div class="new-svg-container-class" id="svg-container-5"></div>
+          </div>
+          <div class="slide-container" id="movie-container-6">
+            <div class="slide-text-area">
+              <div class="mov-info-container">
+                <div class="svg-immediate-container id="movie-svg-container-6" >
+              </div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt1300854/"
+                target="_blank"
+                class="movie-title-text"
+                >Iron Man 3 (2013)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              When Tony Stark's world is torn apart by a formidable terrorist
+              called the Mandarin, he starts an odyssey of rebuilding and
+              retribution.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/IronMan3.jpg"
+              alt="iron-man-3-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$200,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$174,144,585</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$1,214,811,252</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$409,013,994</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$57,074,453</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$121,200,000</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$25,185,661</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$24,368,143</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-6"></div>
+        </div>
+        <div class="slide-container" id="movie-container-7">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-7"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt1981115/"
+                target="_blank"
+                class="movie-title-text"
+                >Thor: The Dark World (2013)</a
+              >)
+            </div>
+            <div class="movie-blurb">
+              When the Dark Elves attempt to plunge the universe into darkness,
+              Thor must embark on a perilous and personal journey that will
+              reunite him with doctor Jane Foster.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/Thor2.jpg"
+              alt="thor-2013-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$170,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$85,737,841</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$644,783,140</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$206,362,140</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$26,224,037</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$55,340,000</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$6,017,520</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$20,356,156</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-7"></div>
+        </div>
+        <div class="slide-container" id="movie-container-8">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-8"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt1843866/"
+                target="_blank"
+                class="movie-title-text"
+                >Captain America: The Winter Soldier (2014)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              As Steve Rogers struggles to embrace his role in the modern world,
+              he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black
+              Widow, to battle a new threat from history: an assassin known as
+              the Winter Soldier.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/CaptainAmerica2.jpg"
+              alt="cap-america-2014-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$170,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$95,023,721</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$714,421,503</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$259,766,572</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$32,230,026</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$115,620,000</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$6,628,830</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$12,477,139</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-8"></div>
+        </div>
+        <div class="slide-container" id="movie-container-9">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-9"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt2015381/"
+                target="_blank"
+                class="movie-title-text"
+                >Guardians of the Galaxy (2014)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              A group of intergalactic criminals must pull together to stop a
+              fanatical warrior with plans to purge the universe.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/GotG1.jpg"
+              alt="gotg-2014-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$170,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$94,320,883</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$773,350,147</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$333,718,600</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$37,213,981</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$86,346,366</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$9,504,440</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$24,601,759</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-9"></div>
+        </div>
+        <div class="slide-container" id="movie-container-10">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-10"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt2395427/"
+                target="_blank"
+                class="movie-title-text"
+                >Avengers: Age of Ultron (2015)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              When Tony Stark and Bruce Banner try to jump-start a dormant
+              peacekeeping program called Ultron, things go horribly wrong and
+              it's up to Earth's mightiest heroes to stop the villainous Ultron
+              from enacting his terrible plan.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/Avengers2.jpg"
+              alt="avengers-ultron-2015-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$250,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$191,271,109</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$1,402,809,540</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$459,005,868</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$62,974,363</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$240,110,000</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$26,373,434</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$31,193,932</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-10"></div>
+        </div>
+        <div class="slide-container" id="movie-container-11">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-11"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt0478970/"
+                target="_blank"
+                class="movie-title-text"
+                >Ant-Man (2015)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              Armed with a super-suit with the astonishing ability to shrink in
+              scale but increase in strength, cat burglar Scott Lang must
+              embrace his inner hero and help his mentor, Dr. Hank Pym, plan and
+              pull off a heist that will save the world.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/AntMan1.jpg"
+              alt="ant-man-2015-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$130,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$57,225,526</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$519,311,965</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$180,202,163</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$25,190,193</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$105,370,038</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$9,670,913</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$5,917,308</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-11"></div>
+        </div>
+        <div class="slide-container" id="movie-container-12">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-12"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt3498820/"
+                target="_blank"
+                class="movie-title-text"
+                >Captain America: Civil War (2016)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              Political involvement in the Avengers' affairs causes a rift
+              between Captain America and Iron Man.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/CivilWar.jpeg"
+              alt="marvel-civil-war-2016-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$250,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$179,139,142</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$1,153,561,649</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$408,084,349</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$53,779,860</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$180,794,517</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$24,366,759</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$21,770,093</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-12"></div>
+        </div>
+        <div class="slide-container" id="movie-container-13">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-13"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt1211837/"
+                target="_blank"
+                class="movie-title-text"
+                >Doctor Strange (2016)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              While on a journey of physical and spiritual healing, a brilliant
+              neurosurgeon is drawn into the world of the mystic arts.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/DoctorStrange.jpg"
+              alt="doctor-strange-2016-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$165,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$85,058,311</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$677,796,076</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$232,641,920</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$28,547,412</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$109,194,913</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$16,390,905</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$17,402,095</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-13"></div>
+        </div>
+        <div class="slide-container" id="movie-container-14">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-14"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt3896198/"
+                target="_blank"
+                class="movie-title-text"
+                >Guardians of the Galaxy Vol. 2 (2017)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              The Guardians struggle to keep together as a team while dealing
+              with their personal family issues, notably Star-Lord's encounter
+              with his father the ambitious celestial being Ego.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/GotG2.jpg"
+              alt="gotg-2-2017-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$200,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$146,510,104</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$863,756,051</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$389,813,101</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$53,060,497</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$100,663,260</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$10,097,680</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$30,165,433</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-14"></div>
+        </div>
+        <div class="slide-container" id="movie-container-15">
+          <div class="slide-text-area">
+            <div
+              class="svg-immediate-container"
+              id="movie-svg-container-15"
+            ></div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt2250912/"
+                target="_blank"
+                class="movie-title-text"
+                >Spider-Man: Homecoming (2017)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              Peter Parker balances his life as an ordinary high school student
+              in Queens with his superhero alter-ego Spider-Man, and finds
+              himself on the trail of a new menace prowling the skies of New
+              York City.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/Spider1.jpeg"
+              alt="spiderman-homecoming-2017-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$175,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$117,027,503</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$880,166,924</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$334,201,140</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$39,582,694</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$116,280,889</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$25,390,871</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$11,664,461</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-15"></div>
+        </div>
+        <div class="slide-container" id="movie-container-16">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-16"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt3501632/"
+                target="_blank"
+                class="movie-title-text"
+                >Thor: Ragnarok (2017)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              Imprisoned on the planet Sakaar, Thor must race against time to
+              return to Asgard and stop Ragnarök, the destruction of his world,
+              at the hands of the powerful and ruthless villain Hela.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/Thor3.jpg"
+              alt="thor-3-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$180,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$122,744,989</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$854,189,384</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$315,058,289</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$40,960,481</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$112,226,154</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$10,116,575</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$19,036,1455</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-16"></div>
+        </div>
+        <div class="slide-container" id="movie-container-17">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-17"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt1825683/"
+                target="_blank"
+                class="movie-title-text"
+                >Black Panther (2018)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              T'Challa, heir to the hidden but advanced kingdom of Wakanda, must
+              step forward to lead his people into a new future and must
+              confront a challenger from his country's past.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/BlackPanther1.jpg"
+              alt="black-panther-poster-2018"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$200,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$202,003,951</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$1,347,597,973</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$700,426,566</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$70,750,817</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$105,062,459</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$14,655,352</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$23,392,484</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-17"></div>
+        </div>
+        <div class="slide-container" id="movie-container-18">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-18"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt4154756/"
+                target="_blank"
+                class="movie-title-text"
+                >Avengers: Infinity War (2018)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              The Avengers and their allies must be willing to sacrifice all in
+              an attempt to defeat the powerful Thanos before his blitz of
+              devastation and ruin puts an end to the universe.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/Avengers_IW.jpg"
+              alt="infinity-war-poster-2018"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$321,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$257,698,183</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$2,048,359,754</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$678,815,482</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$96,640,433</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$359,543,153</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$33,881,648</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$45,398,141</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-18"></div>
+        </div>
+        <div class="slide-container" id="movie-container-19">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-19"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt5095030/"
+                target="_blank"
+                class="movie-title-text"
+                >Ant-Man and the Wasp (2018)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              As Scott Lang balances being both a superhero and a father, Hope
+              van Dyne and Dr. Hank Pym present an urgent new mission that finds
+              the Ant-Man fighting alongside The Wasp to uncover secrets from
+              their past.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/AntMan2.jpeg"
+              alt="ant-man-2018-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$162,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$75,812,205</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$622,674,139</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$216,648,740</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$22,941,205</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$121,203,074</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$11,595,269</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$9,424,892</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-19"></div>
+        </div>
+        <div class="slide-container" id="movie-container-20">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-20"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt4154664/"
+                target="_blank"
+                class="movie-title-text"
+                >Captain Marvel (2019)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              Carol Danvers becomes one of the universe's most powerful heroes
+              when Earth is caught in the middle of a galactic war between two
+              alien races.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/CaptainMarvel.jpg"
+              alt="captain-marvel-2019-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$160,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$153,433,423</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$1,128,462,972</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$426,829,839</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$51,792,440</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$154,070,663</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$17,752,989</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$24,309,763</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-20"></div>
+        </div>
+        <div class="slide-container" id="movie-container-21">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-21"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt4154796/"
+                target="_blank"
+                class="movie-title-text"
+                >Avengers: Endgame (2019)</a
+              >
+            </div>
+            <div class="movie-blurb">
+              After the devastating events of Avengers: Infinity War, the
+              universe is in ruins. With the help of remaining allies, the
+              Avengers assemble once more in order to reverse Thanos' actions
+              and restore balance to the universe.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/AvengersEndgame.jpg"
+              alt="avengers-endgame-2019-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$356,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$357,115,007</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$2,797,501,328</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$858,373,000</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$115,000,524</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$629,100,298</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$55,304,132</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$63,290,219</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-21"></div>
+        </div>
+        <div class="slide-container" id="movie-container-22">
+          <div class="slide-text-area">
+            <div class="mov-info-container">
+              <div
+                class="svg-immediate-container"
+                id="movie-svg-container-22"
+              ></div>
+            </div>
+            <div class="slide-header">
+              <a
+                href="https://www.imdb.com/title/tt6320628/"
+                target="_blank"
+                class="movie-title-text"
+                >Spider-Man: Far from Home (2019)</a
+              >)
+            </div>
+            <div class="movie-blurb">
+              Following the events of Avengers: Endgame, Spider-Man must step up
+              to take on new threats in a world that has changed forever.
+            </div>
+            <img
+              class="movie-poster"
+              src="https://vision-js.s3-us-west-1.amazonaws.com/Spider2.jpg"
+              alt="spiderman-2-2019-poster"
+            />
+            <table class="viz-style-table">
+              <tr>
+                <td>Budget</td>
+                <td>$160,000,000</td>
+              </tr>
+              <tr>
+                <td>Opening Weekend</td>
+                <td>$92,579,212</td>
+              </tr>
+              <tr>
+                <td>Worldwide Gross</td>
+                <td>$1,131,927,996</td>
+              </tr>
+              <tr>
+                <td>US & Canada Gross</td>
+                <td>$390,532,085</td>
+              </tr>
+              <tr>
+                <td>United Kingdom Gross</td>
+                <td>$47,123,033</td>
+              </tr>
+              <tr>
+                <td>China Gross</td>
+                <td>$198,999,549</td>
+              </tr>
+              <tr>
+                <td>Japan Gross</td>
+                <td>$28,137,054</td>
+              </tr>
+              <tr>
+                <td>Germany Gross</td>
+                <td>$19,415,724</td>
+              </tr>
+            </table>
+          </div>
+          <div class="new-svg-container-class" id="svg-container-22"></div>
+        </div>
+      </div>
+      <!-- <div class="modal is-open">
+      <div class="modal-text">
+        <h1 class="modal-title">Vision</h1>
+        <h2>Developed by Joshua Clarence Sadsad</h2>
+        <p>
+          Welcome! This is a a data visualization website that displays Marvel
+          Cinematic Universe information.
+        </p>
+        <button class="modal-close">Assemble!</button>
+      </div>
+      
+      <div class="modal-screen"></div>
+      <script src="./src/modal.js"></script> -->
+    </div>
+    <ul class="viz-nav"></ul>
+  </body>
 </html>
