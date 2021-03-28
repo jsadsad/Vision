@@ -1,10 +1,13 @@
-document.addEventListener("click", (event) => {
-    if (!event.target.matches('.modal-close')) return;
-    event.preventDefault();
+document.addEventListener('click', (event) => {
+  if (!event.target.matches('.close-modal')) return
 
-    const is_open = document.querySelector('.is-open');
+  event.preventDefault()
 
-    if (is_open) {
-        is_open.classList.remove('is-open');
-    }
+  const is_open = document.querySelector('.is-open')
+
+  if (is_open) {
+    is_open.classList.remove('is-open')
+    window.scrollTo(0, 0)
+  } else {
+  }
 })

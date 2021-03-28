@@ -1,8 +1,10 @@
 .viz-style-table {
   border-collapse: collapse;
-  font-size: 0.9em;
+  font-style: italic;
+  font-size: 0.5em;
   font-family: sans-serif;
-  min-width: 400px;
+  min-width: 335px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 15%);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 

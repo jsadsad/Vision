@@ -47,6 +47,9 @@ body {
   font-size: 19px;
   opacity: 50%;
   padding-bottom: 8px;
+  font-size: 21px;
+  opacity: 80%;
+  padding-bottom: 8px;
 }
 
 #viz-socials a {

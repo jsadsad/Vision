@@ -4,6 +4,14 @@
 
 .is-open {
   display: block;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .modal-screen {
@@ -16,7 +24,7 @@
   background: rgb(44, 125, 79);
 }
 
-.modal-text {
+.modal-content {
   position: absolute;
   left: 50%;
   top: 45%;
@@ -30,7 +38,7 @@
 }
 
 .modal-title {
-  font-family: 'Alata', sans-serif;
+  font-family: 'Cabin', sans-serif;
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -54,7 +62,7 @@
   margin-bottom: 15px;
 }
 
-.modal-close {
+.close-modal {
   border: none;
   color: white;
   background-color: #2f574c;
