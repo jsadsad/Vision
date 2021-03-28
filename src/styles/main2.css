@@ -249,8 +249,6 @@ body {
   width: 25%;
   height: 100%;
   font-size: 30px;
-  box-sizing: border-box;
-  transition: all 0.5s;
   margin-right: 25px;
 }
 
@@ -271,26 +269,6 @@ body {
 
 .source-text {
   font-size: 13px;
-}
-
-.d3-tip {
-  line-height: 1;
-  padding: 6px;
-  border-radius: 4px;
-  font-size: 12px;
-  border: 2px solid black;
-}
-
-.d3-tip:after {
-  box-sizing: border-box;
-  display: inline;
-  font-size: 10px;
-  width: 100%;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.8);
-  content: '\25BC';
-  position: absolute;
-  text-align: center;
 }
 
 .footer {
@@ -325,24 +303,4 @@ body {
 
 .viz-footer-right {
   margin: 1px;
-}
-
-#topBtn {
-  display: none;
-  position: fixed;
-  bottom: 70px;
-  right: 10.5rem;
-  z-index: 99;
-  border: none;
-  outline: none;
-  background-color: #ed1d24;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 25px;
-  font-size: 1.2rem;
-}
-
-#topBtn:hover {
-  background-color: rgb(34, 86, 198);
 }
