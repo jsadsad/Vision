@@ -2,6 +2,17 @@ window.onload = function () {
   window.scrollTo(0, 0)
 }
 
+const createObs = (slides) => {
+  let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0,
+  }
+  for (let i = 0; i < slides.length - 1; i++) {
+    renderSlide(options, slides[i], i)
+  }
+}
+
 window.addEventListener(
   'load',
   (e) => {
@@ -259,16 +270,4 @@ const createVision = (movieData, idx) => {
     .attr('offset', '100%')
     .attr('stop-color', 'rgb(31,131,51)')
     .attr('stop-opacity', 2)
-}
-
-const createObs = (slides) => {
-  let options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0,
-  }
-
-  for (let i = 0; i < slides.length - 1; i++) {
-    renderSlide(options, slides[i], i)
-  }
 }

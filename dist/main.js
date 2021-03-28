@@ -7,6 +7,18 @@ window.onload = function () {
   window.scrollTo(0, 0);
 };
 
+var createObs = function createObs(slides) {
+  var options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0
+  };
+
+  for (var i = 0; i < slides.length - 1; i++) {
+    renderSlide(options, slides[i], i);
+  }
+};
+
 window.addEventListener('load', function (e) {
   var obsSlides = [];
 
@@ -166,18 +178,6 @@ var createVision = function createVision(movieData, idx) {
   var gradient = defs.append('linearGradient').attr('id', 'svgGradient').attr('x1', '0%').attr('x2', '100%').attr('y1', '0%').attr('y2', '100%');
   gradient.append('stop').attr('class', 'start').attr('offset', '0%').attr('stop-color', 'rgb(214,183,33)').attr('stop-opacity', 2);
   gradient.append('stop').attr('class', 'end').attr('offset', '100%').attr('stop-color', 'rgb(31,131,51)').attr('stop-opacity', 2);
-};
-
-var createObs = function createObs(slides) {
-  var options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0
-  };
-
-  for (var i = 0; i < slides.length - 1; i++) {
-    renderSlide(options, slides[i], i);
-  }
 };
 /******/ })()
 ;
