@@ -58,3 +58,5 @@ Users will be able to:
 [Bar-Chart-Tutorials](https://www.youtube.com/watch?v=BDpBAFvdjYo)
 
 [Movie Data](boxofficemojo.com)
+
+[Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
