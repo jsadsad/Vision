@@ -5,6 +5,22 @@
   scroll-behavior: smooth;
 }
 
+.nav-developer {
+  color: rgb(46, 142, 46);
+  text-decoration: overline;
+  font-size: 1.5rem;
+}
+
+.nav-socials {
+  display: flex;
+  width: 14.5%;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  line-height: normal;
+  border-bottom: 3.2px solid;
+  color: rgb(46, 142, 46);
+}
+
 .viz-nav-li {
   list-style: none;
   height: 2.1rem;
