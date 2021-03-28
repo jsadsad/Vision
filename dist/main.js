@@ -71,7 +71,7 @@ var createVision = function createVision(movieData, idx) {
   // let yScale = d3.scaleLinear().domain([6, 0]).range([100, 400])
   // let yScale = d3.scaleLinear().domain([7, 0]).range([300, 400])
 
-  var yScale = d3.scaleLinear().domain([9, 0]).range([25, 400]);
+  var yScale = d3.scaleLinear().domain([10, 0]).range([25, 400]);
   var svg = d3.select('#vision').append('svg').attr('class', "".concat(targetSVG, " hidden")).attr('viewBox', "0 0 375 750") // .attr('viewBox', `0 0 650 700`)
   .attr('preserveAspectRatio', 'xMinYMin meet');
   var xAxis = d3.axisBottom().scale(xScale).tickSize(5).tickFormat(function (d) {
@@ -79,8 +79,17 @@ var createVision = function createVision(movieData, idx) {
   });
   formatValue = d3.format('.1s');
   var yAxis = d3.axisLeft(yScale).ticks(4).tickFormat(function (tickCount) {
-    // return tickCount + 'million'
-    return formatValue(tickCount) + '00 million';
+    switch (tickCount) {
+      case 10:
+        return '1 billion';
+        break;
+
+      case 0:
+        return '1 million';
+
+      default:
+        return formatValue(tickCount) + '00 million';
+    }
   });
   svg.append('g').attr('class', "".concat(targetSVG, "-x-axis x-axis")).attr('transform', 'translate(' + margin.left + ', ' + (height - margin.top) + ')' // 'translate(' + margin.left + ', ' + (height - margin.top) + ')'
   ).transition().duration(3000).call(xAxis);

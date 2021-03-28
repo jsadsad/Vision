@@ -67,7 +67,7 @@ const createVision = (movieData, idx) => {
   // let yScale = d3.scaleLinear().domain([6, 0]).range([250, 400])
   // let yScale = d3.scaleLinear().domain([6, 0]).range([100, 400])
   // let yScale = d3.scaleLinear().domain([7, 0]).range([300, 400])
-  let yScale = d3.scaleLinear().domain([9, 0]).range([25, 400])
+  let yScale = d3.scaleLinear().domain([10, 0]).range([25, 400])
 
   let svg = d3
     .select('#vision')
@@ -90,8 +90,15 @@ const createVision = (movieData, idx) => {
     .axisLeft(yScale)
     .ticks(4)
     .tickFormat((tickCount) => {
-      // return tickCount + 'million'
-      return formatValue(tickCount) + '00 million'
+      switch (tickCount) {
+        case 10:
+          return '1 billion'
+          break
+        case 0:
+          return '1 million'
+        default:
+          return formatValue(tickCount) + '00 million'
+      }
     })
 
   svg

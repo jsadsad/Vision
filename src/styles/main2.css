@@ -228,9 +228,9 @@ body {
 }
 
 .new-svg-container-class svg {
-  width: 80%;
-  padding: 2rem 0px 0px 5rem;
-  height: 121vh;
+  width: 75%;
+  padding: 0px 0px 0px 30px;
+  height: 125vh;
 }
 
 .y-axis path {
