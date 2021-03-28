@@ -2,10 +2,6 @@ window.onload = function () {
   window.scrollTo(0, 0)
 }
 
-// window.onbeforeunload = function () {
-//   return 'Is this Working?'
-// }
-
 const appendNavLi = (idx) => {
   let navCol = document.querySelector('.viz-nav')
   let ankLi = document.createElement('a')
@@ -44,7 +40,7 @@ d3.json('movies.json', (d) => {
 }).then((data) => {
   movieData = data
 
-  createVision(movieData[0], 0, true)
+  createVision(movieData[0], 0)
   appendNavLi(0)
   appendAnchor(0)
 
@@ -55,7 +51,7 @@ d3.json('movies.json', (d) => {
   }
 })
 
-const createVision = (movieData, idx, createXAxisBool) => {
+const createVision = (movieData, idx) => {
   let margin = { top: 10, right: 40, bottom: 25, left: 60 }
   let width = 600 - margin.left - margin.right
   let height = 449 - margin.top - margin.bottom
@@ -72,7 +68,6 @@ const createVision = (movieData, idx, createXAxisBool) => {
   // let yScale = d3.scaleLinear().domain([6, 0]).range([100, 400])
   // let yScale = d3.scaleLinear().domain([7, 0]).range([300, 400])
   let yScale = d3.scaleLinear().domain([9, 0]).range([25, 400])
-  // let yScale = d3.scaleLinear().domain([9, 0]).range([25, 400])
 
   let svg = d3
     .select('#vision')
@@ -115,16 +110,6 @@ const createVision = (movieData, idx, createXAxisBool) => {
     return 'translate(10, 23)rotate(-30)'
     // return 'translate(10, 25)rotate(-45)'
   })
-
-  // svg
-  //   .append('text')
-  //   .text('Vision Data Visualization Project')
-  //   .attr('transform', 'rotate(-90)')
-  //   .attr('class', 'y-axis-label')
-  //   .attr('y', -10)
-  //   .attr('x', 10 - height / 2)
-  //   .attr('dy', '1em')
-  //   .style('text-anchor', 'middle')
 
   svg
     .append('text')
@@ -211,21 +196,11 @@ const createObs = (slides) => {
   }
 }
 
-// -------------- SLIDES ------------
-
 const renderSlide = (options, slide, idx) => {
   const handleScroll = (entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         document.querySelector(`.slide-svg-${idx}`).classList.remove('hidden')
-
-        let tooltip = d3
-          .select('body')
-          .append('div')
-          .style('position', 'absolute')
-          .style('font-size', '12px')
-          .style('z-index', '10')
-          .style('visibility', 'hidden')
 
         if (document.querySelector(`.slide-svg-${idx - 1}`)) {
           document
@@ -289,7 +264,6 @@ const renderSlide = (options, slide, idx) => {
       }
     })
   }
-
   let observer = new IntersectionObserver(handleScroll, options)
   observer.observe(slide)
 }

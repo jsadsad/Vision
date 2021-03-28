@@ -5,10 +5,7 @@ var __webpack_exports__ = {};
   \********************/
 window.onload = function () {
   window.scrollTo(0, 0);
-}; // window.onbeforeunload = function () {
-//   return 'Is this Working?'
-// }
-
+};
 
 var appendNavLi = function appendNavLi(idx) {
   var navCol = document.querySelector('.viz-nav');
@@ -45,7 +42,7 @@ d3.json('movies.json', function (d) {
   };
 }).then(function (data) {
   movieData = data;
-  createVision(movieData[0], 0, true);
+  createVision(movieData[0], 0);
   appendNavLi(0);
   appendAnchor(0);
 
@@ -56,7 +53,7 @@ d3.json('movies.json', function (d) {
   }
 });
 
-var createVision = function createVision(movieData, idx, createXAxisBool) {
+var createVision = function createVision(movieData, idx) {
   var margin = {
     top: 10,
     right: 40,
@@ -74,8 +71,7 @@ var createVision = function createVision(movieData, idx, createXAxisBool) {
   // let yScale = d3.scaleLinear().domain([6, 0]).range([100, 400])
   // let yScale = d3.scaleLinear().domain([7, 0]).range([300, 400])
 
-  var yScale = d3.scaleLinear().domain([9, 0]).range([25, 400]); // let yScale = d3.scaleLinear().domain([9, 0]).range([25, 400])
-
+  var yScale = d3.scaleLinear().domain([9, 0]).range([25, 400]);
   var svg = d3.select('#vision').append('svg').attr('class', "".concat(targetSVG, " hidden")).attr('viewBox', "0 0 375 750") // .attr('viewBox', `0 0 650 700`)
   .attr('preserveAspectRatio', 'xMinYMin meet');
   var xAxis = d3.axisBottom().scale(xScale).tickSize(5).tickFormat(function (d) {
@@ -90,16 +86,7 @@ var createVision = function createVision(movieData, idx, createXAxisBool) {
   ).transition().duration(3000).call(xAxis);
   svg.selectAll('.x-axis text').attr('transform', function (d) {
     return 'translate(10, 23)rotate(-30)'; // return 'translate(10, 25)rotate(-45)'
-  }); // svg
-  //   .append('text')
-  //   .text('Vision Data Visualization Project')
-  //   .attr('transform', 'rotate(-90)')
-  //   .attr('class', 'y-axis-label')
-  //   .attr('y', -10)
-  //   .attr('x', 10 - height / 2)
-  //   .attr('dy', '1em')
-  //   .style('text-anchor', 'middle')
-
+  });
   svg.append('text').text('Source: IMDbPro').attr('class', 'source-text').attr('transform', 'translate(35, ' + (height + margin.top + 75) + ')').style('text-anchor', 'left');
   svg.append('g').attr('class', "".concat(targetSVG, "-y-axis y-axis")).attr('transform', 'translate(' + margin.left + ',0)').style('opacity', '0%').call(yAxis);
   svg.selectAll('rect').data(data).enter().append('rect').attr('class', "".concat(targetSlideRect)).attr('x', function (d, i) {
@@ -138,15 +125,13 @@ var createObs = function createObs(slides) {
   for (var i = 0; i < slides.length - 1; i++) {
     renderSlide(options, slides[i], i);
   }
-}; // -------------- SLIDES ------------
-
+};
 
 var renderSlide = function renderSlide(options, slide, idx) {
   var handleScroll = function handleScroll(entries, observer) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         document.querySelector(".slide-svg-".concat(idx)).classList.remove('hidden');
-        var tooltip = d3.select('body').append('div').style('position', 'absolute').style('font-size', '12px').style('z-index', '10').style('visibility', 'hidden');
 
         if (document.querySelector(".slide-svg-".concat(idx - 1))) {
           document.querySelector(".slide-svg-".concat(idx - 1)).classList.add('hidden');
