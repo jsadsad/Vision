@@ -30,7 +30,6 @@ body {
   width: 100%;
   height: auto;
   scroll-behavior: smooth;
-  /* max-width: 1300px; */
   box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -76,7 +75,7 @@ body {
 }
 
 #main-header {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 #main-header-container ul {
@@ -106,10 +105,6 @@ body {
 .movie-title-text:hover {
   color: #ed1d24;
   text-decoration: underline;
-}
-
-.show {
-  opacity: 100%;
 }
 
 .movie-poster {
@@ -235,7 +230,6 @@ body {
 .new-svg-container-class svg {
   width: 80%;
   padding: 2rem 0px 0px 5rem;
-  /* padding-left: 14.4%; */
   height: 121vh;
 }
 
