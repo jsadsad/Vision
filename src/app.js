@@ -53,7 +53,7 @@ d3.json('movies.json', (d) => {
 
 const createVision = (movieData, idx) => {
   let margin = { top: 10, right: 40, bottom: 25, left: 60 }
-  let width = 600 - margin.left - margin.right
+  let width = 660 - margin.left - margin.right
   let height = 449 - margin.top - margin.bottom
   let data = Object.values(movieData).slice(3)
   let numberOfColumns = 8
@@ -62,7 +62,8 @@ const createVision = (movieData, idx) => {
   let targetSVG = 'slide-svg-' + idx
   let targetSlideRect = 'slide-svg-' + idx + '-rect'
 
-  let xScale = d3.scaleLinear().domain([0, numberOfColumns]).range([15, width])
+  // let xScale = d3.scaleLinear().domain([0, numberOfColumns]).range([20, width])
+  let xScale = d3.scaleLinear().domain([0, numberOfColumns]).range([20, width])
 
   // let yScale = d3.scaleLinear().domain([6, 0]).range([250, 400])
   // let yScale = d3.scaleLinear().domain([6, 0]).range([100, 400])
@@ -80,12 +81,13 @@ const createVision = (movieData, idx) => {
   let xAxis = d3
     .axisBottom()
     .scale(xScale)
-    .tickSize(5)
+    .tickSize(0)
     .tickFormat(function (d) {
       return Object.keys(movieData).slice(3)[d]
     })
 
-  formatValue = d3.format('.1s')
+  let formatValue = d3.format('.1s')
+
   let yAxis = d3
     .axisLeft(yScale)
     .ticks(4)
@@ -139,8 +141,7 @@ const createVision = (movieData, idx) => {
     .append('rect')
     .attr('class', `${targetSlideRect}`)
     .attr('x', function (d, i) {
-      // return i * (x_axisLength / numberOfColumns) + margin.left + 12
-      return i * (x_axisLength / numberOfColumns) + margin.left + 13.5
+      return i * (x_axisLength / numberOfColumns) + margin.left + 20
     })
     .attr('y', function (d) {
       return yScale(d / 100)

@@ -60,24 +60,25 @@ var createVision = function createVision(movieData, idx) {
     bottom: 25,
     left: 60
   };
-  var width = 600 - margin.left - margin.right;
+  var width = 660 - margin.left - margin.right;
   var height = 449 - margin.top - margin.bottom;
   var data = Object.values(movieData).slice(3);
   var numberOfColumns = 8;
   var x_axisLength = width;
   var targetSVG = 'slide-svg-' + idx;
-  var targetSlideRect = 'slide-svg-' + idx + '-rect';
-  var xScale = d3.scaleLinear().domain([0, numberOfColumns]).range([15, width]); // let yScale = d3.scaleLinear().domain([6, 0]).range([250, 400])
+  var targetSlideRect = 'slide-svg-' + idx + '-rect'; // let xScale = d3.scaleLinear().domain([0, numberOfColumns]).range([20, width])
+
+  var xScale = d3.scaleLinear().domain([0, numberOfColumns]).range([20, width]); // let yScale = d3.scaleLinear().domain([6, 0]).range([250, 400])
   // let yScale = d3.scaleLinear().domain([6, 0]).range([100, 400])
   // let yScale = d3.scaleLinear().domain([7, 0]).range([300, 400])
 
   var yScale = d3.scaleLinear().domain([10, 0]).range([25, 400]);
   var svg = d3.select('#vision').append('svg').attr('class', "".concat(targetSVG, " hidden")).attr('viewBox', "0 0 375 750") // .attr('viewBox', `0 0 650 700`)
   .attr('preserveAspectRatio', 'xMinYMin meet');
-  var xAxis = d3.axisBottom().scale(xScale).tickSize(5).tickFormat(function (d) {
+  var xAxis = d3.axisBottom().scale(xScale).tickSize(0).tickFormat(function (d) {
     return Object.keys(movieData).slice(3)[d];
   });
-  formatValue = d3.format('.1s');
+  var formatValue = d3.format('.1s');
   var yAxis = d3.axisLeft(yScale).ticks(4).tickFormat(function (tickCount) {
     switch (tickCount) {
       case 10:
@@ -99,8 +100,7 @@ var createVision = function createVision(movieData, idx) {
   svg.append('text').text('Source: IMDbPro').attr('class', 'source-text').attr('transform', 'translate(35, ' + (height + margin.top + 75) + ')').style('text-anchor', 'left');
   svg.append('g').attr('class', "".concat(targetSVG, "-y-axis y-axis")).attr('transform', 'translate(' + margin.left + ',0)').style('opacity', '0%').call(yAxis);
   svg.selectAll('rect').data(data).enter().append('rect').attr('class', "".concat(targetSlideRect)).attr('x', function (d, i) {
-    // return i * (x_axisLength / numberOfColumns) + margin.left + 12
-    return i * (x_axisLength / numberOfColumns) + margin.left + 13.5;
+    return i * (x_axisLength / numberOfColumns) + margin.left + 20;
   }).attr('y', function (d) {
     return yScale(d / 100);
   }).attr('width', x_axisLength / numberOfColumns - 1).attr('height', function (d) {
