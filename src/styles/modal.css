@@ -2,6 +2,16 @@
   display: none;
 }
 
+.modal-screen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: rgb(44, 125, 79);
+}
+
 .is-open {
   display: block;
   overflow: hidden;
@@ -14,52 +24,44 @@
   bottom: 0;
 }
 
-.modal-screen {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  background: rgb(44, 125, 79);
-}
-
 .modal-content {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 0 0.625rem 0 rgba(192, 187, 180, 0.8);
-  padding: 20px;
   text-align: center;
+  padding: 50px;
+  left: 55%;
+  top: 50%;
+  position: absolute;
+  border-radius: 35px;
+  box-shadow: 0 0 0.625rem 0 rgb(192 187 180 / 80%);
+  z-index: 99;
+  background-color: #f36f73;
+  transform: translate(-55%, -70%);
 }
 
 .modal-title {
-  font-family: 'Cabin', sans-serif;
-  font-size: 50px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #2f574c;
-  margin-bottom: 5px;
+  font-size: 4rem;
+  font-family: cursive;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  letter-spacing: 3px;
+  color: rgb(44, 125, 79);
 }
 
-.modal-text > h2 {
-  font-size: 14px;
-  padding: 0px 20px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
+.modal-developed-by {
+  font-size: 1rem;
+  font-weight: lighter;
+  font-style: oblique;
+  padding: 8px;
+  line-height: 1rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
 }
 
-.modal-text > p {
-  font-size: 18px;
-  padding: 0px 30px;
-  line-height: 22px;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+.modal-text {
+  font-size: 1rem;
+  /* padding: 3px 30px; */
+  line-height: 21px;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
 }
 
 .close-modal {
@@ -77,10 +79,25 @@
   letter-spacing: 1px;
 }
 
-.modal-close:hover {
-  cursor: pointer;
+.close-modal:hover {
   color: #ed1d24;
   background-color: #adcb17;
   border: 1px solid #2f3c57;
   transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.modal-socials {
+  padding-top: 1rem;
+}
+
+.modal-socials-icons {
+  color: rgb(44, 125, 79);
+  margin-left: 4rem;
+  font-size: 2rem;
+  letter-spacing: 2rem;
+}
+
+.modal-socials-icons:hover {
+  color: #adcb17;
 }

@@ -14,6 +14,12 @@
   text-align: left;
 }
 
+.viz-style-table tr:hover {
+  background-color: #988b00;
+  color: #ffffff;
+  text-align: left;
+}
+
 .viz-style-table th,
 .viz-style-table td {
   padding: 12px 15px;
@@ -25,6 +31,9 @@
 
 .viz-style-table tbody tr:nth-of-type(even) {
   background-color: #e60000;
+}
+.viz-style-table tbody tr:nth-of-type(even):hover {
+  background-color: #db00e6;
 }
 
 .viz-style-table tbody tr:last-of-type {
