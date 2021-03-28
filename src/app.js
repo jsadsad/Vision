@@ -2,9 +2,9 @@ window.onload = function () {
   window.scrollTo(0, 0)
 }
 
-window.onbeforeunload = function () {
-  return 'Is this Working?'
-}
+// window.onbeforeunload = function () {
+//   return 'Is this Working?'
+// }
 
 const appendNavLi = (idx) => {
   let navCol = document.querySelector('.viz-nav')
