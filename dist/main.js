@@ -140,7 +140,7 @@ var createVision = function createVision(movieData, idx) {
   var targetSlideRect = 'slide-svg-' + idx + '-rect';
   var xScale = d3.scaleLinear().domain([0, numberOfColumns]).range([20, width]);
   var yScale = d3.scaleLinear().domain([10, 0]).range([25, 400]);
-  var svg = d3.select('#vision').append('svg').attr('class', "".concat(targetSVG, " hidden")).attr('viewBox', "0 0 100 750").attr('preserveAspectRatio', 'xMinYMin meet');
+  var svg = d3.select('#vision').append('svg').attr('class', "".concat(targetSVG, " hidden")).attr('viewBox', "0 0 600 700").attr('preserveAspectRatio', 'xMinYMin meet');
   var xAxis = d3.axisBottom().scale(xScale).tickSize(0).tickFormat(function (d) {
     return Object.keys(movieData).slice(3)[d];
   });

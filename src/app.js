@@ -167,7 +167,7 @@ const createVision = (movieData, idx) => {
     .select('#vision')
     .append('svg')
     .attr('class', `${targetSVG} hidden`)
-    .attr('viewBox', `0 0 100 750`)
+    .attr('viewBox', `0 0 600 700`)
     .attr('preserveAspectRatio', 'xMinYMin meet')
 
   let xAxis = d3
