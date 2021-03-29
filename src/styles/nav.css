@@ -1,6 +1,6 @@
 .viz-nav {
   position: sticky;
-  top: 10px;
+  top: 4px;
   align-self: flex-start;
   scroll-behavior: smooth;
 }
@@ -9,6 +9,7 @@
   color: rgb(46, 142, 46);
   text-decoration: overline;
   font-size: 1.5rem;
+  cursor: default;
 }
 
 .nav-socials {
@@ -223,7 +224,7 @@
 #viz-nav-li-1:after {
   content: 'The Incredible Hulk';
   top: 40px;
-  left: 35px;
+  left: 23px;
   background-color: rgb(46, 142, 46);
 }
 
@@ -474,10 +475,11 @@
 .viz-nav-li-15:after,
 #viz-nav-li-15:after {
   content: 'Spider-Man: Homecoming';
-  top: 650px;
-  left: 35px;
+  top: 642px;
+  left: 31px;
   background-color: #a52828;
-  font-size: 13px;
+  font-size: 10px;
+  line-height: 20px;
 }
 
 .viz-nav-li-15:after {
@@ -582,7 +584,7 @@
 #viz-nav-li-21:after {
   content: 'Avengers: Endgame';
   top: 900px;
-  left: 35px;
+  left: 22px;
   background-color: #261eb8;
   color: #c13333;
 }

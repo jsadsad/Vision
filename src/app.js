@@ -67,7 +67,7 @@ const renderSlide = (options, slide, idx) => {
         }
 
         document.querySelectorAll(`.slide-svg-${idx}-rect`).forEach((rect) => {
-          rect.classList.add('chart-rect')
+          rect.classList.add('bar-rect')
         })
 
         d3.select(`.slide-svg-${idx}-y-axis`)
@@ -82,7 +82,7 @@ const renderSlide = (options, slide, idx) => {
           document
             .querySelectorAll(`.slide-svg-${idx - 1}-rect`)
             .forEach((rect) => {
-              rect.classList.remove('chart-rect')
+              rect.classList.remove('bar-rect')
             })
 
           d3.select(`.slide-svg-${idx - 1}-y-axis`)
@@ -101,7 +101,7 @@ const renderSlide = (options, slide, idx) => {
           document
             .querySelectorAll(`.slide-svg-${idx + 1}-rect`)
             .forEach((rect) => {
-              rect.classList.remove('chart-rect')
+              rect.classList.remove('bar-rect')
             })
 
           d3.select(`.slide-svg-${idx + 1}-y-axis`)

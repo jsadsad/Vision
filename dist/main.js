@@ -65,7 +65,7 @@ var renderSlide = function renderSlide(options, slide, idx) {
         }
 
         document.querySelectorAll(".slide-svg-".concat(idx, "-rect")).forEach(function (rect) {
-          rect.classList.add('chart-rect');
+          rect.classList.add('bar-rect');
         });
         d3.select(".slide-svg-".concat(idx, "-y-axis")).transition().style('opacity', '100%').duration(500);
         var navCircle = document.getElementById("viz-nav-li-".concat(idx));
@@ -73,7 +73,7 @@ var renderSlide = function renderSlide(options, slide, idx) {
 
         if (document.querySelectorAll(".slide-svg-".concat(idx - 1, "-rect"))) {
           document.querySelectorAll(".slide-svg-".concat(idx - 1, "-rect")).forEach(function (rect) {
-            rect.classList.remove('chart-rect');
+            rect.classList.remove('bar-rect');
           });
           d3.select(".slide-svg-".concat(idx - 1, "-y-axis")).transition().style('opacity', '0%').duration(1000);
         }
@@ -84,7 +84,7 @@ var renderSlide = function renderSlide(options, slide, idx) {
 
         if (document.querySelectorAll(".slide-svg-".concat(idx + 1, "-rect"))) {
           document.querySelectorAll(".slide-svg-".concat(idx + 1, "-rect")).forEach(function (rect) {
-            rect.classList.remove('chart-rect');
+            rect.classList.remove('bar-rect');
           });
           d3.select(".slide-svg-".concat(idx + 1, "-y-axis")).transition().style('opacity', '0%').duration(1000);
           document.getElementById("viz-nav-li-".concat(idx + 1)).classList.remove("viz-nav-li-".concat(idx + 1));

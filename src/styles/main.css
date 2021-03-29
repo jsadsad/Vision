@@ -74,6 +74,7 @@ body {
 }
 
 #main-header {
+  font-family: cursive;
   font-size: 2rem;
   margin: 10px 20px 10px 15px;
 }
@@ -229,7 +230,7 @@ body {
 
 .new-svg-container-class svg {
   width: 75%;
-  padding: 0px 0px 0px 30px;
+  padding: 0px 0px 0px 75px;
   height: 125vh;
 }
 

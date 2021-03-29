@@ -6,7 +6,7 @@
     y: attr(y);
   }
   from {
-    height: 40px;
+    height: 45px;
   }
   to {
     height: attr(height);
@@ -128,8 +128,8 @@
   fill: #a52828;
 }
 
-.chart-rect:hover {
-  opacity: 75%;
+.bar-rect:hover {
+  opacity: 25%;
   transition: all 0.5s;
 }
 
@@ -137,7 +137,7 @@
   display: none;
 }
 
-.chart-rect {
+.bar-rect {
   transition: all 0.5s;
   animation-duration: 0.5s;
   animation-name: rectGrow;
