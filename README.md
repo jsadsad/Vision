@@ -43,9 +43,9 @@ I created my own `movies.json` using information from [IMDbPro](https://pro.imdb
 
 | Technologies                                                                                            | Used                                     |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)                                   |
-| [CSS](https://www.w3schools.com/css/)                                                                   | [D3.js](https://d3js.org/)               |
-| [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) | [Font Awesome](https://fontawesome.com/) |
+| [HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)                                   | [D3.js](https://d3js.org/)               |
+| [CSS](https://www.w3schools.com/css/)                                                                   | [Font Awesome](https://fontawesome.com/) |
+| [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) |                                          |
 
 ## Functionality & MVP
 
