@@ -12,6 +12,11 @@
   cursor: default;
 }
 
+.prof-hulk {
+  height: 60px;
+  width: 65px;
+}
+
 .nav-socials {
   display: flex;
   font-size: 2rem;

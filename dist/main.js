@@ -7,28 +7,28 @@ window.onload = function () {
   window.scrollTo(0, 0);
 };
 
-var createObs = function createObs(slides) {
+var createObs = function createObs(containers) {
   var options = {
     root: null,
     rootMargin: '0px',
     threshold: 1.0
   };
 
-  for (var i = 0; i < slides.length - 1; i++) {
-    renderSlide(options, slides[i], i);
+  for (var i = 0; i < containers.length - 1; i++) {
+    renderSlide(options, containers[i], i);
   }
 };
 
 window.addEventListener('load', function (e) {
-  var obsSlides = [];
+  var obsContainers = [];
 
   for (var i = 0; i <= movieData.length; i++) {
     var movContainer = '#movie-container-' + i;
     var movSlide = document.querySelector(movContainer);
-    obsSlides.push(movSlide);
+    obsContainers.push(movSlide);
   }
 
-  createObs(obsSlides);
+  createObs(obsContainers);
 }, false);
 
 var appendNavLi = function appendNavLi(idx) {
@@ -131,7 +131,7 @@ var createVision = function createVision(movieData, idx) {
     bottom: 25,
     left: 60
   };
-  var width = 660 - margin.left - margin.right;
+  var width = 700 - margin.left - margin.right;
   var height = 450 - margin.top - margin.bottom;
   var data = Object.values(movieData).slice(3);
   var numberOfColumns = 8;
@@ -140,7 +140,7 @@ var createVision = function createVision(movieData, idx) {
   var targetSlideRect = 'slide-svg-' + idx + '-rect';
   var xScale = d3.scaleLinear().domain([0, numberOfColumns]).range([20, width]);
   var yScale = d3.scaleLinear().domain([10, 0]).range([25, 400]);
-  var svg = d3.select('#vision').append('svg').attr('class', "".concat(targetSVG, " hidden")).attr('viewBox', "0 0 600 700").attr('preserveAspectRatio', 'xMinYMin meet');
+  var svg = d3.select('#vision').append('svg').attr('class', "".concat(targetSVG, " hidden")).attr('viewBox', "0 50 650 100").attr('preserveAspectRatio', 'xMinYMin meet');
   var xAxis = d3.axisBottom().scale(xScale).tickSize(0).tickFormat(function (d) {
     return Object.keys(movieData).slice(3)[d];
   });
