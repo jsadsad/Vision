@@ -15,7 +15,7 @@
 }
 
 .viz-style-table tbody tr:nth-of-type(even) {
-  background-color: rgb(205, 19, 19);
+  background-color: #f36f73;
 }
 
 .viz-style-table tr:hover {

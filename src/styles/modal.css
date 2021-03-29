@@ -65,7 +65,7 @@
 }
 
 .modal-text a {
-  color: #adcb17;
+  color: rgb(247, 229, 78);
 }
 
 .close-modal {
@@ -85,7 +85,7 @@
 
 .close-modal:hover {
   color: #ed1d24;
-  background-color: #adcb17;
+  background-color: rgb(247, 229, 78);
   border: 1px solid #2f3c57;
   transition: all 0.4s ease;
   cursor: pointer;
@@ -103,5 +103,5 @@
 }
 
 .modal-socials-icons:hover {
-  color: #adcb17;
+  color: rgb(247, 229, 78);
 }
