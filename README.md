@@ -1,8 +1,8 @@
 # Vision
 
-[Live!](jsadsad.github.io/vision/)
+[Live!](https://jsadsad.github.io/Vision/)
 
-Vision is a single-page data visualization project using vanilla JavaScript, HTML, CSS, and the D3.js library.
+Vision is a single-page data visualization project using Vanilla JavaScript, HTML, CSS, and the D3.js library.
 
 This application displays data from the Marvel Cinematic Universe dating back to the first _Iron Man_ film in 2008 to the latest _Spider-Man: Far from Home_ in 2019. Information includes budget, worldwide gross, United States + Canada Gross, China Gross, and Japan Gross.
 
@@ -56,7 +56,7 @@ Visitors will be able to:
 - Enter the application through a modal.
 - Scroll smoothly through a assortment of charts and containers.
 - View timeline and release dates of MCU films on a table.
-- Interact with Navigation Icons on the left and be anchored to the specific film.
+- Interact with Navigation Icons on the right and be anchored to the specific film.
 
 ![GoTG Data](production_img/gotg_example.png)
 ![Spider-Man:Homecoming Data](production_img/spider-man_example.png)
