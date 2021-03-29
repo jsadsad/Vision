@@ -12,10 +12,10 @@
   cursor: default;
 }
 
-.prof-hulk {
+/* .prof-hulk {
   height: 55px;
   width: 55px;
-}
+} */
 
 .nav-socials {
   display: flex;
@@ -229,18 +229,18 @@
 #viz-nav-li-1:after {
   content: 'The Incredible Hulk';
   top: 40px;
-  left: 23px;
+  left: 35px;
   background-color: rgb(46, 142, 46);
 }
 
 .viz-nav-li-1:after {
-  top: 26px;
   position: absolute;
   opacity: 70%;
   width: auto;
   border-radius: 4px;
   padding: 3px;
   color: white;
+  font-size: 10px;
 }
 
 .viz-nav-li-2:after,
@@ -291,7 +291,6 @@
 .viz-nav-li-4:after {
   position: absolute;
   opacity: 70%;
-  width: auto;
   border-radius: 4px;
   padding: 3px;
   color: rgb(255, 255, 255);
@@ -301,10 +300,9 @@
 #viz-nav-li-5:after {
   content: "Marvel's The Avengers";
   top: 210px;
-  left: 35px;
-  font-size: 14px;
+  left: 33px;
+  font-size: 12px;
   background-color: #8890e6;
-  width: 59px;
 }
 
 .viz-nav-li-5:after {
@@ -313,7 +311,7 @@
   width: auto;
   border-radius: 4px;
   padding: 3px;
-  color: white;
+  color: #350d0d;
 }
 
 .viz-nav-li-6:after,
@@ -354,9 +352,9 @@
 .viz-nav-li-8:after,
 #viz-nav-li-8:after {
   content: 'Captain America: The Winter Soldier';
-  top: 340px;
-  left: 35px;
-  font-size: 14px;
+  top: 330px;
+  left: 33px;
+  font-size: 12px;
   background-color: #143bd7;
 }
 
@@ -364,54 +362,57 @@
   position: absolute;
   opacity: 70%;
   width: auto;
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 3px;
-  color: white;
+  color: #dead20;
 }
 
 .viz-nav-li-9:after,
 #viz-nav-li-9:after {
   content: 'Guardians of the Galaxy';
-  top: 380px;
-  left: 35px;
+  top: 385px;
+  left: 32px;
   background-color: #e11998;
+  font-size: 12px;
 }
 
 .viz-nav-li-9:after {
   position: absolute;
   opacity: 70%;
   width: auto;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 3px;
-  color: white;
+  color: #130000;
 }
 
 .viz-nav-li-10:after,
 #viz-nav-li-10:after {
   content: 'Avengers: Age of Ultron';
-  top: 420px;
-  left: 35px;
+  top: 423px;
+  left: 29px;
   background-color: #d3cfa0;
-  width: 75px;
+  width: 60px;
+  font-size: 13px;
 }
 
 .viz-nav-li-10:after {
   position: absolute;
   opacity: 70%;
-  width: auto;
-  border-radius: 4px;
-  padding: 3px;
-  color: white;
+
+  border-radius: 15px;
+  padding: 2px;
+  color: #983a3a;
 }
 
 .viz-nav-li-11:after,
 #viz-nav-li-11:after {
   content: 'Ant-Man';
-  top: 480px;
+  top: 479px;
   left: 35px;
   background-color: #d53636;
-  width: 70px;
+  width: 46px;
   color: #000;
+  font-size: 12px;
 }
 
 .viz-nav-li-11:after {
@@ -420,7 +421,7 @@
   width: auto;
   border-radius: 4px;
   padding: 3px;
-  color: white;
+  color: #a1a3f3;
 }
 
 .viz-nav-li-12:after,
@@ -445,9 +446,10 @@
 .viz-nav-li-13:after,
 #viz-nav-li-13:after {
   content: 'Doctor Strange';
-  top: 560px;
-  left: 35px;
+  top: 562px;
+  left: 37px;
   background-color: #e4b809;
+  font-size: 12px;
 }
 
 .viz-nav-li-13:after {
@@ -480,11 +482,11 @@
 .viz-nav-li-15:after,
 #viz-nav-li-15:after {
   content: 'Spider-Man: Homecoming';
-  top: 642px;
-  left: 31px;
+  top: 647px;
+  left: 28px;
   background-color: #a52828;
-  font-size: 10px;
-  line-height: 20px;
+  font-size: 9.5px;
+  line-height: 12px;
 }
 
 .viz-nav-li-15:after {
@@ -492,17 +494,18 @@
   opacity: 70%;
   width: auto;
   border-radius: 4px;
-  padding: 3px;
-  color: white;
+  padding: 2px;
+  color: black;
 }
 
 .viz-nav-li-16:after,
 #viz-nav-li-16:after {
   content: 'Thor: Ragnarok';
   top: 690px;
-  left: 35px;
+  left: 38px;
   background-color: rgb(218, 223, 112);
   color: rgb(42, 42, 164);
+  font-size: 10px;
 }
 
 .viz-nav-li-16:after {
@@ -517,9 +520,10 @@
 .viz-nav-li-17:after,
 #viz-nav-li-17:after {
   content: 'Black Panther';
-  top: 730px;
-  left: 35px;
+  top: 734px;
+  left: 37px;
   background-color: #5220b7;
+  font-size: 11px;
 }
 
 .viz-nav-li-17:after {
@@ -538,15 +542,15 @@
   left: 35px;
   background-color: #91b720;
   color: rgb(63, 143, 152);
+  font-size: 12px;
 }
 
 .viz-nav-li-18:after {
   position: absolute;
   opacity: 70%;
   width: auto;
-  border-radius: 4px;
+  border-radius: 7px;
   padding: 3px;
-  color: white;
 }
 
 .viz-nav-li-19:after,
@@ -588,16 +592,16 @@
 .viz-nav-li-21:after,
 #viz-nav-li-21:after {
   content: 'Avengers: Endgame';
-  top: 900px;
-  left: 22px;
+  top: 905px;
+  left: 35px;
   background-color: #261eb8;
   color: #c13333;
+  font-size: 12px;
 }
 
 .viz-nav-li-21:after {
   position: absolute;
   opacity: 70%;
-  width: auto;
   border-radius: 4px;
   padding: 3px;
   color: white;
@@ -607,7 +611,7 @@
 #viz-nav-li-22:after {
   content: 'Spider-Man: Far from Home';
   top: 920px;
-  left: 40px;
+  left: 36px;
   background-color: #a52828;
   font-size: 13px;
 }
