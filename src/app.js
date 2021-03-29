@@ -2,27 +2,27 @@ window.onload = function () {
   window.scrollTo(0, 0)
 }
 
-const createObs = (slides) => {
+const createObs = (containers) => {
   let options = {
     root: null,
     rootMargin: '0px',
     threshold: 1.0,
   }
-  for (let i = 0; i < slides.length - 1; i++) {
-    renderSlide(options, slides[i], i)
+  for (let i = 0; i < containers.length - 1; i++) {
+    renderSlide(options, containers[i], i)
   }
 }
 
 window.addEventListener(
   'load',
   (e) => {
-    let obsSlides = []
+    let obsContainers = []
     for (let i = 0; i <= movieData.length; i++) {
       let movContainer = '#movie-container-' + i
       let movSlide = document.querySelector(movContainer)
-      obsSlides.push(movSlide)
+      obsContainers.push(movSlide)
     }
-    createObs(obsSlides)
+    createObs(obsContainers)
   },
   false
 )
