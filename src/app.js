@@ -150,7 +150,7 @@ d3.json('movies.json', (d) => {
 
 const createVision = (movieData, idx) => {
   let margin = { top: 10, right: 40, bottom: 25, left: 60 }
-  let width = 660 - margin.left - margin.right
+  let width = 700 - margin.left - margin.right
   let height = 450 - margin.top - margin.bottom
   let data = Object.values(movieData).slice(3)
   let numberOfColumns = 8
@@ -167,7 +167,7 @@ const createVision = (movieData, idx) => {
     .select('#vision')
     .append('svg')
     .attr('class', `${targetSVG} hidden`)
-    .attr('viewBox', `0 0 600 700`)
+    .attr('viewBox', `0 50 650 100`)
     .attr('preserveAspectRatio', 'xMinYMin meet')
 
   let xAxis = d3
