@@ -1,14 +1,16 @@
 # Vision
 
+[Live!](jsadsad.github.io/vision/)
+
 Vision is a single-page data visualization project using vanilla JavaScript, HTML, CSS, and the D3.js library.
 
-This application displays data from the Marvel Cinematic Universe dating back to the first _Iron Man_ film in 2008. Information displayed include budget, worldwide gross, United States + Canada Gross, China Gross, and Japan Gross.
+This application displays data from the Marvel Cinematic Universe dating back to the first _Iron Man_ film in 2008 to the latest _Spider-Man: Far from Home_ in 2019. Information includes budget, worldwide gross, United States + Canada Gross, China Gross, and Japan Gross.
 
 ## Background
 
-Coming from a Film Production background, I enjoy just about any movie. Growing up reading comics and spending countless hours studying up just about every hero and villain in early 2010, my love for Marvel comics grew and even more so, the Marvel Cinematic Universe films.
+Coming from a Film Production background, I can enjoy any movie. Growing up reading comics and spending countless hours studying up just about every hero and villain in the early 2010s, my love for Marvel comics grew and even more so, the Marvel Cinematic Universe films.
 
-I created my own `movies.json` using information from [IMDbPro](https://pro.imdb.com/).
+I created my own `movies.json` using information from [IMDbPro](https://pro.imdb.com/). To allow easier scaling with D3, all the _budget_ and _gross_ data represent numbers in _millions_.
 
 ```
 {
