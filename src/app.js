@@ -1,75 +1,3 @@
-const renderSlide = (options, slide, idx) => {
-  const handleScroll = (entries, obs) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        document.querySelector(`.slide-svg-${idx}`).classList.remove('hidden')
-
-        if (document.querySelector(`.slide-svg-${idx - 1}`)) {
-          document
-            .querySelector(`.slide-svg-${idx - 1}`)
-            .classList.add('hidden')
-        }
-
-        if (document.querySelector(`.slide-svg-${idx + 1}`)) {
-          document
-            .querySelector(`.slide-svg-${idx + 1}`)
-            .classList.add('hidden')
-        }
-
-        document.querySelectorAll(`.slide-svg-${idx}-rect`).forEach((rect) => {
-          rect.classList.add('bar-rect')
-        })
-
-        d3.select(`.slide-svg-${idx}-y-axis`)
-          .transition()
-          .style('opacity', '100%')
-          .duration(500)
-
-        let navCircle = document.getElementById(`viz-nav-li-${idx}`)
-        navCircle.classList.add(`viz-nav-li-${idx}`)
-
-        if (document.querySelectorAll(`.slide-svg-${idx - 1}-rect`)) {
-          document
-            .querySelectorAll(`.slide-svg-${idx - 1}-rect`)
-            .forEach((rect) => {
-              rect.classList.remove('bar-rect')
-            })
-
-          d3.select(`.slide-svg-${idx - 1}-y-axis`)
-            .transition()
-            .style('opacity', '0%')
-            .duration(1000)
-        }
-
-        if (document.getElementById(`viz-nav-li-${idx - 1}`)) {
-          document
-            .getElementById(`viz-nav-li-${idx - 1}`)
-            .classList.remove(`viz-nav-li-${idx - 1}`)
-        }
-
-        if (document.querySelectorAll(`.slide-svg-${idx + 1}-rect`)) {
-          document
-            .querySelectorAll(`.slide-svg-${idx + 1}-rect`)
-            .forEach((rect) => {
-              rect.classList.remove('bar-rect')
-            })
-
-          d3.select(`.slide-svg-${idx + 1}-y-axis`)
-            .transition()
-            .style('opacity', '0%')
-            .duration(1000)
-
-          document
-            .getElementById(`viz-nav-li-${idx + 1}`)
-            .classList.remove(`viz-nav-li-${idx + 1}`)
-        }
-      }
-    })
-  }
-  let observer = new IntersectionObserver(handleScroll, options)
-  observer.observe(slide)
-}
-
 // document.addEventListener('DOMContentLoaded', function (e) {
 let movieData
 d3.json('movies.json', (d) => {
@@ -221,22 +149,33 @@ const createVision = (movieData, idx) => {
     .attr('offset', '100%')
     .attr('stop-color', 'rgb(31,131,51)')
     .attr('stop-opacity', 2)
-
-  window.addEventListener(
-    'load',
-    (e) => {
-      let obsContainers = []
-      for (let i = 0; i <= movieData.length; i++) {
-        let movContainer = '#movie-container-' + i
-        let movSlide = document.querySelector(movContainer)
-        obsContainers.push(movSlide)
-      }
-      createObs(obsContainers)
-    },
-    false
-  )
 }
 // })
+
+const createObs = (containers) => {
+  let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0,
+  }
+  for (let i = 0; i < containers.length - 1; i++) {
+    renderSlide(options, containers[i], i)
+  }
+}
+
+window.addEventListener(
+  'load',
+  (e) => {
+    let obsContainers = []
+    for (let i = 0; i <= movieData.length; i++) {
+      let movContainer = '#movie-container-' + i
+      let movSlide = document.querySelector(movContainer)
+      obsContainers.push(movSlide)
+    }
+    createObs(obsContainers)
+  },
+  false
+)
 
 const appendNavLi = (idx) => {
   let navCol = document.querySelector('.viz-nav')
@@ -259,13 +198,74 @@ const appendAnchor = (idx) => {
   movieContainer.appendChild(aTag)
 }
 
-const createObs = (containers) => {
-  let options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0,
+const renderSlide = (options, slide, idx) => {
+  const handleScroll = (entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        document.querySelector(`.slide-svg-${idx}`).classList.remove('hidden')
+
+        if (document.querySelector(`.slide-svg-${idx - 1}`)) {
+          document
+            .querySelector(`.slide-svg-${idx - 1}`)
+            .classList.add('hidden')
+        }
+
+        if (document.querySelector(`.slide-svg-${idx + 1}`)) {
+          document
+            .querySelector(`.slide-svg-${idx + 1}`)
+            .classList.add('hidden')
+        }
+
+        document.querySelectorAll(`.slide-svg-${idx}-rect`).forEach((rect) => {
+          rect.classList.add('bar-rect')
+        })
+
+        d3.select(`.slide-svg-${idx}-y-axis`)
+          .transition()
+          .style('opacity', '100%')
+          .duration(500)
+
+        let navCircle = document.getElementById(`viz-nav-li-${idx}`)
+        navCircle.classList.add(`viz-nav-li-${idx}`)
+
+        if (document.querySelectorAll(`.slide-svg-${idx - 1}-rect`)) {
+          document
+            .querySelectorAll(`.slide-svg-${idx - 1}-rect`)
+            .forEach((rect) => {
+              rect.classList.remove('bar-rect')
+            })
+
+          d3.select(`.slide-svg-${idx - 1}-y-axis`)
+            .transition()
+            .style('opacity', '0%')
+            .duration(1000)
+        }
+
+        if (document.getElementById(`viz-nav-li-${idx - 1}`)) {
+          document
+            .getElementById(`viz-nav-li-${idx - 1}`)
+            .classList.remove(`viz-nav-li-${idx - 1}`)
+        }
+
+        if (document.querySelectorAll(`.slide-svg-${idx + 1}-rect`)) {
+          document
+            .querySelectorAll(`.slide-svg-${idx + 1}-rect`)
+            .forEach((rect) => {
+              rect.classList.remove('bar-rect')
+            })
+
+          d3.select(`.slide-svg-${idx + 1}-y-axis`)
+            .transition()
+            .style('opacity', '0%')
+            .duration(1000)
+
+          document
+            .getElementById(`viz-nav-li-${idx + 1}`)
+            .classList.remove(`viz-nav-li-${idx + 1}`)
+        }
+      }
+    })
   }
-  for (let i = 0; i < containers.length - 1; i++) {
-    renderSlide(options, containers[i], i)
-  }
+  let observer = new IntersectionObserver(handleScroll, options)
+  observer.observe(slide)
 }
