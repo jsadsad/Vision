@@ -1,5 +1,5 @@
+let movieData
 document.addEventListener('DOMContentLoaded', function (e) {
-  let movieData
   d3.json('movies.json', (d) => {
     return {
       title: d['Title'],

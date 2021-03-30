@@ -3,8 +3,8 @@ var __webpack_exports__ = {};
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
+var movieData;
 document.addEventListener('DOMContentLoaded', function (e) {
-  var movieData;
   d3.json('movies.json', function (d) {
     return {
       title: d['Title'],
