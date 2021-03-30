@@ -3,54 +3,54 @@ var __webpack_exports__ = {};
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-document.addEventListener('DOMContentLoaded', function (e) {
-  var renderSlide = function renderSlide(options, slide, idx) {
-    var handleScroll = function handleScroll(entries, obs) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          document.querySelector(".slide-svg-".concat(idx)).classList.remove('hidden');
+var renderSlide = function renderSlide(options, slide, idx) {
+  var handleScroll = function handleScroll(entries, obs) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        document.querySelector(".slide-svg-".concat(idx)).classList.remove('hidden');
 
-          if (document.querySelector(".slide-svg-".concat(idx - 1))) {
-            document.querySelector(".slide-svg-".concat(idx - 1)).classList.add('hidden');
-          }
-
-          if (document.querySelector(".slide-svg-".concat(idx + 1))) {
-            document.querySelector(".slide-svg-".concat(idx + 1)).classList.add('hidden');
-          }
-
-          document.querySelectorAll(".slide-svg-".concat(idx, "-rect")).forEach(function (rect) {
-            rect.classList.add('bar-rect');
-          });
-          d3.select(".slide-svg-".concat(idx, "-y-axis")).transition().style('opacity', '100%').duration(500);
-          var navCircle = document.getElementById("viz-nav-li-".concat(idx));
-          navCircle.classList.add("viz-nav-li-".concat(idx));
-
-          if (document.querySelectorAll(".slide-svg-".concat(idx - 1, "-rect"))) {
-            document.querySelectorAll(".slide-svg-".concat(idx - 1, "-rect")).forEach(function (rect) {
-              rect.classList.remove('bar-rect');
-            });
-            d3.select(".slide-svg-".concat(idx - 1, "-y-axis")).transition().style('opacity', '0%').duration(1000);
-          }
-
-          if (document.getElementById("viz-nav-li-".concat(idx - 1))) {
-            document.getElementById("viz-nav-li-".concat(idx - 1)).classList.remove("viz-nav-li-".concat(idx - 1));
-          }
-
-          if (document.querySelectorAll(".slide-svg-".concat(idx + 1, "-rect"))) {
-            document.querySelectorAll(".slide-svg-".concat(idx + 1, "-rect")).forEach(function (rect) {
-              rect.classList.remove('bar-rect');
-            });
-            d3.select(".slide-svg-".concat(idx + 1, "-y-axis")).transition().style('opacity', '0%').duration(1000);
-            document.getElementById("viz-nav-li-".concat(idx + 1)).classList.remove("viz-nav-li-".concat(idx + 1));
-          }
+        if (document.querySelector(".slide-svg-".concat(idx - 1))) {
+          document.querySelector(".slide-svg-".concat(idx - 1)).classList.add('hidden');
         }
-      });
-    };
 
-    var observer = new IntersectionObserver(handleScroll, options);
-    observer.observe(slide);
+        if (document.querySelector(".slide-svg-".concat(idx + 1))) {
+          document.querySelector(".slide-svg-".concat(idx + 1)).classList.add('hidden');
+        }
+
+        document.querySelectorAll(".slide-svg-".concat(idx, "-rect")).forEach(function (rect) {
+          rect.classList.add('bar-rect');
+        });
+        d3.select(".slide-svg-".concat(idx, "-y-axis")).transition().style('opacity', '100%').duration(500);
+        var navCircle = document.getElementById("viz-nav-li-".concat(idx));
+        navCircle.classList.add("viz-nav-li-".concat(idx));
+
+        if (document.querySelectorAll(".slide-svg-".concat(idx - 1, "-rect"))) {
+          document.querySelectorAll(".slide-svg-".concat(idx - 1, "-rect")).forEach(function (rect) {
+            rect.classList.remove('bar-rect');
+          });
+          d3.select(".slide-svg-".concat(idx - 1, "-y-axis")).transition().style('opacity', '0%').duration(1000);
+        }
+
+        if (document.getElementById("viz-nav-li-".concat(idx - 1))) {
+          document.getElementById("viz-nav-li-".concat(idx - 1)).classList.remove("viz-nav-li-".concat(idx - 1));
+        }
+
+        if (document.querySelectorAll(".slide-svg-".concat(idx + 1, "-rect"))) {
+          document.querySelectorAll(".slide-svg-".concat(idx + 1, "-rect")).forEach(function (rect) {
+            rect.classList.remove('bar-rect');
+          });
+          d3.select(".slide-svg-".concat(idx + 1, "-y-axis")).transition().style('opacity', '0%').duration(1000);
+          document.getElementById("viz-nav-li-".concat(idx + 1)).classList.remove("viz-nav-li-".concat(idx + 1));
+        }
+      }
+    });
   };
 
+  var observer = new IntersectionObserver(handleScroll, options);
+  observer.observe(slide);
+};
+
+document.addEventListener('DOMContentLoaded', function (e) {
   var movieData;
   d3.json('movies.json', function (d) {
     return {
