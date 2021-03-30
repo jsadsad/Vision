@@ -3,25 +3,6 @@ var __webpack_exports__ = {};
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-var appendNavLi = function appendNavLi(idx) {
-  var navCol = document.querySelector('.viz-nav');
-  var ankLi = document.createElement('a');
-  var navLi = document.createElement('li');
-  ankLi.setAttribute('href', "#anchor-".concat(idx));
-  navCol.appendChild(ankLi);
-  navLi.setAttribute('id', "viz-nav-li-".concat(idx));
-  navLi.classList.add('viz-nav-li');
-  ankLi.appendChild(navLi);
-};
-
-var appendAnchor = function appendAnchor(idx) {
-  var movieContainer = document.getElementById("movie-container-".concat(idx));
-  var aTag = document.createElement('a');
-  aTag.setAttribute('id', "anchor-".concat(idx));
-  aTag.classList.add('anchor');
-  movieContainer.appendChild(aTag);
-};
-
 document.addEventListener('DOMContentLoaded', function (e) {
   var renderSlide = function renderSlide(options, slide, idx) {
     var handleScroll = function handleScroll(entries, obs) {
@@ -70,18 +51,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
     observer.observe(slide);
   };
 
-  var createObs = function createObs(containers) {
-    var options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 1.0
-    };
-
-    for (var i = 0; i < containers.length - 1; i++) {
-      renderSlide(options, containers[i], i);
-    }
-  };
-
   var movieData;
   d3.json('movies.json', function (d) {
     return {
@@ -108,17 +77,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
       appendAnchor(idx);
     }
   });
-  window.addEventListener('load', function (e) {
-    var obsContainers = [];
-
-    for (var i = 0; i <= movieData.length; i++) {
-      var movContainer = '#movie-container-' + i;
-      var movSlide = document.querySelector(movContainer);
-      obsContainers.push(movSlide);
-    }
-
-    createObs(obsContainers);
-  }, false);
 
   var createVision = function createVision(movieData, idx) {
     var margin = {
@@ -176,6 +134,48 @@ document.addEventListener('DOMContentLoaded', function (e) {
     gradient.append('stop').attr('class', 'end').attr('offset', '100%').attr('stop-color', 'rgb(31,131,51)').attr('stop-opacity', 2);
   };
 });
+window.addEventListener('load', function (e) {
+  var obsContainers = [];
+
+  for (var i = 0; i <= movieData.length; i++) {
+    var movContainer = '#movie-container-' + i;
+    var movSlide = document.querySelector(movContainer);
+    obsContainers.push(movSlide);
+  }
+
+  createObs(obsContainers);
+}, false);
+
+var appendNavLi = function appendNavLi(idx) {
+  var navCol = document.querySelector('.viz-nav');
+  var ankLi = document.createElement('a');
+  var navLi = document.createElement('li');
+  ankLi.setAttribute('href', "#anchor-".concat(idx));
+  navCol.appendChild(ankLi);
+  navLi.setAttribute('id', "viz-nav-li-".concat(idx));
+  navLi.classList.add('viz-nav-li');
+  ankLi.appendChild(navLi);
+};
+
+var appendAnchor = function appendAnchor(idx) {
+  var movieContainer = document.getElementById("movie-container-".concat(idx));
+  var aTag = document.createElement('a');
+  aTag.setAttribute('id', "anchor-".concat(idx));
+  aTag.classList.add('anchor');
+  movieContainer.appendChild(aTag);
+};
+
+var createObs = function createObs(containers) {
+  var options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0
+  };
+
+  for (var i = 0; i < containers.length - 1; i++) {
+    renderSlide(options, containers[i], i);
+  }
+};
 /******/ })()
 ;
 //# sourceMappingURL=main.js.map

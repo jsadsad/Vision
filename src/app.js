@@ -1,24 +1,3 @@
-const appendNavLi = (idx) => {
-  let navCol = document.querySelector('.viz-nav')
-  let ankLi = document.createElement('a')
-  let navLi = document.createElement('li')
-
-  ankLi.setAttribute('href', `#anchor-${idx}`)
-  navCol.appendChild(ankLi)
-  navLi.setAttribute('id', `viz-nav-li-${idx}`)
-  navLi.classList.add('viz-nav-li')
-  ankLi.appendChild(navLi)
-}
-
-const appendAnchor = (idx) => {
-  let movieContainer = document.getElementById(`movie-container-${idx}`)
-  let aTag = document.createElement('a')
-
-  aTag.setAttribute('id', `anchor-${idx}`)
-  aTag.classList.add('anchor')
-  movieContainer.appendChild(aTag)
-}
-
 document.addEventListener('DOMContentLoaded', function (e) {
   const renderSlide = (options, slide, idx) => {
     const handleScroll = (entries, obs) => {
@@ -94,17 +73,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
     observer.observe(slide)
   }
 
-  const createObs = (containers) => {
-    let options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 1.0,
-    }
-    for (let i = 0; i < containers.length - 1; i++) {
-      renderSlide(options, containers[i], i)
-    }
-  }
-
   let movieData
   d3.json('movies.json', (d) => {
     return {
@@ -132,20 +100,6 @@ document.addEventListener('DOMContentLoaded', function (e) {
       appendAnchor(idx)
     }
   })
-
-  window.addEventListener(
-    'load',
-    (e) => {
-      let obsContainers = []
-      for (let i = 0; i <= movieData.length; i++) {
-        let movContainer = '#movie-container-' + i
-        let movSlide = document.querySelector(movContainer)
-        obsContainers.push(movSlide)
-      }
-      createObs(obsContainers)
-    },
-    false
-  )
 
   const createVision = (movieData, idx) => {
     let margin = { top: 10, right: 40, bottom: 25, left: 60 }
@@ -274,3 +228,49 @@ document.addEventListener('DOMContentLoaded', function (e) {
       .attr('stop-opacity', 2)
   }
 })
+
+window.addEventListener(
+  'load',
+  (e) => {
+    let obsContainers = []
+    for (let i = 0; i <= movieData.length; i++) {
+      let movContainer = '#movie-container-' + i
+      let movSlide = document.querySelector(movContainer)
+      obsContainers.push(movSlide)
+    }
+    createObs(obsContainers)
+  },
+  false
+)
+
+const appendNavLi = (idx) => {
+  let navCol = document.querySelector('.viz-nav')
+  let ankLi = document.createElement('a')
+  let navLi = document.createElement('li')
+
+  ankLi.setAttribute('href', `#anchor-${idx}`)
+  navCol.appendChild(ankLi)
+  navLi.setAttribute('id', `viz-nav-li-${idx}`)
+  navLi.classList.add('viz-nav-li')
+  ankLi.appendChild(navLi)
+}
+
+const appendAnchor = (idx) => {
+  let movieContainer = document.getElementById(`movie-container-${idx}`)
+  let aTag = document.createElement('a')
+
+  aTag.setAttribute('id', `anchor-${idx}`)
+  aTag.classList.add('anchor')
+  movieContainer.appendChild(aTag)
+}
+
+const createObs = (containers) => {
+  let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0,
+  }
+  for (let i = 0; i < containers.length - 1; i++) {
+    renderSlide(options, containers[i], i)
+  }
+}
