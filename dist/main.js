@@ -132,19 +132,19 @@ document.addEventListener('DOMContentLoaded', function (e) {
     var gradient = defs.append('linearGradient').attr('id', 'svgGradient').attr('x1', '0%').attr('x2', '100%').attr('y1', '0%').attr('y2', '100%');
     gradient.append('stop').attr('class', 'start').attr('offset', '0%').attr('stop-color', 'rgb(214,183,33)').attr('stop-opacity', 2);
     gradient.append('stop').attr('class', 'end').attr('offset', '100%').attr('stop-color', 'rgb(31,131,51)').attr('stop-opacity', 2);
+    window.addEventListener('load', function (e) {
+      var obsContainers = [];
+
+      for (var i = 0; i <= movieData.length; i++) {
+        var movContainer = '#movie-container-' + i;
+        var movSlide = document.querySelector(movContainer);
+        obsContainers.push(movSlide);
+      }
+
+      createObs(obsContainers);
+    }, false);
   };
 });
-window.addEventListener('load', function (e) {
-  var obsContainers = [];
-
-  for (var i = 0; i <= movieData.length; i++) {
-    var movContainer = '#movie-container-' + i;
-    var movSlide = document.querySelector(movContainer);
-    obsContainers.push(movSlide);
-  }
-
-  createObs(obsContainers);
-}, false);
 
 var appendNavLi = function appendNavLi(idx) {
   var navCol = document.querySelector('.viz-nav');

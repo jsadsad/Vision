@@ -224,22 +224,22 @@ document.addEventListener('DOMContentLoaded', function (e) {
       .attr('offset', '100%')
       .attr('stop-color', 'rgb(31,131,51)')
       .attr('stop-opacity', 2)
+
+    window.addEventListener(
+      'load',
+      (e) => {
+        let obsContainers = []
+        for (let i = 0; i <= movieData.length; i++) {
+          let movContainer = '#movie-container-' + i
+          let movSlide = document.querySelector(movContainer)
+          obsContainers.push(movSlide)
+        }
+        createObs(obsContainers)
+      },
+      false
+    )
   }
 })
-
-window.addEventListener(
-  'load',
-  (e) => {
-    let obsContainers = []
-    for (let i = 0; i <= movieData.length; i++) {
-      let movContainer = '#movie-container-' + i
-      let movSlide = document.querySelector(movContainer)
-      obsContainers.push(movSlide)
-    }
-    createObs(obsContainers)
-  },
-  false
-)
 
 const appendNavLi = (idx) => {
   let navCol = document.querySelector('.viz-nav')
