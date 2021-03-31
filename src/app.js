@@ -1,3 +1,5 @@
+import * as d3 from 'd3'
+
 let movieData
 // document.addEventListener('DOMContentLoaded', function (e) {
 d3.json('movies.json', (d) => {
