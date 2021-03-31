@@ -158,7 +158,7 @@ const createObs = (containers) => {
   let options = {
     root: null,
     rootMargin: '0px',
-    threshold: 1.0,
+    threshold: 0.7,
   }
   for (let i = 0; i < containers.length - 1; i++) {
     renderSlide(options, containers[i], i)

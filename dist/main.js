@@ -30730,7 +30730,7 @@ var createObs = function createObs(containers) {
   var options = {
     root: null,
     rootMargin: '0px',
-    threshold: 1.0
+    threshold: 0.7
   };
 
   for (var i = 0; i < containers.length - 1; i++) {
