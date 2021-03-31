@@ -103,7 +103,7 @@ var createObs = function createObs(containers) {
 window.addEventListener('load', function (e) {
   var obsContainers = [];
 
-  for (var i = 0; i <= movieData.length; i++) {
+  for (var i = 0; i <= 22; i++) {
     var movContainer = '#movie-container-' + i;
     var movSlide = document.querySelector(movContainer);
     obsContainers.push(movSlide);

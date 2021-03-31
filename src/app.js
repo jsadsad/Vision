@@ -170,7 +170,7 @@ window.addEventListener(
   'load',
   (e) => {
     let obsContainers = []
-    for (let i = 0; i <= movieData.length; i++) {
+    for (let i = 0; i <= 22; i++) {
       let movContainer = '#movie-container-' + i
       let movSlide = document.querySelector(movContainer)
       obsContainers.push(movSlide)
