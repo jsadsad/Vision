@@ -21,10 +21,8 @@
   display: flex;
   font-size: 2rem;
   letter-spacing: 1rem;
-  line-height: normal;
   border-bottom: 3.2px solid;
   color: rgb(46, 142, 46);
-  min-width: 14.5%;
   max-width: 18.5%;
 }
 
